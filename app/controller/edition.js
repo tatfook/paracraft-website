@@ -1,8 +1,8 @@
 module.exports = app => {
   return class EditionController extends app.Controller {
-    async list() {
+    async homepage() {
       const { ctx } = this
-      await ctx.renderClient('list/index.js')
+      await ctx.renderClient('homepage/index.js')
     }
     async edition1() {
       const { ctx } = this
