@@ -1,0 +1,17 @@
+node_modules/
+npm-debug.log
+dist
+private
+public
+run
+*.iml
+*tmp
+_site
+logs
+*.log
+.vscode
+config/manifest.json
+app/view/*
+!app/view/layout.html
+!app/view/.gitkeep
+package-lock.json
