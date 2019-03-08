@@ -1,4 +1,4 @@
 
 module.exports = app => {
-  app.get('/', app.controller.edition.homepage);
+  app.get('/', app.controller.home.homepage);
 };
