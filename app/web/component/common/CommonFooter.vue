@@ -21,9 +21,9 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">致社区</li>
-          <li>致教育者</li>
-          <li><a href="/download">给父母的话</a></li>
-          <li>致开发者</li>
+          <li><a href="https://keepwork.com/official/paracraft/to-educators">致教育者</a></li>
+          <li><a href="https://keepwork.com/official/paracraft/to-parents">给父母的话</a></li>
+          <li><a href="https://keepwork.com/official/paracraft/to-developers">致开发者</a></li>
           <li>对爱好编程的你说</li>
         </ul>
       </div>
@@ -75,7 +75,7 @@ export default {
       &-list {
         list-style: none;
         padding: 0 0 20px;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 35px;
         a{
           text-decoration: none;
