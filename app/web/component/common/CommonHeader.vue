@@ -1,19 +1,38 @@
 <template>
   <div class="common-header">
     <el-menu mode="horizontal">
-      <el-menu-item><img src="@/asset/images/paracraft.png" alt="paracraft">Paracraft 创意空间</el-menu-item>
+      <el-menu-item><img src="@/asset/images/paracraft.png" alt="paracraft"><a href="/"> Paracraft 创意空间</a></el-menu-item>
       <el-menu-item>我们的优势</el-menu-item>
       <el-menu-item>服务项目</el-menu-item>
       <el-menu-item>价格</el-menu-item>
       <el-menu-item class="pull-right">
-        <el-button type="primary">免费体验</el-button>
+        <el-button type="primary" @click="ShowGatherInfo">免费体验</el-button>
       </el-menu-item>
     </el-menu>
+    <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
   </div>
 </template>
 <script>
+import GatherInfoDialog from '@/component/common/GatherInfoDialog'
+
 export default {
-  name: 'CommonHeader'
+  name: 'CommonHeader',
+  data() {
+    return {
+      showGatherInfoDialog: false
+    }
+  },
+  methods: {
+    ShowGatherInfo() {
+      this.showGatherInfoDialog = true
+    },
+    closeGatherInfoDialog() {
+      this.showGatherInfoDialog = false
+    }
+  },
+  components: {
+    GatherInfoDialog
+  }
 }
 </script>
 <style lang="scss">
@@ -29,6 +48,9 @@ export default {
       line-height: 82px;
       color: #fff;
       font-size: 14px;
+      a {
+        text-decoration: none;
+      }
       &:hover {
         background: rgb(5, 16, 41);
       }
