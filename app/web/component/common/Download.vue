@@ -8,7 +8,7 @@
       <div class="download-versions-part">
         <h5 class="download-versions-part-title">桌面版</h5>
         <div class="download-versions-part-img"><img src="@/asset/images/desk.png" alt="desk"></div>
-        <el-button>App Store下载</el-button>
+        <el-button class="download-versions-part-btn"><a href="http://cdn.keepwork.com/paracraft/win32/paracraft_full.exe?ver=07411">直接下载</a></el-button>
       </div>
       <div class="download-versions-part">
         <h5 class="download-versions-part-title">Mac版</h5>

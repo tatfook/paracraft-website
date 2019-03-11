@@ -24,14 +24,14 @@
           <li><a href="https://keepwork.com/official/paracraft/to-educators">致教育者</a></li>
           <li><a href="https://keepwork.com/official/paracraft/to-parents">给父母的话</a></li>
           <li><a href="https://keepwork.com/official/paracraft/to-developers">致开发者</a></li>
-          <li>对爱好编程的你说</li>
+          <li><a href="https://github.com/LiXizhi/NPLRuntime/wiki">对爱好编程的你说</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">关于我们</li>
           <li>公司简介</li>
-          <li><a href="/download">新闻动态</a></li>
+          <li><a href="/news">新闻动态</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
