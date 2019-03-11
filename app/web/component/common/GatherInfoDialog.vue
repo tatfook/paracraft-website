@@ -21,7 +21,7 @@
             <el-input placeholder="请填写单位或者机构名称" v-model="infoData.organization"></el-input>
           </el-form-item>
           <el-form-item class="gather-info-dialog-content-form-submit">
-            <el-button class="gather-info-dialog-content-form-submit-btn" type="primary">提交</el-button>
+            <el-button class="gather-info-dialog-content-form-submit-btn" type="primary" @click="submitInfo()">提交</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -29,6 +29,8 @@
   </div>
 </template>
 <script>
+import axios from 'axios'
+
 export default {
   name: 'GatherInfoDialog',
   props: {
@@ -58,6 +60,20 @@ export default {
   methods: {
     handleClose() {
       this.$emit('close')
+    },
+    submitInfo() {
+      let baseUrl = process.env.KEEPWORK_API_PREFIX
+      axios
+        .post(`${baseUrl}/paracraftVisitors/upsert`, {
+          ...this.infoData
+        })
+        .then(res => {
+          this.handleClose()
+          this.$message.success('提交成功')
+        })
+        .catch(err => {
+          console.error('err', err)
+        })
     }
   }
 }
@@ -86,8 +102,9 @@ export default {
     }
   }
   &-content {
-    max-width: 615px;
+    max-width: 635px;
     margin: 0 auto;
+    padding: 0 10px;
     &-reminder {
       height: 47px;
       background-color: #f1f6fa;
@@ -109,6 +126,15 @@ export default {
         &-btn {
           width: 139px;
         }
+      }
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .gather-info-dialog {
+    .el-dialog__wrapper {
+      .el-dialog {
+        width: 90% !important;
       }
     }
   }
