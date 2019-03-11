@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HomePage from '@/component/common/HomePage'
 import Download from '@/component/common/Download'
+import News from '@/component/common/News'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
       path: '/download',
       name: 'Download',
       component: Download
+    },
+    {
+      path: '/news',
+      name: 'News',
+      component: News
     }
   ]
 })
