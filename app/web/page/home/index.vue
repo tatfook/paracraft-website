@@ -39,6 +39,9 @@ body{
 }
 .index-page-container{
   min-height: 100%;
+  &-main{
+    padding: 0;
+  }
   &-header.el-header{
     padding: 0;
     height: auto !important;
