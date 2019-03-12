@@ -11,14 +11,20 @@
           表单提交成功后我们将于1-3个工作日内与您联系，如有紧急情况请拨打0755-86967012
         </div>
         <el-form :model="infoData" :rules="infoDataRules" ref="infoForm" label-position="top" label-width="100px" class="gather-info-dialog-content-form">
-          <el-form-item label="姓名：" prop="realname">
-            <el-input placeholder="请填写您的姓名" v-model="infoData.realname"></el-input>
+          <el-form-item label="联系人姓名：" prop="realname">
+            <el-input placeholder="请输入您的姓名" v-model="infoData.realname"></el-input>
           </el-form-item>
-          <el-form-item label="联系方式：" prop="cellphone">
-            <el-input placeholder="手机号码/座机号码" v-model="infoData.cellphone"></el-input>
+          <el-form-item label="联系手机：" prop="cellphone">
+            <el-input placeholder="请输入手机号码" v-model="infoData.cellphone"></el-input>
+          </el-form-item>
+          <el-form-item label="邮箱：" prop="email">
+            <el-input placeholder="请输入邮箱" v-model="infoData.email"></el-input>
           </el-form-item>
           <el-form-item label="所属单位名称：">
-            <el-input placeholder="请填写单位或者机构名称" v-model="infoData.organization"></el-input>
+            <el-input placeholder="请输入单位或者机构名称" v-model="infoData.organization"></el-input>
+          </el-form-item>
+          <el-form-item label="描述：">
+            <el-input placeholder="请简单描述一下你想了解的问题" v-model="infoData.description"></el-input>
           </el-form-item>
           <el-form-item class="gather-info-dialog-content-form-submit">
             <el-button class="gather-info-dialog-content-form-submit-btn" type="primary" @click="submitInfo()">提交</el-button>
@@ -41,17 +47,27 @@ export default {
       infoData: {
         realname: '',
         cellphone: '',
-        organization: ''
+        email: '',
+        organization: '',
+        description: ''
       },
       infoDataRules: {
         realname: [
-          { required: true, message: '请填写您的姓名', trigger: 'blur' }
+          { required: true, message: '请输入您的姓名', trigger: 'blur' }
         ],
         cellphone: [
           {
             required: true,
-            message: '请填写您的手机号码/座机号码',
+            message: '请输入手机号码',
             trigger: 'blur'
+          }
+        ],
+        email: [
+          { required: true, message: '请输入邮箱', trigger: 'blur' },
+          {
+            type: 'email',
+            message: '请输入正确的邮箱地址',
+            trigger: ['blur', 'change']
           }
         ]
       }
