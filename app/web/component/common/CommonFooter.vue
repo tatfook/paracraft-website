@@ -6,16 +6,16 @@
           <li class="common-footer-content-part-list-title">产品</li>
           <li>Paracraft 创意空间</li>
           <li><a href="/download">免费下载</a></li>
-          <li>作品社区</li>
-          <li>NPL动画与编程大赛</li>
+          <li><a href="https://keepwork.com/">作品社区</a></li>
+          <li><a href="https://keepwork.com/NPL">NPL动画与编程大赛</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">服务</li>
-          <li><a href="/download">我们的优势</a></li>
-          <li>服务项目</li>
-          <li>价格</li>
+          <li><a href="#">我们的优势</a></li>
+          <li><a href="#">我们的服务</a></li>
+          <li><a href="#">价格</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
@@ -30,8 +30,8 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">关于我们</li>
-          <li>公司简介</li>
-          <li><a href="/news">新闻动态</a></li>
+          <li><a href="/#">公司简介</a></li>
+          <!-- <li><a href="/news">新闻动态</a></li> -->
         </ul>
       </div>
       <div class="common-footer-content-part">

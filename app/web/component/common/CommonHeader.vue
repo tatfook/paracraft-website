@@ -1,11 +1,11 @@
 <template>
   <div class="common-header">
-    <el-menu mode="horizontal">
-      <el-menu-item><img src="@/asset/images/paracraft.png" alt="paracraft"><a href="/"> Paracraft 创意空间</a></el-menu-item>
-      <el-menu-item>我们的优势</el-menu-item>
-      <el-menu-item>服务项目</el-menu-item>
-      <el-menu-item>价格</el-menu-item>
-      <el-menu-item class="pull-right">
+    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+      <el-menu-item index="top"><img src="@/asset/images/paracraft.png" alt="paracraft">Paracraft 创意空间</el-menu-item>
+      <el-menu-item index="oursAdvantage">我们的优势</el-menu-item>
+      <el-menu-item index="oursService">我们的服务</el-menu-item>
+      <el-menu-item index="price">价格</el-menu-item>
+      <el-menu-item index="5" class="pull-right">
         <el-button type="primary" @click="ShowGatherInfo">免费体验</el-button>
       </el-menu-item>
     </el-menu>
@@ -14,12 +14,14 @@
 </template>
 <script>
 import GatherInfoDialog from '@/component/common/GatherInfoDialog'
+import scrollIntoView from 'scroll-into-view-if-needed'
 
 export default {
   name: 'CommonHeader',
   data() {
     return {
-      showGatherInfoDialog: false
+      showGatherInfoDialog: false,
+      activeIndex: '1'
     }
   },
   methods: {
@@ -28,6 +30,11 @@ export default {
     },
     closeGatherInfoDialog() {
       this.showGatherInfoDialog = false
+    },
+    handleSelect(key, keyPath){
+      console.log(key)
+      console.log(keyPath)
+      // TODO
     }
   },
   components: {
@@ -52,6 +59,9 @@ export default {
         text-decoration: none;
       }
       &:hover {
+        background: rgb(5, 16, 41);
+      }
+      &.is-active {
         background: rgb(5, 16, 41);
       }
     }
