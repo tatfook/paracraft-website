@@ -5,7 +5,7 @@
         <div class="homepage-banner-center-left">
           <p class="homepage-banner-center-left-typical">Paracraft是一款<span class="homepage-banner-center-left-typical-highlight">免费</span>开源的3D动画与编程<span class="homepage-banner-center-left-typical-highlight">创作软件</span></p>
           <p class="homepage-banner-center-left-target">我们致力于为青少年提供最佳的编程工具与学习体验</p>
-          <span class="homepage-banner-center-left-free">免费体验</span><span class="homepage-banner-center-left-free homepage-banner-center-left-watch">观看视频</span>
+          <span class="homepage-banner-center-left-free" @click="isShowGatherInfo">免费体验</span><span class="homepage-banner-center-left-free homepage-banner-center-left-watch" @click="watchVideo()">观看视频</span>
         </div>
       </div>
     </div>
@@ -151,7 +151,7 @@
               <div class="homepage-teacher-center-img">
                 <div class="homepage-teacher-center-img-wrap">
                   <img :src="item.coverUrl" alt="" width="100%">
-                  <img class="homepage-teacher-center-img-wrap-player" src="@/asset/images/作品播放.png" alt="">
+                  <img class="homepage-teacher-center-img-wrap-player" src="@/asset/images/作品播放.png" alt="" @click="showVideo(item)">
                 </div>
                 <h5 class="homepage-teacher-center-img-name">{{item.workName}}</h5>
                 <p class="homepage-teacher-center-img-author">作者： {{item.author}}</p>
@@ -162,6 +162,11 @@
       </div>
     </div>
     <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
+    <div v-if="videoDialogVisible">
+      <el-dialog :visible.sync="videoDialogVisible" width="40%" center>
+        <video width="100%" :src="currentToPlayerVideo" autoplay controls></video>
+      </el-dialog>
+    </div>
   </div>
 </template>
 
@@ -206,7 +211,9 @@ export default {
       achievementTagsTimer: null,
       currentTagIndex: 0,
       currentPicArr: '',
-      workData: workData
+      workData: workData,
+      videoDialogVisible: false,
+      currentToPlayerVideo: ''
     }
   },
   mounted() {
@@ -230,6 +237,16 @@ export default {
           this.currentPicArr = this.achievement_tags_pic_1
         }
       }, 1000)
+    },
+    showVideo(item) {
+      this.currentToPlayerVideo = item.videoUrl
+      // this.currentToPlayerVideo = "https://api.keepwork.com/storage/v0/siteFiles/770/raw#宣传视频01.mp4"
+      this.videoDialogVisible = true
+    },
+    watchVideo() {
+      this.currentToPlayerVideo =
+        'https://api.keepwork.com/storage/v0/siteFiles/770/raw#宣传视频01.mp4'
+      this.videoDialogVisible = true
     }
   },
   components: {
@@ -492,6 +509,7 @@ export default {
   }
   &-teacher {
     background: #f9faff;
+    padding-bottom: 120px;
     &-title {
       text-align: center;
       font-size: 34px;
@@ -552,11 +570,12 @@ export default {
         &-name {
           font-size: 18px;
           color: #333;
-          margin: 24px 0 20px;
+          margin: 24px 0 20px 30px;
         }
         &-author {
           color: #999;
           font-size: 14px;
+          margin-left: 30px;
         }
       }
     }
