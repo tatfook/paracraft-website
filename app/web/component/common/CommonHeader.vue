@@ -15,7 +15,6 @@
 <script>
 import GatherInfoDialog from '@/component/common/GatherInfoDialog'
 import scrollIntoView from 'scroll-into-view-if-needed'
-import { deflate } from 'zlib'
 
 export default {
   name: 'CommonHeader',
@@ -34,7 +33,9 @@ export default {
     },
     handleSelect(key, keyPath) {
       switch (key) {
-        case ('top', 'oursAdvantage', 'oursService'):
+        case 'top':
+        case 'oursAdvantage':
+        case 'oursService':
           let theId = document.getElementById(key)
           scrollIntoView(theId, {
             scrollMode: 'if-needed',
