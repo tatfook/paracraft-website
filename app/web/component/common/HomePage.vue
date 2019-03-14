@@ -1,6 +1,6 @@
 <template>
   <div class="homepage">
-    <div class="homepage-banner">
+    <div class="homepage-banner" id="top">
       <div class="homepage-banner-center">
         <div class="homepage-banner-center-left">
           <p class="homepage-banner-center-left-typical">Paracraft是一款<span class="homepage-banner-center-left-typical-highlight">免费</span>开源的3D动画与编程<span class="homepage-banner-center-left-typical-highlight">创作软件</span></p>
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="homepage-advantage">
+    <div class="homepage-advantage" id="oursAdvantage">
       <h4 class="homepage-advantage-title">我们的优势</h4>
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
@@ -45,7 +45,7 @@
           <p class="box-text-text">直接在3D世界中编程</p>
           <p class="box-text-text">沉浸式游戏与学习体验</p>
           <p class="box-text-text">支持PC/移动多平台</p>
-          <p class="box-text-text-bottom"><span>‘‘</span>随心所欲创造属于你的3D动画与游戏<span>’’</span></p>
+          <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>随心所欲创造属于你的3D动画与游戏<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
         </div>
       </div>
       <div class="homepage-advantage-intro">
@@ -56,7 +56,7 @@
           <p class="box-text-text">开发从简单到复杂的3D动画与游戏</p>
           <p class="box-text-text">分享你的作品到网站或发布到手机应用商城</p>
           <p class="box-text-text">历经15年，自主研发的NPL语言与专业3D引擎</p>
-          <p class="box-text-text-bottom"><span>‘‘</span>从可视化编程，到文本编程，到发布专业软件App<span>’’</span></p>
+          <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>从可视化编程，到文本编程，到发布专业软件App<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
         </div>
         <div class="homepage-advantage-intro-box">
           <div class="block">
@@ -84,11 +84,11 @@
           <p class="box-text-text">完整的编程学习生态系统和课程体系，满足学生和老师的需要</p>
           <p class="box-text-text">专业的教师培训+一站式课堂管理平台，助力老师打造高效课堂</p>
           <p class="box-text-text">教学课程可深度定制开发，助力学校和教学机构教学升级</p>
-          <p class="box-text-text-bottom"><span>‘‘</span>随心所欲创造属于你的3D动画与游戏<span>’’</span></p>
+          <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>随心所欲创造属于你的3D动画与游戏<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
         </div>
       </div>
     </div>
-    <div class="homepage-service">
+    <div class="homepage-service" id="oursService">
       <div class="homepage-service-bg">
         <div class="homepage-service-bg-center">
           <h4 class="homepage-service-bg-center-title">我们的服务</h4>
@@ -347,9 +347,10 @@ export default {
     margin: 0 auto;
     &-title {
       text-align: center;
-      margin: 120px 0 60px;
+      margin: 0;
       font-size: 34px;
       font-weight: normal;
+      padding: 120px 0 60px;
     }
     &-intro {
       display: flex;
@@ -411,10 +412,16 @@ export default {
                 margin-right: 15px;
               }
               &-bottom {
-                padding-left: 74px;
+                padding-left: 84px;
                 font-size: 22px;
                 color: #1298ff;
                 margin-top: 35px;
+                &-icon {
+                  margin-right: 10px;
+                  &-right {
+                    margin-left: 10px;
+                  }
+                }
               }
             }
           }
