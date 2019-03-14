@@ -1,6 +1,6 @@
 <template>
   <div class="homepage">
-    <div class="homepage-banner">
+    <div class="homepage-banner" id="top">
       <div class="homepage-banner-center">
         <div class="homepage-banner-center-left">
           <p class="homepage-banner-center-left-typical">Paracraft是一款<span class="homepage-banner-center-left-typical-highlight">免费</span>开源的3D动画与编程<span class="homepage-banner-center-left-typical-highlight">创作软件</span></p>
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="homepage-advantage">
+    <div class="homepage-advantage" id="oursAdvantage">
       <h4 class="homepage-advantage-title">我们的优势</h4>
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
@@ -88,7 +88,7 @@
         </div>
       </div>
     </div>
-    <div class="homepage-service">
+    <div class="homepage-service" id="oursService">
       <div class="homepage-service-bg">
         <div class="homepage-service-bg-center">
           <h4 class="homepage-service-bg-center-title">我们的服务</h4>
@@ -179,7 +179,7 @@ export default {
   name: 'HomePage',
   data() {
     return {
-      showGatherInfoDialog: false,
+      showGatherInfoDialog: false,     
       carouselPic_1: [
         { url: require('@/asset/images/carouse-pic-1.jpg') },
         { url: require('@/asset/images/carouse-pic-2.jpg') },
@@ -347,9 +347,10 @@ export default {
     margin: 0 auto;
     &-title {
       text-align: center;
-      margin: 120px 0 60px;
+      margin: 0;
       font-size: 34px;
       font-weight: normal;
+      padding: 120px 0 60px;
     }
     &-intro {
       display: flex;
