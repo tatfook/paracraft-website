@@ -124,6 +124,7 @@ export default {
               ...this.infoData
             })
             .then(res => {
+              this.sendContentToEmail(this.infoData.email)
               this.handleClose()
               this.submitSuccessVisible = true
             })
@@ -142,13 +143,30 @@ export default {
     resendEmailAgain() {
       this.$refs.resendEmail.validate(valid => {
         if (valid) {
-          console.log('chenggong')
+          this.sendContentToEmail(this.resendEmailData.new_email)
           this.resendEmailVisible = false
         } else {
-          console.log('error submit')
           return false
         }
       })
+    },
+    sendContentToEmail(email) {
+      let baseUrl = process.env.KEEPWORK_API_PREFIX
+      let origin = window.location.origin
+      let aLink = `${origin}/ceo_letter?name=${this.infoData.realname}`
+      axios
+        .post(`${baseUrl}/keepworks/email`, {
+          subject: 'keepwork',
+          to: email,
+          html: `<p>${
+            this.infoData.realname
+          },您好!</p><p>感谢您对Paracraft的关注！我们已经收到了您填写的信息，工作人员将会尽快与您联系。</p><p>完整信件请访问： <a href='${aLink}'></a>${aLink}</p>`
+        })
+        .then(res => {
+        })
+        .catch(err => {
+          console.error('err', err)
+        })
     }
   }
 }
