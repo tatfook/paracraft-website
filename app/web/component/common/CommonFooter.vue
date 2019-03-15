@@ -30,7 +30,7 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">关于我们</li>
-          <li><a href="/#">公司简介</a></li>
+          <li><a href="/companyProfile ">公司简介</a></li>
           <!-- <li><a href="/news">新闻动态</a></li> -->
         </ul>
       </div>
