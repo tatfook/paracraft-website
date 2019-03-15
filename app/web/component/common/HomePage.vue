@@ -5,7 +5,7 @@
         <div class="homepage-banner-center-left">
           <p class="homepage-banner-center-left-typical">Paracraft是一款<span class="homepage-banner-center-left-typical-highlight">免费</span>开源的3D动画与编程<span class="homepage-banner-center-left-typical-highlight">创作软件</span></p>
           <p class="homepage-banner-center-left-target">我们致力于为青少年提供最佳的编程工具与学习体验</p>
-          <span class="homepage-banner-center-left-free" @click="isShowGatherInfo">免费体验</span><span class="homepage-banner-center-left-free homepage-banner-center-left-watch" @click="watchVideo()">观看视频</span>
+          <span class="homepage-banner-center-left-free" @click="isShowGatherInfo">免费体验</span><span class="homepage-banner-center-left-free homepage-banner-center-left-watch" @click="watchFreeVideo()">观看视频</span>
         </div>
       </div>
     </div>
@@ -240,10 +240,9 @@ export default {
     },
     showVideo(item) {
       this.currentToPlayerVideo = item.videoUrl
-      // this.currentToPlayerVideo = "https://api.keepwork.com/storage/v0/siteFiles/770/raw#宣传视频01.mp4"
       this.videoDialogVisible = true
     },
-    watchVideo() {
+    watchFreeVideo() {
       this.currentToPlayerVideo =
         'https://api.keepwork.com/storage/v0/siteFiles/770/raw#宣传视频01.mp4'
       this.videoDialogVisible = true
