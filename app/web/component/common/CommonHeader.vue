@@ -4,7 +4,7 @@
       <el-menu-item index="top"><img src="@/asset/images/paracraft.png" alt="paracraft">Paracraft 创意空间</el-menu-item>
       <el-menu-item index="oursAdvantage">我们的优势</el-menu-item>
       <el-menu-item index="oursService">我们的服务</el-menu-item>
-      <el-menu-item index="price">价格</el-menu-item>
+      <!-- <el-menu-item index="price">价格</el-menu-item> -->
       <el-menu-item index="experience" class="pull-right">
         <el-button type="primary">免费体验</el-button>
       </el-menu-item>
