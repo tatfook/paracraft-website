@@ -1,6 +1,6 @@
 <template>
   <div class="gather-info">
-    <el-dialog :visible.sync="showGatherInfoDialog" width="772px" center class="gather-info-dialog" :before-close="handleClose">
+    <el-dialog v-if="showGatherInfoDialog" :visible.sync="showGatherInfoDialog" width="772px" center class="gather-info-dialog" :before-close="handleClose">
       <div class="gather-info-dialog-title">
         <h4 class="gather-info-dialog-title-text">商务合作</h4>
         <p class="gather-info-dialog-title-hint">免费试用Paracraft，试用中遇到疑问以及商务合作请在Paracraft微信公众号中留言</p>
@@ -117,17 +117,23 @@ export default {
     },
     submitInfo() {
       let baseUrl = process.env.KEEPWORK_API_PREFIX
-      axios
-        .post(`${baseUrl}/paracraftVisitors/upsert`, {
-          ...this.infoData
-        })
-        .then(res => {
-          this.handleClose()
-          this.submitSuccessVisible = true
-        })
-        .catch(err => {
-          console.error('err', err)
-        })
+      this.$refs.infoForm.validate(valid => {
+        if (valid) {
+          axios
+            .post(`${baseUrl}/paracraftVisitors/upsert`, {
+              ...this.infoData
+            })
+            .then(res => {
+              this.handleClose()
+              this.submitSuccessVisible = true
+            })
+            .catch(err => {
+              console.error('err', err)
+            })
+        } else {
+          return false
+        }
+      })
     },
     toResendEmail() {
       this.submitSuccessVisible = false
