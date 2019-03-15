@@ -36,14 +36,18 @@ export default {
         case 'top':
         case 'oursAdvantage':
         case 'oursService':
-          let theId = document.getElementById(key)
-          scrollIntoView(theId, {
-            scrollMode: 'if-needed',
-            behavior: 'smooth'
+          if (this.$route.name != 'HomePage') {
+            this.$router.push('/')
+          }
+          this.$nextTick(() => {
+            let theId = document.getElementById(key)
+            scrollIntoView(theId, {
+              scrollMode: 'if-needed',
+              behavior: 'smooth'
+            })
           })
           break
         case 'price':
-          console.log('暂未开发')
           break
         case 'experience':
           this.showGatherInfo()
