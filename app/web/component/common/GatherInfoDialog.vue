@@ -156,11 +156,12 @@ export default {
       let aLink = `${origin}/ceo_letter?name=${this.infoData.realname}`
       axios
         .post(`${baseUrl}/keepworks/email`, {
-          subject: 'keepwork',
+          subject: '已收到您的需求，我们会尽快与您联系，感谢！',
           to: email,
           html: `<p>${
             this.infoData.realname
-          },您好!</p><p>感谢您对Paracraft的关注！我们已经收到了您填写的信息，工作人员将会尽快与您联系。</p><p>完整信件请访问： <a href='${aLink}'></a>${aLink}</p>`
+          },您好!</p><p>感谢您对Paracraft的关注！我们已经收到了您填写的信息，工作人员将会尽快与您联系。</p><p>完整信件请访问： <a href='${aLink}'></a>${aLink}</p>`,
+          from: 'Paracraft团队 <noreply@mail.keepwork.com>'
         })
         .then(res => {
         })

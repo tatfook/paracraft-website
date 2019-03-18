@@ -31,7 +31,7 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel>
+            <el-carousel :interval="4000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_1" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -60,7 +60,7 @@
         </div>
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel>
+            <el-carousel :interval="4000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_2" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -145,21 +145,14 @@
     <div class="homepage-teacher">
       <h4 class="homepage-teacher-title">作品是最好的老师</h4>
       <div class="homepage-teacher-center">
-        <div class="block">
-          <el-carousel type="card" :interval="150000" arrow="always">
-            <el-carousel-item v-for="(item,index) in workData" :key="index">
-              <div class="homepage-teacher-center-img">
-                <div class="homepage-teacher-center-img-wrap">
-                  <img :src="item.coverUrl" alt="" width="100%">
-                  <img class="homepage-teacher-center-img-wrap-player" src="@/asset/images/作品播放.png" alt="" @click="showVideo(item)">
-                </div>
-                <h5 class="homepage-teacher-center-img-name">{{item.workName}}</h5>
-                <p class="homepage-teacher-center-img-author">作者： {{item.author}}</p>
-              </div>
-            </el-carousel-item>
-          </el-carousel>
-        </div>
+        <work-carousel @showVideo="showVideo"></work-carousel>
       </div>
+    </div>
+    <div class="homepage-price">
+      <price-item @isShowGatherInfo="isShowGatherInfo"></price-item>
+    </div>
+    <div class="homepage-company">
+      <company-item></company-item>
     </div>
     <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
     <div v-if="videoDialogVisible">
@@ -173,7 +166,9 @@
 <script>
 import GatherInfoDialog from '@/component/common/GatherInfoDialog'
 import VideoPlayer from '@/component/common/VideoPlayer'
-import workData from '@/component/data/workData.js'
+import WorkCarousel from './WorkCarousel'
+import PriceItem from './PriceItem'
+import CompanyItem from './CompanyItem'
 
 export default {
   name: 'HomePage',
@@ -211,7 +206,6 @@ export default {
       achievementTagsTimer: null,
       currentTagIndex: 0,
       currentPicArr: '',
-      workData: workData,
       videoDialogVisible: false,
       currentToPlayerVideo: ''
     }
@@ -250,7 +244,10 @@ export default {
   },
   components: {
     GatherInfoDialog,
-    VideoPlayer
+    VideoPlayer,
+    WorkCarousel,
+    PriceItem,
+    CompanyItem
   }
 }
 </script>
@@ -359,11 +356,6 @@ export default {
         .block .el-carousel {
           .el-carousel__indicators {
             .el-carousel__indicator {
-              .el-carousel__button {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-              }
               &.is-active button {
                 background: #409eff;
               }
@@ -524,49 +516,8 @@ export default {
       margin: 0;
     }
     &-center {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
-      .block .el-carousel {
-        .el-carousel__container {
-          height: 400px !important;
-          max-width: 100%;
-          .el-carousel__item {
-            .el-carousel__mask {
-              opacity: 0.6;
-            }
-            &.is-active .homepage-teacher-center-img-wrap {
-              position: relative;
-              &-player {
-                display: block !important;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                margin-left: -30px;
-                margin-top: -30px;
-              }
-            }
-          }
-          .el-carousel__arrow {
-            color: #409eff;
-            background-color: #ffffff;
-            box-shadow: 0px 4px 11px 0px rgba(172, 172, 172, 0.32);
-          }
-        }
-        .el-carousel__indicators {
-          .el-carousel__indicator {
-            .el-carousel__button {
-              width: 10px;
-              height: 10px;
-              border-radius: 50%;
-            }
-            &.is-active {
-              button {
-                background: #409eff;
-              }
-            }
-          }
-        }
-      }
       &-img {
         &-wrap {
           &-player {
