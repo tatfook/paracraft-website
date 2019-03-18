@@ -151,6 +151,9 @@
     <div class="homepage-price">
       <price-item @isShowGatherInfo="isShowGatherInfo"></price-item>
     </div>
+    <div class="homepage-company">
+      <company-item></company-item>
+    </div>
     <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
     <div v-if="videoDialogVisible">
       <el-dialog :visible.sync="videoDialogVisible" width="40%" center>
@@ -165,6 +168,7 @@ import GatherInfoDialog from '@/component/common/GatherInfoDialog'
 import VideoPlayer from '@/component/common/VideoPlayer'
 import WorkCarousel from './WorkCarousel'
 import PriceItem from './PriceItem'
+import CompanyItem from './CompanyItem'
 
 export default {
   name: 'HomePage',
@@ -242,7 +246,8 @@ export default {
     GatherInfoDialog,
     VideoPlayer,
     WorkCarousel,
-    PriceItem
+    PriceItem,
+    CompanyItem
   }
 }
 </script>
