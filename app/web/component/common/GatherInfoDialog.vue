@@ -1,6 +1,6 @@
 <template>
   <div class="gather-info">
-    <el-dialog :visible.sync="showGatherInfoDialog" width="772px" center class="gather-info-dialog" :before-close="handleClose">
+    <el-dialog v-if="showGatherInfoDialog" :visible.sync="showGatherInfoDialog" width="772px" center class="gather-info-dialog" :before-close="handleClose">
       <div class="gather-info-dialog-title">
         <h4 class="gather-info-dialog-title-text">商务合作</h4>
         <p class="gather-info-dialog-title-hint">免费试用Paracraft，试用中遇到疑问以及商务合作请在Paracraft微信公众号中留言</p>
@@ -117,17 +117,24 @@ export default {
     },
     submitInfo() {
       let baseUrl = process.env.KEEPWORK_API_PREFIX
-      axios
-        .post(`${baseUrl}/paracraftVisitors/upsert`, {
-          ...this.infoData
-        })
-        .then(res => {
-          this.handleClose()
-          this.submitSuccessVisible = true
-        })
-        .catch(err => {
-          console.error('err', err)
-        })
+      this.$refs.infoForm.validate(valid => {
+        if (valid) {
+          axios
+            .post(`${baseUrl}/paracraftVisitors/upsert`, {
+              ...this.infoData
+            })
+            .then(res => {
+              this.sendContentToEmail(this.infoData.email)
+              this.handleClose()
+              this.submitSuccessVisible = true
+            })
+            .catch(err => {
+              console.error('err', err)
+            })
+        } else {
+          return false
+        }
+      })
     },
     toResendEmail() {
       this.submitSuccessVisible = false
@@ -136,13 +143,31 @@ export default {
     resendEmailAgain() {
       this.$refs.resendEmail.validate(valid => {
         if (valid) {
-          console.log('chenggong')
+          this.sendContentToEmail(this.resendEmailData.new_email)
           this.resendEmailVisible = false
         } else {
-          console.log('error submit')
           return false
         }
       })
+    },
+    sendContentToEmail(email) {
+      let baseUrl = process.env.KEEPWORK_API_PREFIX
+      let origin = window.location.origin
+      let aLink = `${origin}/ceo_letter?name=${this.infoData.realname}`
+      axios
+        .post(`${baseUrl}/keepworks/email`, {
+          subject: '已收到您的需求，我们会尽快与您联系，感谢！',
+          to: email,
+          html: `<p>${
+            this.infoData.realname
+          },您好!</p><p>感谢您对Paracraft的关注！我们已经收到了您填写的信息，工作人员将会尽快与您联系。</p><p>完整信件请访问： <a href='${aLink}'></a>${aLink}</p>`,
+          from: 'Paracraft团队 <noreply@mail.keepwork.com>'
+        })
+        .then(res => {
+        })
+        .catch(err => {
+          console.error('err', err)
+        })
     }
   }
 }
@@ -154,6 +179,13 @@ export default {
       .el-dialog__header,
       .el-dialog__body {
         padding: 0;
+      }
+      .el-dialog__header {
+        .el-dialog__headerbtn{
+          .el-icon-close:before{
+            color: #fff;
+          }
+        }
       }
     }
     &-title {

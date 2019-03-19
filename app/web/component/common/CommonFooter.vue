@@ -4,7 +4,7 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">产品</li>
-          <li>Paracraft 创意空间</li>
+          <li @click="handleSelect('top')">Paracraft 创意空间</li>
           <li><a href="/download">免费下载</a></li>
           <li><a href="https://keepwork.com/">作品社区</a></li>
           <li><a href="https://keepwork.com/NPL">NPL动画与编程大赛</a></li>
@@ -13,9 +13,9 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">服务</li>
-          <li><a href="#">我们的优势</a></li>
-          <li><a href="#">我们的服务</a></li>
-          <li><a href="#">价格</a></li>
+          <li @click="handleSelect('oursAdvantage')">我们的优势</li>
+          <li @click="handleSelect('oursService')">我们的服务</li>
+          <!-- <li @click="handleSelect('price')">价格</li> -->
         </ul>
       </div>
       <div class="common-footer-content-part">
@@ -30,7 +30,7 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">关于我们</li>
-          <li><a href="/#">公司简介</a></li>
+          <li><a href="/companyProfile ">公司简介</a></li>
           <!-- <li><a href="/news">新闻动态</a></li> -->
         </ul>
       </div>
@@ -59,8 +59,37 @@
   </div>
 </template>
 <script>
+import scrollIntoView from 'scroll-into-view-if-needed'
+
 export default {
-  name: 'CommonFooter'
+  name: 'CommonFooter',
+  methods: {
+    handleSelect(key) {
+      switch (key) {
+        case 'top':
+        case 'oursAdvantage':
+        case 'oursService':
+          if (this.$route.name != 'HomePage') {
+            this.$router.push('/')
+          }
+          this.$nextTick(() => {
+            let theId = document.getElementById(key)
+            scrollIntoView(theId, {
+              scrollMode: 'if-needed',
+              behavior: 'smooth'
+            })
+          })
+          break
+        case 'price':
+          break
+        case 'experience':
+          this.showGatherInfo()
+          break
+        default:
+          break
+      }
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -77,7 +106,7 @@ export default {
         padding: 0 0 20px;
         font-size: 12px;
         line-height: 35px;
-        a{
+        a {
           text-decoration: none;
           color: #b4b4b4;
         }
@@ -87,12 +116,13 @@ export default {
         }
         li + li {
           color: #b4b4b4;
+          cursor: pointer;
         }
-        &-weixin{
+        &-weixin {
           width: 122px;
         }
       }
-      &-last{
+      &-last {
         text-align: center;
       }
     }

@@ -5,23 +5,23 @@
         <div class="homepage-banner-center-left">
           <p class="homepage-banner-center-left-typical">Paracraft是一款<span class="homepage-banner-center-left-typical-highlight">免费</span>开源的3D动画与编程<span class="homepage-banner-center-left-typical-highlight">创作软件</span></p>
           <p class="homepage-banner-center-left-target">我们致力于为青少年提供最佳的编程工具与学习体验</p>
-          <span class="homepage-banner-center-left-free" @click="isShowGatherInfo">免费体验</span><span class="homepage-banner-center-left-free homepage-banner-center-left-watch" @click="watchVideo()">观看视频</span>
+          <span class="homepage-banner-center-left-free" @click="isShowGatherInfo">免费体验</span><span class="homepage-banner-center-left-free homepage-banner-center-left-watch" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/770/raw#宣传视频01.mp4')">观看视频</span>
         </div>
       </div>
     </div>
     <div class="homepage-tags">
       <div class="homepage-tags-center">
-        <div class="homepage-tags-center-keywork">
-          <span class="homepage-tags-center-keywork-hightlight">免费</span>
+        <div class="homepage-tags-center-keyword">
+          <span class="homepage-tags-center-keyword-hightlight">免费</span>
           <span>开源200万行代码</span>
-          <span class="homepage-tags-center-keywork-hightlight">3D世界</span>
+          <span class="homepage-tags-center-keyword-hightlight">3D世界</span>
           <span>原创NPL语言</span>
-          <span><span class="homepage-tags-center-keywork-hightlight">15年</span>研发历史</span>
+          <span><span class="homepage-tags-center-keyword-hightlight">15年</span>研发历史</span>
         </div>
-        <div class="homepage-tags-center-keywork">
+        <div class="homepage-tags-center-keyword">
           <span>100+部教学视频</span>
           <span>完整的教材</span>
-          <span>覆盖从<span class="homepage-tags-center-keywork-hightlight">小学到大学</span></span>
+          <span>覆盖从<span class="homepage-tags-center-keyword-hightlight">小学到大学</span></span>
           <span>完整的项目式学习体验 </span>
         </div>
       </div>
@@ -31,36 +31,41 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel>
+            <el-carousel :interval="4000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_1" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
             </el-carousel>
           </div>
         </div>
-        <div class="homepage-advantage-intro-box box-text">
-          <h5 class="box-text-title">下一代的Minecraft</h5>
-          <p class="box-text-text">完善的3D场景编辑器</p>
-          <p class="box-text-text">制作3D骨骼动画人物</p>
-          <p class="box-text-text">直接在3D世界中编程</p>
-          <p class="box-text-text">沉浸式游戏与学习体验</p>
-          <p class="box-text-text">支持PC/移动多平台</p>
-          <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>随心所欲创造属于你的3D动画与游戏<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
+        <div class="homepage-advantage-intro-box">
+          <div class="box-text">
+            <h5 class="box-text-title">下一代的Minecraft</h5>
+            <p class="box-text-text">完善的3D场景编辑器</p>
+            <p class="box-text-text">制作3D骨骼动画人物</p>
+            <p class="box-text-text">直接在3D世界中编程</p>
+            <p class="box-text-text">沉浸式游戏与学习体验</p>
+            <p class="box-text-text">支持PC/移动多平台</p>
+            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>随心所欲创造属于你的3D动画与游戏<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
+          </div>
         </div>
       </div>
       <div class="homepage-advantage-intro">
-        <div class="homepage-advantage-intro-box box-text">
-          <h5 class="box-text-title">升级版的Scratch可视化编程</h5>
-          <p class="box-text-text">从2D到3D全面升级Scratch命令</p>
-          <p class="box-text-text">从可视化编程到基于文本的编程</p>
-          <p class="box-text-text">开发从简单到复杂的3D动画与游戏</p>
-          <p class="box-text-text">分享你的作品到网站或发布到手机应用商城</p>
-          <p class="box-text-text">历经15年，自主研发的NPL语言与专业3D引擎</p>
-          <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>从可视化编程，到文本编程，到发布专业软件App<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
+        <div class="homepage-advantage-intro-box">
+          <div class="box-text">
+
+            <h5 class="box-text-title">升级版的Scratch可视化编程</h5>
+            <p class="box-text-text">从2D到3D全面升级Scratch命令</p>
+            <p class="box-text-text">从可视化编程到基于文本的编程</p>
+            <p class="box-text-text">开发从简单到复杂的3D动画与游戏</p>
+            <p class="box-text-text">分享你的作品到网站或发布到手机应用商城</p>
+            <p class="box-text-text">历经15年，自主研发的NPL语言与专业3D引擎</p>
+            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>从可视化编程，到文本编程，到发布专业软件App<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
+          </div>
         </div>
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel>
+            <el-carousel :interval="4000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_2" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -71,20 +76,22 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <!-- <el-carousel height="150px"> -->
-            <!-- <el-carousel-item v-for="(item,index) in carouselPic_1" :key="index"> -->
-            <img src="@/asset/images/carouse-pic-7.jpg" alt="" width="100%">
-            <!-- </el-carousel-item> -->
-            <!-- </el-carousel> -->
+            <el-carousel :interval="4000" indicator-position="outside">
+            <el-carousel-item v-for="(item,index) in carouselPic_3" :key="index">
+            <img :src="item.url" alt="" width="100%">
+            </el-carousel-item>
+            </el-carousel>
           </div>
         </div>
-        <div class="homepage-advantage-intro-box box-text">
-          <h5 class="box-text-title">面向未来教育</h5>
-          <p class="box-text-text">丰富有趣的课程内容，孩子学习兴趣浓厚</p>
-          <p class="box-text-text">完整的编程学习生态系统和课程体系，满足学生和老师的需要</p>
-          <p class="box-text-text">专业的教师培训+一站式课堂管理平台，助力老师打造高效课堂</p>
-          <p class="box-text-text">教学课程可深度定制开发，助力学校和教学机构教学升级</p>
-          <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>随心所欲创造属于你的3D动画与游戏<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
+        <div class="homepage-advantage-intro-box">
+          <div class="box-text">
+            <h5 class="box-text-title">面向未来教育</h5>
+            <p class="box-text-text">丰富有趣的课程内容，孩子学习兴趣浓厚</p>
+            <p class="box-text-text">完整的编程学习生态系统和课程体系，满足学生和老师的需要</p>
+            <p class="box-text-text">专业的教师培训+一站式课堂管理平台，助力老师打造高效课堂</p>
+            <p class="box-text-text">教学课程可深度定制开发，助力学校和教学机构教学升级</p>
+            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>随心所欲创造属于你的3D动画与游戏<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
+          </div>
         </div>
       </div>
     </div>
@@ -145,24 +152,17 @@
     <div class="homepage-teacher">
       <h4 class="homepage-teacher-title">作品是最好的老师</h4>
       <div class="homepage-teacher-center">
-        <div class="block">
-          <el-carousel type="card" :interval="150000" arrow="always">
-            <el-carousel-item v-for="(item,index) in workData" :key="index">
-              <div class="homepage-teacher-center-img">
-                <div class="homepage-teacher-center-img-wrap">
-                  <img :src="item.coverUrl" alt="" width="100%">
-                  <img class="homepage-teacher-center-img-wrap-player" src="@/asset/images/作品播放.png" alt="" @click="showVideo(item)">
-                </div>
-                <h5 class="homepage-teacher-center-img-name">{{item.workName}}</h5>
-                <p class="homepage-teacher-center-img-author">作者： {{item.author}}</p>
-              </div>
-            </el-carousel-item>
-          </el-carousel>
-        </div>
+        <work-carousel @showVideo="showVideo"></work-carousel>
       </div>
     </div>
+    <div class="homepage-price" id="price">
+      <price-item @isShowGatherInfo="isShowGatherInfo"></price-item>
+    </div>
+    <div class="homepage-company">
+      <company-item @isShowGatherInfo="isShowGatherInfo" @showVideo="showVideo"></company-item>
+    </div>
     <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
-    <div v-if="videoDialogVisible">
+    <div v-if="videoDialogVisible" class="homepage-video-dialog">
       <el-dialog :visible.sync="videoDialogVisible" width="40%" center>
         <video width="100%" :src="currentToPlayerVideo" autoplay controls></video>
       </el-dialog>
@@ -173,7 +173,9 @@
 <script>
 import GatherInfoDialog from '@/component/common/GatherInfoDialog'
 import VideoPlayer from '@/component/common/VideoPlayer'
-import workData from '@/component/data/workData.js'
+import WorkCarousel from './WorkCarousel'
+import PriceItem from './PriceItem'
+import CompanyItem from './CompanyItem'
 
 export default {
   name: 'HomePage',
@@ -189,6 +191,9 @@ export default {
         { url: require('@/asset/images/carouse-pic-4.jpg') },
         { url: require('@/asset/images/carouse-pic-5.jpg') },
         { url: require('@/asset/images/carouse-pic-6.jpg') }
+      ],
+      carouselPic_3: [
+        { url: require('@/asset/images/优势3-未来教育.jpg') },
       ],
       achievement_tags_pic_1: [
         { url: require('@/asset/images/500万注册用户.jpg') },
@@ -211,7 +216,6 @@ export default {
       achievementTagsTimer: null,
       currentTagIndex: 0,
       currentPicArr: '',
-      workData: workData,
       videoDialogVisible: false,
       currentToPlayerVideo: ''
     }
@@ -238,20 +242,17 @@ export default {
         }
       }, 1000)
     },
-    showVideo(item) {
-      this.currentToPlayerVideo = item.videoUrl
-      // this.currentToPlayerVideo = "https://api.keepwork.com/storage/v0/siteFiles/770/raw#宣传视频01.mp4"
-      this.videoDialogVisible = true
-    },
-    watchVideo() {
-      this.currentToPlayerVideo =
-        'https://api.keepwork.com/storage/v0/siteFiles/770/raw#宣传视频01.mp4'
+    showVideo(videoUrl) {
+      this.currentToPlayerVideo = videoUrl
       this.videoDialogVisible = true
     }
   },
   components: {
     GatherInfoDialog,
-    VideoPlayer
+    VideoPlayer,
+    WorkCarousel,
+    PriceItem,
+    CompanyItem
   }
 }
 </script>
@@ -329,7 +330,7 @@ export default {
       max-width: 1200px;
       margin: 0 auto;
       color: #f2f2f2;
-      &-keywork {
+      &-keyword {
         font-size: 20px;
         & > span {
           margin-right: 90px;
@@ -345,6 +346,7 @@ export default {
   &-advantage {
     max-width: 1400px;
     margin: 0 auto;
+    min-height: 433px;
     &-title {
       text-align: center;
       margin: 0;
@@ -360,11 +362,6 @@ export default {
         .block .el-carousel {
           .el-carousel__indicators {
             .el-carousel__indicator {
-              .el-carousel__button {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-              }
               &.is-active button {
                 background: #409eff;
               }
@@ -383,44 +380,43 @@ export default {
             }
           }
         }
-        &.box-text {
+        .box-text {
           box-shadow: 0px 8px 27px 0px rgba(63, 138, 250, 0.13);
           border-radius: 6px;
+          min-height: 400px;
           background: url(../../asset/images/advantage-bg.png);
-          .box-text {
-            &-title {
-              font-size: 28px;
-              color: #333;
-              margin-bottom: 34px;
-              padding-left: 74px;
+          &-title {
+            font-size: 28px;
+            color: #333;
+            margin: 0;
+            padding: 45px 0 35px 74px;
+          }
+          &-text {
+            padding-left: 74px;
+            font-size: 18px;
+            color: #666;
+            line-height: 36px;
+            margin: 0;
+            &::before {
+              content: '';
+              border: 2px solid #0090ff;
+              display: inline-block;
+              width: 12px;
+              height: 6px;
+              border-top-color: transparent;
+              border-right-color: transparent;
+              transform: rotate(-45deg) translateY(-16%) translateX(40%);
+              margin-right: 15px;
             }
-            &-text {
-              padding-left: 74px;
-              font-size: 18px;
-              color: #666;
-              line-height: 36px;
-              margin: 0;
-              &::before {
-                content: '';
-                border: 2px solid #0090ff;
-                display: inline-block;
-                width: 12px;
-                height: 6px;
-                border-top-color: transparent;
-                border-right-color: transparent;
-                transform: rotate(-45deg) translateY(-16%) translateX(40%);
-                margin-right: 15px;
-              }
-              &-bottom {
-                padding-left: 84px;
-                font-size: 22px;
-                color: #1298ff;
-                margin-top: 35px;
-                &-icon {
-                  margin-right: 10px;
-                  &-right {
-                    margin-left: 10px;
-                  }
+            &-bottom {
+              padding:0 0 44px 84px;
+              font-size: 22px;
+              color: #1298ff;
+              margin-top: 35px;
+              &-icon {
+                margin-right: 10px;
+                &-right {
+                  margin-left: 10px;
                 }
               }
             }
@@ -525,49 +521,8 @@ export default {
       margin: 0;
     }
     &-center {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
-      .block .el-carousel {
-        .el-carousel__container {
-          height: 400px !important;
-          max-width: 100%;
-          .el-carousel__item {
-            .el-carousel__mask {
-              opacity: 0.6;
-            }
-            &.is-active .homepage-teacher-center-img-wrap {
-              position: relative;
-              &-player {
-                display: block !important;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                margin-left: -30px;
-                margin-top: -30px;
-              }
-            }
-          }
-          .el-carousel__arrow {
-            color: #409eff;
-            background-color: #ffffff;
-            box-shadow: 0px 4px 11px 0px rgba(172, 172, 172, 0.32);
-          }
-        }
-        .el-carousel__indicators {
-          .el-carousel__indicator {
-            .el-carousel__button {
-              width: 10px;
-              height: 10px;
-              border-radius: 50%;
-            }
-            &.is-active {
-              button {
-                background: #409eff;
-              }
-            }
-          }
-        }
-      }
       &-img {
         &-wrap {
           &-player {
@@ -584,6 +539,33 @@ export default {
           font-size: 14px;
           margin-left: 30px;
         }
+      }
+    }
+  }
+  &-video-dialog {
+    .el-dialog {
+      background: rgba(0, 0, 0, 0);
+
+      .el-dialog__header {
+        padding: 20px;
+        position: relative;
+        .el-dialog__headerbtn {
+          border-radius: 50%;
+          position: absolute;
+          top: -4px;
+          right: -30px;
+          padding: 5px;
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+          }
+          .el-icon-close:before {
+            color: #fff;
+            font-size: 36px;
+          }
+        }
+      }
+      .el-dialog__body {
+        padding: 0;
       }
     }
   }

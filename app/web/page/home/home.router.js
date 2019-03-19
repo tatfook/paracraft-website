@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import HomePage from '@/component/common/HomePage'
 import Download from '@/component/common/Download'
 import News from '@/component/common/News'
+import EmailContent from '@/component/common/EmailContent'
+import CompanyProfile from '@/component/CompanyProfile'
 
 Vue.use(Router)
 
@@ -23,6 +25,16 @@ export default new Router({
       path: '/news',
       name: 'News',
       component: News
+    },
+    {
+      path: '/companyProfile',
+      name: 'CompanyProfile',
+      component: CompanyProfile
+    },
+    {
+      path: '/ceo_letter',
+      name: 'EmailContent',
+      component: EmailContent
     }
   ]
 })
