@@ -63,7 +63,7 @@ export default {
       }, 2000)
     },
     showVideo(item) {
-      this.$emit('showVideo', item)
+      this.$emit('showVideo', item.videoUrl)
     }
   },
   beforeDestroy() {

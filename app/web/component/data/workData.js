@@ -136,12 +136,12 @@ export const workData = [{
     videoUrl: "https://api.keepwork.com/storage/v0/siteFiles/2930/raw#惧谁_colin.mp4",
     coverUrl: require('@/asset/images/workCover/惧谁.jpg')
   },
-  {
-    workName: "荔园小学",
-    author: "深晴",
-    videoUrl: "https://api.keepwork.com/storage/v0/siteFiles/2928/raw#荔园小学.mp4",
-    coverUrl: require('@/asset/images/workCover/荔园小学.jpg')
-  },
+  // {
+  //   workName: "荔园小学",
+  //   author: "深晴",
+  //   videoUrl: "https://api.keepwork.com/storage/v0/siteFiles/2928/raw#荔园小学.mp4",
+  //   coverUrl: require('@/asset/images/workCover/荔园小学.jpg')
+  // },
   {
     workName: "美丽心灵",
     author: "柳金辉",

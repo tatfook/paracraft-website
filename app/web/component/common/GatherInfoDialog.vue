@@ -180,6 +180,13 @@ export default {
       .el-dialog__body {
         padding: 0;
       }
+      .el-dialog__header {
+        .el-dialog__headerbtn{
+          .el-icon-close:before{
+            color: #fff;
+          }
+        }
+      }
     }
     &-title {
       height: 149px;
