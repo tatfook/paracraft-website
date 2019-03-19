@@ -194,6 +194,8 @@ export default {
       ],
       carouselPic_3: [
         { url: require('@/asset/images/优势3-未来教育.jpg') },
+        { url: require('@/asset/images/优势3-辅导平台.jpg') },
+        { url: require('@/asset/images/优势3-辅导平台2.jpg') }
       ],
       achievement_tags_pic_1: [
         { url: require('@/asset/images/500万注册用户.jpg') },
