@@ -13,7 +13,7 @@
       <div class="download-versions-part">
         <h5 class="download-versions-part-title">Mac版</h5>
         <div class="download-versions-part-img"><img src="@/asset/images/mac.png" alt="mac"></div>
-        <el-button class="download-versions-part-btn"><a href="https://itunes.apple.com/cn/app/paracraft/id1422406070">App Store下载</a></el-button>
+        <el-button class="download-versions-part-btn"><a href="https://itunes.apple.com/cn/app/paracraft/id1422406070" target="_blank">App Store下载</a></el-button>
         <el-button class="download-versions-part-btn"><a href="http://cdn.keepwork.com/paracraft/mac/paracraft.pkg?ver=07386">直接下载</a></el-button>
       </div>
       <div class="download-versions-part">
