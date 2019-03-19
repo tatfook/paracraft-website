@@ -547,7 +547,7 @@ export default {
   &-video-dialog {
     .el-dialog {
       background: rgba(0, 0, 0, 0);
-
+      box-shadow: none;
       .el-dialog__header {
         padding: 20px;
         position: relative;
