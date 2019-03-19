@@ -3,7 +3,7 @@
     <el-dialog v-if="showGatherInfoDialog" :visible.sync="showGatherInfoDialog" width="772px" center class="gather-info-dialog" :before-close="handleClose">
       <div class="gather-info-dialog-title">
         <h4 class="gather-info-dialog-title-text">商务合作</h4>
-        <p class="gather-info-dialog-title-hint">免费试用Paracraft，试用中遇到疑问以及商务合作请在Paracraft微信公众号中留言</p>
+        <p class="gather-info-dialog-title-hint">免费试用Paracraft，试用中遇到疑问请在Paracraft微信公众号中留言</p>
       </div>
       <div class="gather-info-dialog-content">
         <div class="gather-info-dialog-content-reminder">
