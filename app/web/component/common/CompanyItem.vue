@@ -31,7 +31,7 @@
         <span class="company-item-tags-center-word"> 原创NPL语言</span>
         <span class="company-item-tags-center-word">分布式的3D游戏引擎</span>
         <span class="company-item-tags-center-word"><span class="company-item-tags-center-word-hightlight">22项</span>软件著作权及PCT国际专利</span>
-        <span class="company-item-tags-center-word"><span class="company-item-tags-center-word-hightlight">7+发明专利</span></span>
+        <span class="company-item-tags-center-word"><span class="company-item-tags-center-word-hightlight">发明专利</span></span>
         <span class="company-item-tags-center-word">开源200万NPL代码</span>
         <span class="company-item-tags-center-word"><span class="company-item-tags-center-word-hightlight">自主知识产权</span></span>
         <span class="company-item-tags-center-word">主创人员<span class="company-item-tags-center-word-hightlight">10-30年编程经验</span></span>
@@ -39,7 +39,7 @@
     </div>
     <div class="company-item-bottom">
       <div class="company-item-bottom-center">
-        <p class="company-item-bottom-center-text">我们诚心邀请培训机构，学校，教育工作者和我们一起推广Paracraft</p>
+        <p class="company-item-bottom-center-text">我们诚心邀请培训机构、学校、教育工作者和我们一起推广Paracraft</p>
         <span class="company-item-bottom-center-button" @click="isShowGatherInfo">马上体验</span>
       </div>
     </div>
