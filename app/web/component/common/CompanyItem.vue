@@ -179,11 +179,7 @@ export default {
         margin: 12px 0;
         cursor: pointer;
         &:hover {
-          background: linear-gradient(
-            to right,
-            rgb(221, 216, 216),
-            rgb(154, 188, 248)
-          );
+          background: #e0e9ff;
         }
       }
     }
