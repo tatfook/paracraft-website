@@ -127,10 +127,11 @@
       <div class="homepage-achievement-intro">
         <div class="homepage-achievement-intro-box" v-for="(pic,index) in currentPicArr" :key="index">
           <img :src="pic.url" alt="">
+          <p class="homepage-achievement-intro-box-text">{{pic.text}}</p>
         </div>
       </div>
       <div class="homepage-achievement-tags">
-        <span :class="[{'hightlight': index == currentTagIndex}]" v-for="(i,index) in achievement_tags" :key="index" v-html="i.text">500万注册用户</span>
+        <span :class="[{'hightlight': index == currentTagIndex}]" v-for="(i,index) in achievement_tags" :key="index" v-html="i.text"></span>
       </div>
       <div class="homepage-achievement-intro">
         <div class="homepage-achievement-intro-box">
@@ -198,14 +199,14 @@ export default {
         { url: require('@/asset/images/优势3-辅导平台2.jpg') }
       ],
       achievement_tags_pic_1: [
-        { url: require('@/asset/images/500万注册用户.jpg') },
-        { url: require('@/asset/images/100部教学视频.jpg') },
-        { url: require('@/asset/images/50多节在线课程.jpg') }
+        { url: require('@/asset/images/500万注册用户.jpg'),text: '500万注册用户' },
+        { url: require('@/asset/images/100部教学视频.jpg'),text: '100部教学视频' },
+        { url: require('@/asset/images/50多节在线课程.jpg'),text: '50多节在线课程' }
       ],
       achievement_tags_pic_2: [
-        { url: require('@/asset/images/百度贴吧.jpg') },
-        { url: require('@/asset/images/最美慕课.jpg') },
-        { url: require('@/asset/images/2万部用户作品视频.jpg') }
+        { url: require('@/asset/images/百度贴吧.jpg'),text: '百度贴吧200万帖子' },
+        { url: require('@/asset/images/最美慕课.jpg'),text: '3D动画课程入选中国教育电台最美慕课' },
+        { url: require('@/asset/images/2万部用户作品视频.jpg'),text: '2万部用户作品视频' }
       ],
       achievement_tags: [
         { text: '500万注册用户' },
@@ -334,8 +335,9 @@ export default {
       color: #f2f2f2;
       &-keyword {
         font-size: 20px;
+        text-align: center;
         & > span {
-          margin-right: 90px;
+          margin: 45px;
           line-height: 70px;
         }
         &-hightlight {
@@ -483,6 +485,18 @@ export default {
       margin-bottom: 58px;
       &-box {
         width: 377px;
+        position: relative;
+        &-text {
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 11px 0;
+          bottom: 0;
+          color: #fff;
+          font-size: 14px;
+          background: linear-gradient(to top, rgba(0,0,0,.8), rgba(255,255,255,0));
+        }
       }
     }
     &-tags {
