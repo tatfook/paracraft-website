@@ -69,6 +69,7 @@ export default {
         case 'top':
         case 'oursAdvantage':
         case 'oursService':
+        case 'price':
           if (this.$route.name != 'HomePage') {
             this.$router.push('/')
           }
@@ -76,11 +77,10 @@ export default {
             let theId = document.getElementById(key)
             scrollIntoView(theId, {
               scrollMode: 'if-needed',
-              behavior: 'smooth'
+              behavior: 'smooth',
+              block: 'start'
             })
           })
-          break
-        case 'price':
           break
         case 'experience':
           this.showGatherInfo()
