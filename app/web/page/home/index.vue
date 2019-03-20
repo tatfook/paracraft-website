@@ -26,7 +26,7 @@ export default {
   name: 'App',
   router,
   mounted() {
-    console.log('this.route', this.$route)
+    // console.log('this.route', this.$route)
   },
   computed: {
     hiddenHeaderAndFooter() {

@@ -4,7 +4,7 @@
     <el-dialog :visible.sync="submitSuccessVisible" width="30%" center class="submit-success">
       <h4 slot="title" class="submit-success-title">Hi,{{infoData.realname}}</h4>
       <div class="submit-success-speech">
-        <p>谢谢，我们已经向您提交的邮箱发送了一份有关如何入门Paracraft的视频！请登录您的邮箱，了解Paracraft创意空间更多信息！</p>
+        <p>我们已经向您提交的邮箱<span class="submit-success-speech-email">({{infoData.email}})</span>发送了一份有关如何入门Paracraft的视频，请查收。</p>
       </div>
       <div class="submit-success-hint">
         <p>如果没有收到确认邮件，可以尝试以下做法：</p>
@@ -109,6 +109,7 @@ export default {
     &-title {
       font-size: 18px;
       color: #333;
+      margin-bottom: 10px;
     }
     &-speech {
       background-color: #eaf3fe;
@@ -117,6 +118,9 @@ export default {
       border: solid 1px #3c7afe;
       padding: 5px 18px;
       color: #1b64d2;
+      &-email {
+        font-weight: bold;
+      }
     }
     &-hint {
       background-color: #fff9e5;
