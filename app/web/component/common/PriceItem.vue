@@ -33,7 +33,8 @@
         <!-- <div class="price-item-content-intro-img"><img class="service-1" src="@/asset/images/贴牌服务.jpg" alt=""></div> -->
         <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>你的专属客户端，当用于在客户端内注册时，网站最后一步，会默认申请成为你的机构的用户。</p>
         <!-- <div class="price-item-content-intro-img"><img class="service-2" src="@/asset/images/贴牌服务2.jpg" alt=""></div> -->
-        <p class="price-item-content-intro-img-reminder">您在机构的管理后台，可以通过新用户的请求，或者直接联系用户，购买你们的更多的服务。</p>
+        <!-- <p class="price-item-content-intro-img-reminder">您在机构的管理后台，可以通过新用户的请求，或者直接联系用户，购买你们的更多的服务。</p> -->
+        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>您在机构的管理后台，可以通过新用户的请求，或者直接联系用户，购买你们的更多的服务。</p>
         <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>你将获得独立可更新PC客户端安装包，您可以独立发行这个贴牌客户端，来吸引用户。</p>
         <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>你可以发行有你们LOGO的用户作品到Android应用商店。</p>
         <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>如果你需要完整的Paracraft与NPL引擎商业化授权请联系我们，完整商业化授权允许你按照任何你希望的方式去改变和发行Paracraft。</p>
