@@ -53,7 +53,7 @@ export default {
       carouselPic: [
         { url: require('@/asset/images/公司介绍01.jpg'), type: 'img' },
         { url: require('@/asset/images/公司介绍02.jpg'), type: 'img' },
-        { url: require('@/asset/images/公司介绍03.jpg'), type: 'img' }
+        { url: require('@/asset/images/公司介绍-不带播放按纽.jpg'), type: 'img' }
       ]
     }
   },
