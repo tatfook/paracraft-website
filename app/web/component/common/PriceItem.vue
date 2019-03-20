@@ -115,7 +115,7 @@ export default {
             content: '';
             display: inline-block;
             width: 2px;
-            height: 18px;
+            height: 20px;
             background: #fd9900;
             position: absolute;
             top: 22px;
