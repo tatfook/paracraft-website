@@ -40,7 +40,7 @@
     <div class="company-item-bottom">
       <div class="company-item-bottom-center">
         <p class="company-item-bottom-center-text">我们诚心邀请培训机构、学校、教育工作者和我们一起推广Paracraft</p>
-        <span class="company-item-bottom-center-button" @click="isShowGatherInfo">马上体验</span>
+        <span class="company-item-bottom-center-button" @click="isShowGatherInfo">立即咨询</span>
       </div>
     </div>
   </div>
