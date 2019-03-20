@@ -30,7 +30,7 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="14000" indicator-position="outside">
+            <el-carousel :interval="4000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_1" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -64,7 +64,7 @@
         </div>
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="14000" indicator-position="outside">
+            <el-carousel :interval="4000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_2" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -75,7 +75,7 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="14000" indicator-position="outside">
+            <el-carousel :interval="4000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_3" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -112,7 +112,7 @@
             <div class="homepage-service-bg-center-intro-box">
               <img src="@/asset/images/课程定制开发.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">课程定制开发</h6>
-              <p class="homepage-service-bg-center-intro-box-text">除了提供青少年编程课程定制开发以外，我们还提供数学、物理、化学、生物等其它学科的3D游戏化和数字化课件外包开发服务，将抽象的知识通过3D技术和游戏动画的形式更加形象立体化的展示出来，从而提升学生的学习兴趣，降低老师的授课难度。</p>
+              <p class="homepage-service-bg-center-intro-box-text">不止提供编程课程定制开发，我们还提供数学、物理、化学、生物等其他学科的3D游戏化和数字化课件外包开发服务，使教学更具有针对性，学习效率提升，促进教学质量的提示。</p>
             </div>
           </div>
         </div>
@@ -412,11 +412,11 @@ export default {
                 opacity: 0.6;
               }
             }
-            .el-carousel__arrow {
-              color: #409eff;
-              background-color: #ffffff;
-              box-shadow: 0px 4px 11px 0px rgba(172, 172, 172, 0.32);
-            }
+            // .el-carousel__arrow {
+            //   color: #409eff;
+            //   background-color: #ffffff;
+            //   box-shadow: 0px 4px 11px 0px rgba(172, 172, 172, 0.32);
+            // }
           }
         }
         .box-text {
@@ -477,7 +477,7 @@ export default {
           color: #fff;
           text-align: center;
           font-size: 34px;
-          padding: 97px 0 67px;
+          padding: 74px 0 67px;
           font-weight: normal;
           margin: 0;
         }
