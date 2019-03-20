@@ -133,12 +133,15 @@
       <div class="homepage-achievement-intro">
         <div class="homepage-achievement-intro-box">
           <img src="@/asset/images/连续5年举办创作大赛.jpg" alt="">
+          <p class="homepage-achievement-intro-box-text">举办国际大赛</p>
         </div>
         <div class="homepage-achievement-intro-box">
           <img src="@/asset/images/学生作品获得.jpg" alt="">
+          <p class="homepage-achievement-intro-box-text">学生作品获得计算机比赛一等奖</p>
         </div>
         <div class="homepage-achievement-intro-box">
           <img src="@/asset/images/抵达3500万家庭.jpg" alt="">
+          <p class="homepage-achievement-intro-box-text">IPTV，抵达3500万家庭</p>
         </div>
       </div>
       <div class="homepage-achievement-award">
@@ -480,7 +483,7 @@ export default {
         &-intro {
           display: flex;
           justify-content: space-between;
-          padding-bottom: 82px;
+          padding-bottom: 70px;
           &-box {
             width: 426px;
             text-align: center;
@@ -516,7 +519,7 @@ export default {
       justify-content: space-around;
       margin-bottom: 58px;
       &-box {
-        width: 377px;
+        width: 378px;
         position: relative;
         &-text {
           position: absolute;
@@ -524,7 +527,7 @@ export default {
           text-align: center;
           margin: 0;
           padding: 11px 0;
-          bottom: 0;
+          bottom: 2px;
           color: #fff;
           font-size: 14px;
           background: linear-gradient(
