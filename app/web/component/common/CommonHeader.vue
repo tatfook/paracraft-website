@@ -44,7 +44,8 @@ export default {
             let theId = document.getElementById(key)
             scrollIntoView(theId, {
               scrollMode: 'if-needed',
-              behavior: 'smooth'
+              behavior: 'smooth',
+              block: 'start'
             })
           })
           break
