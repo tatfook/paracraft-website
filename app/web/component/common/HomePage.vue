@@ -188,8 +188,8 @@ export default {
         { url: require('@/asset/images/carouse-pic-3.jpg') }
       ],
       carouselPic_2: [
-        { url: require('@/asset/images/carouse-pic-4.jpg') },
-        { url: require('@/asset/images/carouse-pic-5.jpg') },
+        { url: require('@/asset/images/优势2-从可视化到基于.jpg') },
+        { url: require('@/asset/images/优势2-开发从游戏.jpg') },
         {
           url: require('@/asset/images/优势2-开发从简单到复杂的3D动画与游戏.jpg')
         }
@@ -477,7 +477,7 @@ export default {
           color: #fff;
           text-align: center;
           font-size: 34px;
-          padding: 74px 0 67px;
+          padding: 74px 0 63px;
           font-weight: normal;
           margin: 0;
         }
