@@ -6,7 +6,7 @@
       <el-menu-item index="oursService">服务项目</el-menu-item>
       <el-menu-item index="price">价格</el-menu-item>
       <el-menu-item index="experience" class="pull-right">
-        <el-button type="primary" class="common-header-menu-experience-btn">免费体验</el-button>
+        <el-button type="primary" class="common-header-menu-experience-btn">合作咨询</el-button>
       </el-menu-item>
     </el-menu>
     <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>

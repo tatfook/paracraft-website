@@ -2,8 +2,8 @@
   <div class="gather-info">
     <el-dialog v-if="showGatherInfoDialog" :visible.sync="showGatherInfoDialog" width="772px" center class="gather-info-dialog" :before-close="handleClose">
       <div class="gather-info-dialog-title">
-        <h4 class="gather-info-dialog-title-text">商务合作</h4>
-        <p class="gather-info-dialog-title-hint">免费试用Paracraft，试用中遇到疑问请在Paracraft微信公众号中留言</p>
+        <h4 class="gather-info-dialog-title-text">合作咨询</h4>
+        <p class="gather-info-dialog-title-hint">我们的销售代表会尽快联系您</p>
       </div>
       <div class="gather-info-dialog-content">
         <div class="gather-info-dialog-content-reminder">
@@ -24,7 +24,7 @@
             <el-input placeholder="请输入单位或者机构名称" v-model="infoData.organization"></el-input>
           </el-form-item>
           <el-form-item label="描述：">
-            <el-input placeholder="请简单描述一下你想了解的问题" v-model="infoData.description"></el-input>
+            <el-input type="textarea" placeholder="请简单描述一下你想了解的问题" v-model="infoData.description"></el-input>
           </el-form-item>
           <el-form-item class="gather-info-dialog-content-form-submit">
             <el-button class="gather-info-dialog-content-form-submit-btn" type="primary" @click="submitInfo()">提交</el-button>
@@ -112,8 +112,8 @@ export default {
     }
   },
   methods: {
-    handleClose(params) {
-      this.$emit('close', params)
+    handleClose() {
+      this.$emit('close')
     },
     submitInfo() {
       let baseUrl = process.env.KEEPWORK_API_PREFIX
@@ -219,6 +219,9 @@ export default {
         }
       }
       &-form {
+        .el-form-item{
+          margin-bottom: 10px;
+        }
         &-submit {
           text-align: center;
           padding: 13px 0 47px;

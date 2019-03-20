@@ -5,15 +5,14 @@
         <div class="homepage-banner-center-left">
           <p class="homepage-banner-center-left-typical">Paracraft是一款<span class="homepage-banner-center-left-typical-highlight">免费</span>开源的3D动画与<span class="homepage-banner-center-left-typical-highlight">编程创作</span>软件</p>
           <p class="homepage-banner-center-left-target">我们致力于为青少年提供最佳的编程工具与学习体验</p>
-          <span class="homepage-banner-center-left-free" @click="isShowGatherInfo">免费体验</span><span class="homepage-banner-center-left-free homepage-banner-center-left-watch" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/770/raw#宣传视频01.mp4')">观看视频</span>
+          <span class="homepage-banner-center-left-free" @click="isShowGatherInfo">合作咨询</span><span class="homepage-banner-center-left-free homepage-banner-center-left-watch" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/770/raw#宣传视频01.mp4')">观看视频</span>
         </div>
       </div>
     </div>
     <div class="homepage-tags">
       <div class="homepage-tags-center">
         <div class="homepage-tags-center-keyword">
-          <span class="homepage-tags-center-keyword-hightlight">免费</span>
-          <span>开源200万行代码</span>
+          <span><span class="homepage-tags-center-keyword-hightlight">免费</span>开源200万行代码</span>
           <span class="homepage-tags-center-keyword-hightlight">3D世界</span>
           <span>原创NPL语言</span>
           <span><span class="homepage-tags-center-keyword-hightlight">15年</span>研发历史</span>
@@ -90,7 +89,7 @@
             <p class="box-text-text">完整的编程学习生态系统和课程体系，满足学生和老师的需要</p>
             <p class="box-text-text">专业的教师培训+一站式课堂管理平台，助力老师打造高效课堂</p>
             <p class="box-text-text">教学课程可深度定制开发，助力学校和教学机构教学升级</p>
-            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>随心所欲创造属于你的3D动画与游戏<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
+            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>教育的本质就是让人保持Keep有事可做Work<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
           </div>
         </div>
       </div>
@@ -113,7 +112,7 @@
             <div class="homepage-service-bg-center-intro-box">
               <img src="@/asset/images/课程定制开发.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">课程定制开发</h6>
-              <p class="homepage-service-bg-center-intro-box-text">我们不止于编程课：数学，物理，生物，历史，外语，如果你希望将游戏化或数字化教学引入课堂或课后自学中，我们提供专业的课件外包开发服务。</p>
+              <p class="homepage-service-bg-center-intro-box-text">除了提供青少年编程课程定制开发以外，我们还提供数学、物理、化学、生物等其它学科的3D游戏化和数字化课件外包开发服务，将抽象的知识通过3D技术和游戏动画的形式更加形象立体化的展示出来，从而提升学生的学习兴趣，降低老师的授课难度。</p>
             </div>
           </div>
         </div>
@@ -191,7 +190,9 @@ export default {
       carouselPic_2: [
         { url: require('@/asset/images/carouse-pic-4.jpg') },
         { url: require('@/asset/images/carouse-pic-5.jpg') },
-        { url: require('@/asset/images/优势2-开发从简单到复杂的3D动画与游戏.jpg') }
+        {
+          url: require('@/asset/images/优势2-开发从简单到复杂的3D动画与游戏.jpg')
+        }
       ],
       carouselPic_3: [
         { url: require('@/asset/images/优势3-未来教育.jpg') },
