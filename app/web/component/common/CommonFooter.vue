@@ -14,8 +14,8 @@
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">服务</li>
           <li @click="handleSelect('oursAdvantage')">我们的优势</li>
-          <li @click="handleSelect('oursService')">我们的服务</li>
-          <!-- <li @click="handleSelect('price')">价格</li> -->
+          <li @click="handleSelect('oursService')">服务项目</li>
+          <li @click="handleSelect('price')">价格</li>
         </ul>
       </div>
       <div class="common-footer-content-part">
@@ -113,6 +113,7 @@ export default {
         &-title {
           color: #fff;
           padding: 30px 0 8px;
+          font-size: 14px;
         }
         li + li {
           color: #b4b4b4;
