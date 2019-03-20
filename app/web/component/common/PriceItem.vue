@@ -19,7 +19,7 @@
         <p class="price-item-content-charge-terms">4. 学生数量大于500，新加入的学生费用为1500元/年</p>
 
         <p class="price-item-content-charge price-item-content-charge-per"><span class="price-item-content-charge-icon"></span>我们还提供额外的教师培训服务。每位老师3000元/年</p>
-        <p class="price-item-content-charge price-item-content-charge-per-2">我们还提供额外的教师培训服务。每位老师3000元</p>
+        <p class="price-item-content-charge price-item-content-charge-per-2">联系我们可申请最多3名免费教师培训名额</p>
         <!-- <div class="price-item-content-counter"></div> -->
         <div class="price-item-content-hint">
           包年一次性付费优惠更多，欢迎洽谈。
