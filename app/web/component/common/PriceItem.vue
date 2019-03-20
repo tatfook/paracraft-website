@@ -60,7 +60,7 @@
 export default {
   name: 'PriceItem',
   methods: {
-    isShowGatherInfo(){
+    isShowGatherInfo() {
       this.$emit('isShowGatherInfo')
     }
   }
@@ -82,6 +82,7 @@ export default {
       border: solid 1px #6ebffd;
       max-width: 1200px;
       margin: 0 auto 60px;
+      padding-bottom: 60px;
       &-top {
         height: 82px;
         line-height: 82px;
@@ -162,7 +163,7 @@ export default {
         color: #ee6a00;
         height: 60px;
         line-height: 60px;
-        margin: 67px;
+        margin: 67px 67px 0;
         padding-left: 24px;
       }
       &-intro {
@@ -200,7 +201,7 @@ export default {
         }
       }
       &-solution {
-        margin: 45px 0 60px 67px;
+        margin: 45px 0 0 67px;
         border-left: 1px solid #eaeaea;
         padding-left: 20px;
         &-title {
@@ -235,6 +236,14 @@ export default {
       display: inline-block;
       line-height: 68px;
       background: linear-gradient(90deg, #417dff 0%, #3c93ff 53%, #36a9ff 100%);
+      &:hover {
+        background: linear-gradient(
+          90deg,
+          #588af7 0%,
+          #4485d4 53%,
+          #0e7ccf 100%
+        );
+      }
     }
   }
 }

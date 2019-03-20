@@ -3,7 +3,7 @@
     <div class="homepage-banner" id="top">
       <div class="homepage-banner-center">
         <div class="homepage-banner-center-left">
-          <p class="homepage-banner-center-left-typical">Paracraft是一款<span class="homepage-banner-center-left-typical-highlight">免费</span>开源的3D动画与编程<span class="homepage-banner-center-left-typical-highlight">创作软件</span></p>
+          <p class="homepage-banner-center-left-typical">Paracraft是一款<span class="homepage-banner-center-left-typical-highlight">免费</span>开源的3D动画与<span class="homepage-banner-center-left-typical-highlight">编程创作</span>软件</p>
           <p class="homepage-banner-center-left-target">我们致力于为青少年提供最佳的编程工具与学习体验</p>
           <span class="homepage-banner-center-left-free" @click="isShowGatherInfo">免费体验</span><span class="homepage-banner-center-left-free homepage-banner-center-left-watch" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/770/raw#宣传视频01.mp4')">观看视频</span>
         </div>
@@ -31,7 +31,7 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="4000" indicator-position="outside">
+            <el-carousel :interval="14000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_1" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -65,7 +65,7 @@
         </div>
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="4000" indicator-position="outside">
+            <el-carousel :interval="14000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_2" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -76,10 +76,10 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="4000" indicator-position="outside">
-            <el-carousel-item v-for="(item,index) in carouselPic_3" :key="index">
-            <img :src="item.url" alt="" width="100%">
-            </el-carousel-item>
+            <el-carousel :interval="14000" indicator-position="outside">
+              <el-carousel-item v-for="(item,index) in carouselPic_3" :key="index">
+                <img :src="item.url" alt="" width="100%">
+              </el-carousel-item>
             </el-carousel>
           </div>
         </div>
@@ -98,25 +98,22 @@
     <div class="homepage-service" id="oursService">
       <div class="homepage-service-bg">
         <div class="homepage-service-bg-center">
-          <h4 class="homepage-service-bg-center-title">我们的服务</h4>
+          <h4 class="homepage-service-bg-center-title">服务项目</h4>
           <div class="homepage-service-bg-center-intro">
             <div class="homepage-service-bg-center-intro-box">
-              <img src="@/asset/images/ours-service-1.png" alt="">
-              <h6 class="homepage-service-bg-center-intro-box-title">Paracraft 软件贴牌</h6>
-              <p class="homepage-service-bg-center-intro-box-text">在客户端或网站启动界面加上您指定的Logo和文字；</p>
-              <p class="homepage-service-bg-center-intro-box-text">以及3D引擎商业化授权</p>
+              <img src="@/asset/images/课程与数字化教学服务.png" alt="">
+              <h6 class="homepage-service-bg-center-intro-box-title">课程与数字化教学服务</h6>
+              <p class="homepage-service-bg-center-intro-box-text">我们制作了大量寓教于乐的课程，并有配套教材，适合中小学生从入门到精通编程</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
-              <img src="@/asset/images/ours-service-2.png" alt="">
+              <img src="@/asset/images/Paracraft-软件贴牌.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">Paracraft 软件贴牌</h6>
-              <p class="homepage-service-bg-center-intro-box-text">在客户端或网站启动界面加上您指定的Logo和文字；</p>
-              <p class="homepage-service-bg-center-intro-box-text">以及3D引擎商业化授权</p>
+              <p class="homepage-service-bg-center-intro-box-text">在客户端或网站启动界面加上您指定的Logo和文字，以及3D引擎商业化授权</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
-              <img src="@/asset/images/ours-service-3.png" alt="">
-              <h6 class="homepage-service-bg-center-intro-box-title">Paracraft 软件贴牌</h6>
-              <p class="homepage-service-bg-center-intro-box-text">在客户端或网站启动界面加上您指定的Logo和文字；</p>
-              <p class="homepage-service-bg-center-intro-box-text">以及3D引擎商业化授权</p>
+              <img src="@/asset/images/课程定制开发.png" alt="">
+              <h6 class="homepage-service-bg-center-intro-box-title">课程定制开发</h6>
+              <p class="homepage-service-bg-center-intro-box-text">我们不止于编程课：数学，物理，生物，历史，外语，如果你希望将游戏化或数字化教学引入课堂或课后自学中，我们提供专业的课件外包开发服务。</p>
             </div>
           </div>
         </div>
@@ -185,13 +182,13 @@ export default {
       showGatherInfoDialog: false,
       carouselPic_1: [
         { url: require('@/asset/images/carouse-pic-1.jpg') },
-        { url: require('@/asset/images/carouse-pic-2.jpg') },
+        { url: require('@/asset/images/优势1-沉浸式游戏与学习体验.jpg') },
         { url: require('@/asset/images/carouse-pic-3.jpg') }
       ],
       carouselPic_2: [
         { url: require('@/asset/images/carouse-pic-4.jpg') },
         { url: require('@/asset/images/carouse-pic-5.jpg') },
-        { url: require('@/asset/images/carouse-pic-6.jpg') }
+        { url: require('@/asset/images/优势2-开发从简单到复杂的3D动画与游戏.jpg') }
       ],
       carouselPic_3: [
         { url: require('@/asset/images/优势3-未来教育.jpg') },
@@ -199,14 +196,32 @@ export default {
         { url: require('@/asset/images/优势3-辅导平台2.jpg') }
       ],
       achievement_tags_pic_1: [
-        { url: require('@/asset/images/500万注册用户.jpg'),text: '500万注册用户' },
-        { url: require('@/asset/images/100部教学视频.jpg'),text: '100部教学视频' },
-        { url: require('@/asset/images/50多节在线课程.jpg'),text: '50多节在线课程' }
+        {
+          url: require('@/asset/images/500万注册用户.jpg'),
+          text: '500万注册用户'
+        },
+        {
+          url: require('@/asset/images/100部教学视频.jpg'),
+          text: '100部教学视频'
+        },
+        {
+          url: require('@/asset/images/50多节在线课程.jpg'),
+          text: '50多节在线课程'
+        }
       ],
       achievement_tags_pic_2: [
-        { url: require('@/asset/images/百度贴吧.jpg'),text: '百度贴吧200万帖子' },
-        { url: require('@/asset/images/最美慕课.jpg'),text: '3D动画课程入选中国教育电台最美慕课' },
-        { url: require('@/asset/images/2万部用户作品视频.jpg'),text: '2万部用户作品视频' }
+        {
+          url: require('@/asset/images/百度贴吧.jpg'),
+          text: '百度贴吧200万帖子'
+        },
+        {
+          url: require('@/asset/images/最美慕课.jpg'),
+          text: '3D动画课程入选中国教育电台最美慕课'
+        },
+        {
+          url: require('@/asset/images/2万部用户作品视频.jpg'),
+          text: '2万部用户作品视频'
+        }
       ],
       achievement_tags: [
         { text: '500万注册用户' },
@@ -261,6 +276,7 @@ export default {
 </script>
 <style lang="scss">
 .homepage {
+  font-family: 'MicrosoftYaHei';
   &-banner {
     background: linear-gradient(to right, #351d85, #081746);
     &-center {
@@ -298,12 +314,21 @@ export default {
           color: #fff;
           margin-right: 37px;
           cursor: pointer;
+          font-size: 20px;
           background: linear-gradient(
             90deg,
             #417dff 0%,
             #3c93ff 53%,
             #36a9ff 100%
           );
+          &:hover {
+            background: linear-gradient(
+              90deg,
+              #588af7 0%,
+              #4485d4 53%,
+              #0e7ccf 100%
+            );
+          }
         }
         &-watch {
           background: #ecc318;
@@ -317,10 +342,13 @@ export default {
             width: 0;
             position: absolute;
             top: 22px;
-            left: 50px;
+            left: 41px;
             display: inline-block;
             border: 10px solid transparent;
             border-left-color: #333;
+          }
+          &:hover {
+            background: #bda134;
           }
         }
       }
@@ -374,8 +402,11 @@ export default {
           .el-carousel__container {
             height: 404px !important;
             max-width: 100%;
-            .el-carousel__item .el-carousel__mask {
-              opacity: 0.6;
+            .el-carousel__item {
+              box-shadow: 0px 8px 27px 0px rgba(63, 138, 250, 0.13);
+              .el-carousel__mask {
+                opacity: 0.6;
+              }
             }
             .el-carousel__arrow {
               color: #409eff;
@@ -413,7 +444,7 @@ export default {
               margin-right: 15px;
             }
             &-bottom {
-              padding:0 0 44px 84px;
+              padding: 0 0 44px 84px;
               font-size: 22px;
               color: #1298ff;
               margin-top: 35px;
@@ -463,6 +494,7 @@ export default {
               font-size: 16px;
               opacity: 0.8;
               line-height: 29px;
+              padding: 0 30px;
             }
           }
         }
@@ -495,7 +527,11 @@ export default {
           bottom: 0;
           color: #fff;
           font-size: 14px;
-          background: linear-gradient(to top, rgba(0,0,0,.8), rgba(255,255,255,0));
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8),
+            rgba(255, 255, 255, 0)
+          );
         }
       }
     }
@@ -523,6 +559,7 @@ export default {
       &-bright {
         font-size: 22px;
         color: #333;
+        margin-left: 18px;
       }
     }
   }
