@@ -418,7 +418,7 @@ export default {
         .box-text {
           box-shadow: 0px 8px 27px 0px rgba(63, 138, 250, 0.13);
           border-radius: 6px;
-          min-height: 400px;
+          min-height: 404px;
           background: url(../../asset/images/advantage-bg.png);
           &-title {
             font-size: 28px;
