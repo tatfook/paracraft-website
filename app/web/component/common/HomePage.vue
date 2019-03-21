@@ -89,7 +89,7 @@
             <p class="box-text-text">完整的编程学习生态系统和课程体系，满足学生和老师的需要</p>
             <p class="box-text-text">专业的教师培训+一站式课堂管理平台，助力老师打造高效课堂</p>
             <p class="box-text-text">教学课程可深度定制开发，助力学校和教学机构教学升级</p>
-            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>教育的本质就是让人保持Keep有事可做Work<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
+            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>教育的本质就是让人(Keep)有事可做(Work)<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
           </div>
         </div>
       </div>
