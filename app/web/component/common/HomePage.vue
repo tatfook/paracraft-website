@@ -55,11 +55,11 @@
 
             <h5 class="box-text-title">升级版的Scratch可视化编程</h5>
             <p class="box-text-text">从2D到3D全面升级Scratch命令</p>
-            <p class="box-text-text">积木式编程与代码一键切换</p>
+            <p class="box-text-text">积木式编程与代码编程一键切换</p>
             <p class="box-text-text">开发从简单到复杂的3D动画与游戏</p>
             <p class="box-text-text">分享你的作品到网站或发布到手机应用商店</p>
             <p class="box-text-text">历经15年，自主研发的NPL语言与专业3D引擎</p>
-            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>从可视化编程，到文本编程，到发布专业软件App<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
+            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>从可视化编程，到文本编程，到发布专业应用程序<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
           </div>
         </div>
         <div class="homepage-advantage-intro-box">
@@ -89,7 +89,7 @@
             <p class="box-text-text">完整的编程学习生态系统和课程体系，满足学生和老师的需要</p>
             <p class="box-text-text">专业的教师培训+一站式课堂管理平台，助力老师打造高效课堂</p>
             <p class="box-text-text">教学课程可深度定制开发，助力学校和教学机构教学升级</p>
-            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>教育的本质就是让人(Keep)有事可做(Work)<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
+            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>教育的本质就是让人保持(Keep)有事可做(Work)<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@
       <div class="homepage-achievement-intro">
         <div class="homepage-achievement-intro-box">
           <img src="@/asset/images/连续5年举办创作大赛.jpg" alt="">
-          <p class="homepage-achievement-intro-box-text">连续5年举办创作大赛，举办国际大赛</p>
+          <p class="homepage-achievement-intro-box-text">连续5年举办国内外创作大赛</p>
         </div>
         <div class="homepage-achievement-intro-box">
           <img src="@/asset/images/学生作品获得.jpg" alt="">
@@ -144,7 +144,7 @@
         </div>
       </div>
       <div class="homepage-achievement-award">
-        <span class="homepage-achievement-award-contest">连续5年举办创作大赛，举办国际大赛</span>
+        <span class="homepage-achievement-award-contest">连续5年举办国内外创作大赛</span>
         <span class="homepage-achievement-award-bright">学生作品获得计算机比赛一等奖</span><br>
         <span>学生作品获得计算机比赛一等奖<span class="homepage-achievement-award-bright">IPTV，抵达3500万家庭</span></span>
       </div>
@@ -418,11 +418,11 @@ export default {
                 opacity: 0.6;
               }
             }
-            // .el-carousel__arrow {
-            //   color: #409eff;
-            //   background-color: #ffffff;
-            //   box-shadow: 0px 4px 11px 0px rgba(172, 172, 172, 0.32);
-            // }
+            .el-carousel__arrow {
+              color: #409eff;
+              background-color: #ffffff;
+              box-shadow: 0px 4px 11px 0px rgba(172, 172, 172, 0.32);
+            }
           }
         }
         .box-text {
@@ -776,6 +776,7 @@ export default {
       }
     }
     &-teacher {
+    padding-bottom: 30px;
       &-title {
         padding: 40px 0 25px;
         font-size: 21px;
