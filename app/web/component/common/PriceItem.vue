@@ -9,14 +9,14 @@
         <p class="price-item-content-flow">通用流程</p>
         <p class="price-item-content-step"><span class="price-item-content-step-icon">1</span>留下您的联系方式，我们的服务人员将邀请您体验具体课程内容</p>
         <p class="price-item-content-step"><span class="price-item-content-step-icon">2</span>与我们签约，并按需采购课程</p>
-        <p class="price-item-content-step"><span class="price-item-content-step-icon price-item-content-step-icon-last">3</span>在线添加学生与老师，开始教学</p>
+        <p class="price-item-content-step  price-item-content-step-last"><span class="price-item-content-step-icon">3</span>在线添加学生与老师，开始教学</p>
 
         <p class="price-item-content-flow">收费标准</p>
         <p class="price-item-content-charge"><span class="price-item-content-intro-icon"></span>我们按照学生数目收取年费</p>
-        <p class="price-item-content-charge-terms">1. 5人以内免费</p>
-        <p class="price-item-content-charge-terms">2. 学生数量100以内，单个学生费用2000元/年</p>
-        <p class="price-item-content-charge-terms">3. 学生数量100到500之间，新加入的学生费用为1800元/年</p>
-        <p class="price-item-content-charge-terms">4. 学生数量大于500，新加入的学生费用为1500元/年</p>
+        <p class="price-item-content-charge-terms"><span class="price-item-content-charge-terms-num">1.</span> 5人以内免费</p>
+        <p class="price-item-content-charge-terms"><span class="price-item-content-charge-terms-num">2.</span> 学生数量100以内，单个学生费用2000元/年</p>
+        <p class="price-item-content-charge-terms"><span class="price-item-content-charge-terms-num">3.</span> 学生数量100到500之间，新加入的学生费用为1800元/年</p>
+        <p class="price-item-content-charge-terms"><span class="price-item-content-charge-terms-num">4.</span> 学生数量大于500，新加入的学生费用为1500元/年</p>
 
         <p class="price-item-content-charge price-item-content-charge-per"><span class="price-item-content-intro-icon"></span>我们还提供额外的教师培训服务。每位老师3000元/年</p>
         <p class="price-item-content-charge price-item-content-charge-per-2">联系我们可申请最多3名免费教师培训名额</p>
@@ -40,9 +40,9 @@
         <div class="price-item-content-top">
           定制化课件开发
         </div>
-        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>根据学校和教学机构的需求，开发特色化的编程教学课程；</p>
-        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>帮助学校和教学机构打造自己的编程教学品牌；</p>
-        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>数、理、化、生物等其它学科的3D游戏化和数字化课件开发；</p>
+        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>根据学校和教学机构的需求，开发特色化的编程教学课程。</p>
+        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>帮助学校和教学机构打造自己的编程教学品牌。</p>
+        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>数、理、化、生物等其它学科的3D游戏化和数字化课件开发。</p>
         <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>PC端与手机端同步制作与发行。</p>
       </div>
     </div>
@@ -96,52 +96,53 @@ export default {
       &-step {
         font-size: 16px;
         color: #333;
-        padding-left: 67px;
+        margin: 0 0 0 67px;
+        padding: 0 0 12px 18px;
+        border-left: 2px solid #fd9900;
+        position: relative;
         &-icon {
-          display: inline-block;
+          position: absolute;
+          //   display: inline-block;
           width: 22px;
           height: 22px;
           border-radius: 50%;
           background: #fd9900;
           text-align: center;
           color: #fff;
-          margin-right: 21px;
-          position: relative;
-          &::before {
-            content: '';
-            display: inline-block;
-            width: 2px;
-            height: 20px;
-            background: #fd9900;
-            position: absolute;
-            top: 22px;
-            left: 10px;
-          }
-          &-last {
-            &::before {
-              height: 0;
-            }
-          }
+          left: -11px;
+          //   margin-right: 21px;
+          //   position: relative;
+          //   &::before {
+          //     content: '';
+          //     display: inline-block;
+          //     width: 2px;
+          //     height: 20px;
+          //     background: #fd9900;
+          //     position: absolute;
+          //     top: 22px;
+          //     left: 10px;
+          //   }
+        }
+        &-last {
+          padding-bottom: 0;
         }
       }
       &-charge {
         color: #333;
         font-size: 16px;
         line-height: 26px;
-        padding-left: 67px;
-        &-icon {
-          display: inline-block;
-          width: 10px;
-          height: 10px;
-          background: #0090ff;
-          transform: rotate(45deg);
-          margin-right: 22px;
-        }
+        padding-left: 86px;
+        position: relative;
         &-terms {
           color: #666;
           padding-left: 98px;
           margin: 9px 0;
           font-size: 16px;
+          position: relative;
+          &-num {
+            position: absolute;
+            left: 82px;
+          }
         }
         &-per {
           margin-bottom: 0;
@@ -156,16 +157,19 @@ export default {
       &-hint {
         background: rgb(255, 245, 229);
         color: #ee6a00;
-        height: 60px;
         line-height: 60px;
         margin: 67px 67px 0;
         padding-left: 24px;
       }
       &-intro {
-        padding-left: 67px;
+        padding-left: 86px;
         font-size: 16px;
         color: #333;
+        position: relative;
         &-icon {
+          position: absolute;
+          top: 10px;
+          left: 62px;
           display: inline-block;
           border: 2px solid #0090ff;
           width: 10px;
@@ -208,7 +212,7 @@ export default {
     padding-bottom: 90px;
     .price-button {
       cursor: pointer;
-      height: 68px;
+      // height: 68px;
       color: #fff;
       border: none;
       min-width: 197px;
@@ -234,6 +238,51 @@ export default {
       &-title {
         padding: 40px 0 25px;
         font-size: 21px;
+      }
+      &-content {
+        margin: 0 10px 20px;
+        &-top {
+          padding-left: 20px;
+        }
+        &-flow {
+          padding-left: 20px;
+        }
+        &-step {
+          margin-left: 30px;
+        }
+        &-charge {
+          padding-left: 40px;
+
+          &-terms {
+            padding-left: 58px;
+            &-num {
+              left: 40px;
+            }
+          }
+        }
+        &-hint {
+          margin: 20px;
+        }
+        &-intro {
+          padding: 0 8px 0 40px;
+          &-icon {
+            position: absolute;
+            top: 10px;
+            left: 18px;
+          }
+        }
+      }
+    }
+    &-say {
+      margin: 12px;
+      font-size: 18px;
+    }
+    &-btn {
+      padding-bottom: 30px;
+      .price-button {
+        line-height: 50px;
+        min-width: 120px;
+        font-size: 15px;
       }
     }
   }

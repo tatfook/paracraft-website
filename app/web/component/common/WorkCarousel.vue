@@ -60,7 +60,7 @@ export default {
         this.currentPage =
           this.currentPage + 1 > this.countPage - 1 ? 0 : this.currentPage + 1
         this.whichPage(this.currentPage)
-      }, 4000)
+      }, 9500)
     },
     showVideo(item) {
       this.$emit('showVideo', item.videoUrl)
