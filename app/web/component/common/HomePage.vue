@@ -30,7 +30,7 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="24000" indicator-position="outside">
+            <el-carousel :interval="4000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_1" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -64,7 +64,7 @@
         </div>
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="24000" indicator-position="outside">
+            <el-carousel :interval="4000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_2" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -75,7 +75,7 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="24000" indicator-position="outside">
+            <el-carousel :interval="4000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_3" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>

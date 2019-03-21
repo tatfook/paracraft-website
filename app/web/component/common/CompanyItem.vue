@@ -4,7 +4,7 @@
     <div class="company-item-intro">
       <div class="company-item-intro-box">
         <div class="company-item-intro-box-carousel">
-          <el-carousel :autoplay="false">
+          <el-carousel :interval="4000">
             <el-carousel-item v-for="(item,index) in carouselPic" :key="index">
               <img :src="item.url" alt="">
             </el-carousel-item>
