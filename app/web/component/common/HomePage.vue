@@ -12,8 +12,8 @@
     <div class="homepage-tags">
       <div class="homepage-tags-center">
         <div class="homepage-tags-center-keyword">
-          <span><span class="homepage-tags-center-keyword-hightlight">免费</span>开源200万行代码</span>
-          <span class="homepage-tags-center-keyword-hightlight">3D世界</span>
+          <!-- <span><span class="homepage-tags-center-keyword-hightlight">免费</span>开源200万行代码</span> -->
+          <span class="homepage-tags-center-keyword-hightlight">3D编程环境</span>
           <span>原创NPL语言</span>
           <span><span class="homepage-tags-center-keyword-hightlight">15年</span>研发历史</span>
         </div>
@@ -44,7 +44,7 @@
             <p class="box-text-text">制作3D骨骼动画人物</p>
             <p class="box-text-text">直接在3D世界中编程</p>
             <p class="box-text-text">沉浸式游戏与学习体验</p>
-            <p class="box-text-text">支持PC/移动多平台</p>
+            <p class="box-text-text">支持PC/移动端多平台</p>
             <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>随心所欲创造属于你的3D动画与游戏<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
           </div>
         </div>
@@ -102,7 +102,7 @@
             <div class="homepage-service-bg-center-intro-box">
               <img src="@/asset/images/课程与数字化教学服务.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">课程与数字化教学服务</h6>
-              <p class="homepage-service-bg-center-intro-box-text">我们制作了大量寓教于乐的课程，并有配套教材，适合中小学生从入门到精通编程</p>
+              <p class="homepage-service-bg-center-intro-box-text">编程课程体系与数字化教学服务，独立研发的完善的编程课程体系，并有专业的配套教材，适合中小学生从入门到精通编程</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
               <img src="@/asset/images/Paracraft-软件贴牌.png" alt="">
