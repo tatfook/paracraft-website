@@ -12,13 +12,13 @@
         <p class="price-item-content-step"><span class="price-item-content-step-icon price-item-content-step-icon-last">3</span>在线添加学生与老师，开始教学</p>
 
         <p class="price-item-content-flow">收费标准</p>
-        <p class="price-item-content-charge"><span class="price-item-content-charge-icon"></span>我们按照学生数目收取年费</p>
+        <p class="price-item-content-charge"><span class="price-item-content-intro-icon"></span>我们按照学生数目收取年费</p>
         <p class="price-item-content-charge-terms">1. 5人以内免费</p>
         <p class="price-item-content-charge-terms">2. 学生数量100以内，单个学生费用2000元/年</p>
         <p class="price-item-content-charge-terms">3. 学生数量100到500之间，新加入的学生费用为1800元/年</p>
         <p class="price-item-content-charge-terms">4. 学生数量大于500，新加入的学生费用为1500元/年</p>
 
-        <p class="price-item-content-charge price-item-content-charge-per"><span class="price-item-content-charge-icon"></span>我们还提供额外的教师培训服务。每位老师3000元/年</p>
+        <p class="price-item-content-charge price-item-content-charge-per"><span class="price-item-content-intro-icon"></span>我们还提供额外的教师培训服务。每位老师3000元/年</p>
         <p class="price-item-content-charge price-item-content-charge-per-2">联系我们可申请最多3名免费教师培训名额</p>
         <!-- <div class="price-item-content-counter"></div> -->
         <div class="price-item-content-hint">
@@ -40,11 +40,10 @@
         <div class="price-item-content-top">
           定制化课件开发
         </div>
-        <div class="price-item-content-solution">
-          <p class="price-item-content-solution-title">解决方案</p>
-          <p class="price-item-content-solution-text">定制开发课程内容</p>
-          <p class="price-item-content-solution-text">手机，PC端App制作与发行</p>
-        </div>
+        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>根据学校和教学机构的需求，开发特色化的编程教学课程；</p>
+        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>帮助学校和教学机构打造自己的编程教学品牌；</p>
+        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>数、理、化、生物等其它学科的3D游戏化和数字化课件开发；</p>
+        <p class="price-item-content-intro"><span class="price-item-content-intro-icon"></span>PC端与手机端同步制作与发行。</p>
       </div>
     </div>
     <p class="price-say">价格仅供参考，我们诚心邀请培训机构、学校、教育工作者和我们一起推广Paracraft</p>
@@ -196,20 +195,6 @@ export default {
           color: #0090ff;
         }
       }
-      &-solution {
-        margin: 45px 0 0 67px;
-        border-left: 1px solid #eaeaea;
-        padding-left: 20px;
-        &-title {
-          color: #28a1f5;
-          font-size: 20px;
-        }
-        &-text {
-          color: #333;
-          font-size: 16px;
-          margin: 4px 0;
-        }
-      }
     }
   }
   &-say {
@@ -239,6 +224,16 @@ export default {
           #4485d4 53%,
           #0e7ccf 100%
         );
+      }
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .price {
+    &-item {
+      &-title {
+        padding: 40px 0 25px;
+        font-size: 21px;
       }
     }
   }

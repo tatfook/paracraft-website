@@ -87,11 +87,9 @@ export default {
       box-shadow: 0px 8px 12px 0px rgba(98, 98, 98, 0.08);
       &-cover {
         width: 380px;
-        height: 198px;
         position: relative;
         &-img {
           width: 100%;
-          height: 100%;
           object-fit: cover;
         }
         &-player {
@@ -164,6 +162,25 @@ export default {
       }
     }
   }
+}
+@media screen and (max-width: 769px) {
+.works {
+  &-cabinet {
+    padding: 8px;
+    &-box {
+      width: 48%;
+      &-cover {
+        width: 100%;
+      }
+      &-title {
+        font-size: 14px;
+      }
+      &-author{
+        font-size: 12px;
+      }
+    }
+  }
+}
 }
 </style>
 
