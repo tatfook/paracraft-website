@@ -30,7 +30,7 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="4000" indicator-position="outside">
+            <el-carousel :interval="24000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_1" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -49,22 +49,22 @@
           </div>
         </div>
       </div>
-      <div class="homepage-advantage-intro">
+      <div class="homepage-advantage-intro homepage-advantage-intro-phone">
         <div class="homepage-advantage-intro-box">
           <div class="box-text">
 
             <h5 class="box-text-title">升级版的Scratch可视化编程</h5>
             <p class="box-text-text">从2D到3D全面升级Scratch命令</p>
-            <p class="box-text-text">从可视化编程到基于文本的编程</p>
+            <p class="box-text-text">积木式编程与代码一键切换</p>
             <p class="box-text-text">开发从简单到复杂的3D动画与游戏</p>
-            <p class="box-text-text">分享你的作品到网站或发布到手机应用商城</p>
+            <p class="box-text-text">分享你的作品到网站或发布到手机应用商店</p>
             <p class="box-text-text">历经15年，自主研发的NPL语言与专业3D引擎</p>
             <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>从可视化编程，到文本编程，到发布专业软件App<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
           </div>
         </div>
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="4000" indicator-position="outside">
+            <el-carousel :interval="24000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_2" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -75,7 +75,7 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="4000" indicator-position="outside">
+            <el-carousel :interval="24000" indicator-position="outside">
               <el-carousel-item v-for="(item,index) in carouselPic_3" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -101,8 +101,8 @@
           <div class="homepage-service-bg-center-intro">
             <div class="homepage-service-bg-center-intro-box">
               <img src="@/asset/images/课程与数字化教学服务.png" alt="">
-              <h6 class="homepage-service-bg-center-intro-box-title">课程与数字化教学服务</h6>
-              <p class="homepage-service-bg-center-intro-box-text">编程课程体系与数字化教学服务，独立研发的完善的编程课程体系，并有专业的配套教材，适合中小学生从入门到精通编程</p>
+              <h6 class="homepage-service-bg-center-intro-box-title">编程课程体系与数字化教学服务</h6>
+              <p class="homepage-service-bg-center-intro-box-text">独立研发的完善的编程课程体系，并有专业的配套教材，适合中小学生从入门到精通编程</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
               <img src="@/asset/images/Paracraft-软件贴牌.png" alt="">
@@ -132,7 +132,7 @@
       <div class="homepage-achievement-intro">
         <div class="homepage-achievement-intro-box">
           <img src="@/asset/images/连续5年举办创作大赛.jpg" alt="">
-          <p class="homepage-achievement-intro-box-text">举办国际大赛</p>
+          <p class="homepage-achievement-intro-box-text">连续5年举办创作大赛，举办国际大赛</p>
         </div>
         <div class="homepage-achievement-intro-box">
           <img src="@/asset/images/学生作品获得.jpg" alt="">
@@ -145,8 +145,8 @@
       </div>
       <div class="homepage-achievement-award">
         <span class="homepage-achievement-award-contest">连续5年举办创作大赛，举办国际大赛</span>
-        <span class="homepage-achievement-award-bright">学生作品获得计算机比赛1等奖</span>
-        <p>学生作品获得计算机比赛1等奖<span class="homepage-achievement-award-bright">IPTV，抵达3500万家庭</span></p>
+        <span class="homepage-achievement-award-bright">学生作品获得计算机比赛一等奖</span><br>
+        <span>学生作品获得计算机比赛一等奖<span class="homepage-achievement-award-bright">IPTV，抵达3500万家庭</span></span>
       </div>
     </div>
     <div class="homepage-teacher">
@@ -197,7 +197,10 @@ export default {
       carouselPic_3: [
         { url: require('@/asset/images/优势3-未来教育.jpg') },
         { url: require('@/asset/images/优势3-辅导平台.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台2.jpg') }
+        { url: require('@/asset/images/优势3-辅导平台2.jpg') },
+        { url: require('@/asset/images/优势3-辅导平台4.jpg') },
+        { url: require('@/asset/images/优势3-辅导平台5.jpg') },
+        { url: require('@/asset/images/优势3-辅导平台6.jpg') }
       ],
       achievement_tags_pic_1: [
         {
@@ -262,7 +265,7 @@ export default {
         } else {
           this.currentPicArr = this.achievement_tags_pic_1
         }
-      }, 1000)
+      }, 14000)
     },
     showVideo(videoUrl) {
       this.currentToPlayerVideo = videoUrl
@@ -393,8 +396,11 @@ export default {
     &-intro {
       display: flex;
       margin-bottom: 90px;
+      flex-wrap: wrap;
       &-box {
         flex: 1;
+        max-width: 680px;
+        min-width: 400px;
         .block .el-carousel {
           .el-carousel__indicators {
             .el-carousel__indicator {
@@ -485,6 +491,7 @@ export default {
           display: flex;
           justify-content: space-between;
           padding-bottom: 70px;
+          flex-wrap: wrap;
           &-box {
             width: 426px;
             text-align: center;
@@ -580,23 +587,6 @@ export default {
     &-center {
       max-width: 1200px;
       margin: 0 auto;
-      &-img {
-        &-wrap {
-          &-player {
-            display: none;
-          }
-        }
-        &-name {
-          font-size: 18px;
-          color: #333;
-          margin: 24px 0 20px 30px;
-        }
-        &-author {
-          color: #999;
-          font-size: 14px;
-          margin-left: 30px;
-        }
-      }
     }
   }
   &-video-dialog {
@@ -623,6 +613,172 @@ export default {
       }
       .el-dialog__body {
         padding: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .homepage {
+    &-banner {
+      &-center {
+        background: url(../../asset/images/banner-phone.jpg) top center;
+        background-size: contain;
+        padding: 0;
+        min-height: 385px;
+        &-left {
+          text-align: center;
+          &-typical {
+            text-align: center;
+            font-size: 20px;
+            line-height: 39px;
+            padding: 60px 25px 40px;
+            &-highlight {
+              font-size: 24px;
+            }
+          }
+          &-target {
+            font-size: 14px;
+            margin: 0 0 45px;
+            text-align: center;
+          }
+          &-free {
+            margin-right: 5px;
+            line-height: 50px;
+            width: 120px;
+            font-size: 15px;
+          }
+          &-watch {
+            margin-left: 20px;
+            &::before {
+              top: 15px;
+              left: 25px;
+            }
+          }
+        }
+      }
+    }
+    &-tags {
+      padding: 15px 40px;
+      background: #2c49c6;
+      &-center {
+        &-keyword {
+          font-size: 12px;
+          & > span {
+            margin: 10px;
+            line-height: 30px;
+          }
+          &-hightlight {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &-advantage {
+      &-title {
+        padding: 40px 0 25px;
+        font-size: 21px;
+      }
+      &-intro {
+        padding: 0 10px;
+        margin-bottom: 20px;
+        &-phone {
+          flex-wrap: wrap-reverse;
+        }
+        &-box {
+          min-width: 100%;
+          .block .el-carousel {
+            .el-carousel__container {
+              height: 240px !important;
+            }
+          }
+          .box-text {
+            min-height: auto;
+            &-title {
+              font-size: 16px;
+              padding: 40px 20px 30px;
+            }
+            &-text {
+              padding-left: 20px;
+              font-size: 14px;
+              line-height: 25px;
+              &-bottom {
+                padding: 0 0 25px;
+                font-size: 14px;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-service {
+      &-bg {
+        background: #105bdd;
+        &-center {
+          &-title {
+            padding: 40px 0 25px;
+            font-size: 21px;
+          }
+          &-intro {
+            padding: 10px;
+            &-box {
+              width: 100%;
+              padding-bottom: 20px;
+              img {
+                width: 100%;
+              }
+              &-title {
+                margin: 30px 0 20px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-achievement {
+      &-title {
+        padding: 40px 0 25px;
+        font-size: 21px;
+      }
+      &-intro {
+        overflow: scroll;
+        padding: 10px;
+        margin-bottom: 20px;
+        &-box {
+          margin: 0 10px;
+        }
+      }
+      &-tags {
+        margin: 0 40px 30px;
+        span {
+          margin-right: 15px;
+          font-size: 12px;
+          line-height: 30px;
+          display: inline-block;
+          &.hightlight {
+            font-size: 15px;
+          }
+        }
+      }
+      &-award {
+        font-size: 12px;
+        line-height: 30px;
+        display: inline-block;
+        &-contest {
+          margin-right: 30px;
+        }
+        &-bright {
+          font-size: 15px;
+          margin-left: 12px;
+          display: inline-block;
+        }
+      }
+    }
+    &-teacher {
+      &-title {
+        padding: 40px 0 25px;
+        font-size: 21px;
       }
     }
   }

@@ -16,7 +16,7 @@
         <p class="company-item-intro-box-text">- 2004年 创始人发明NPL语言</p>
         <p class="company-item-intro-box-text">- ParaEngine工作室成立于2005年8月</p>
         <p class="company-item-intro-box-text">- 2007年获得IDG和著名IT企业家的联合投资</p>
-        <p class="company-item-intro-box-text">- 2009使用NPL语言发行"魔法哈奇": 国内首个3D儿童创想乐园，累计500万注册用户</p>
+        <p class="company-item-intro-box-text">- 2009年使用NPL语言发行"魔法哈奇": 国内首个3D儿童创想乐园，累计500万注册用户</p>
         <p class="company-item-intro-box-text">- 2015年并入上市公司大富科技（300134）子公司</p>
         <p class="company-item-intro-box-text">- 2018年推出keepwork个人作品网</p>
         <p class="company-item-intro-box-btn">
