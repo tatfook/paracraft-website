@@ -20,7 +20,7 @@
         <div class="homepage-tags-center-keyword">
           <span>100+部教学视频</span>
           <span>完整的教材</span>
-          <span>覆盖从<span class="homepage-tags-center-keyword-hightlight">小学到大学</span></span>
+          <span>覆盖从<span class="homepage-tags-center-keyword-hightlight">小学</span>到大学</span>
           <span>完整的项目式学习体验 </span>
         </div>
       </div>
@@ -121,31 +121,35 @@
     <div class="homepage-achievement">
       <h4 class="homepage-achievement-title">我们的教学成果</h4>
       <div class="homepage-achievement-intro">
-        <div class="homepage-achievement-intro-box" v-for="(pic,index) in currentPicArr" :key="index">
-          <img :src="pic.url" alt="">
-          <p class="homepage-achievement-intro-box-text">{{pic.text}}</p>
+        <div class="homepage-achievement-intro-wrap">
+          <div class="homepage-achievement-intro-box" v-for="(pic,index) in currentPicArr" :key="index">
+            <img :src="pic.url" alt="">
+            <p class="homepage-achievement-intro-box-text">{{pic.text}}</p>
+          </div>
         </div>
       </div>
       <div class="homepage-achievement-tags">
         <span :class="[{'hightlight': index == currentTagIndex}]" v-for="(i,index) in achievement_tags" :key="index" v-html="i.text"></span>
       </div>
       <div class="homepage-achievement-intro">
-        <div class="homepage-achievement-intro-box">
-          <img src="@/asset/images/连续5年举办创作大赛.jpg" alt="">
-          <p class="homepage-achievement-intro-box-text">连续5年举办国内外创作大赛</p>
-        </div>
-        <div class="homepage-achievement-intro-box">
-          <img src="@/asset/images/学生作品获得.jpg" alt="">
-          <p class="homepage-achievement-intro-box-text">学生作品获得计算机比赛一等奖</p>
-        </div>
-        <div class="homepage-achievement-intro-box">
-          <img src="@/asset/images/抵达3500万家庭.jpg" alt="">
-          <p class="homepage-achievement-intro-box-text">IPTV，抵达3500万家庭</p>
+        <div class="homepage-achievement-intro-wrap">
+          <div class="homepage-achievement-intro-box">
+            <img src="@/asset/images/连续5年举办创作大赛.jpg" alt="">
+            <p class="homepage-achievement-intro-box-text">连续5年举办国内外创作大赛</p>
+          </div>
+          <div class="homepage-achievement-intro-box">
+            <img src="@/asset/images/学生作品获得.jpg" alt="">
+            <p class="homepage-achievement-intro-box-text">学生作品获得计算机比赛一等奖</p>
+          </div>
+          <div class="homepage-achievement-intro-box">
+            <img src="@/asset/images/抵达3500万家庭.jpg" alt="">
+            <p class="homepage-achievement-intro-box-text">IPTV，抵达3500万家庭</p>
+          </div>
         </div>
       </div>
       <div class="homepage-achievement-award">
         <span class="homepage-achievement-award-contest">连续5年举办国内外创作大赛</span>
-        <span class="homepage-achievement-award-bright">学生作品获得计算机比赛一等奖</span><br>
+        <span class="homepage-achievement-award-bright">学生作品获得计算机比赛一等奖</span>
         <span>200部Paracraft视频上线IPTV，抵达3500万家庭</span>
       </div>
     </div>
@@ -300,6 +304,7 @@ export default {
       &-left {
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 12px;
         &-typical {
           font-size: 41px;
           line-height: 70px;
@@ -527,9 +532,12 @@ export default {
       margin: 0;
     }
     &-intro {
-      display: flex;
-      justify-content: space-around;
       margin-bottom: 58px;
+      &-wrap {
+        display: flex;
+        min-width: 930px;
+        justify-content: space-around;
+      }
       &-box {
         width: 378px;
         position: relative;
@@ -568,6 +576,9 @@ export default {
       font-size: 16px;
       text-align: center;
       line-height: 50px;
+      span {
+        display: inline-block;
+      }
       &-contest {
         margin-right: 58px;
       }
@@ -753,12 +764,17 @@ export default {
         font-size: 21px;
       }
       &-intro {
-        // overflow: scroll;
+        overflow: scroll;
         padding: 10px;
         margin-bottom: 20px;
+        &-wrap {
+          display: flex;
+          min-width: 930px;
+          justify-content: start;
+        }
         &-box {
           margin: 0 10px;
-          width: 32%;
+          width: 300px;
           img {
             width: 100%;
           }
@@ -771,7 +787,7 @@ export default {
         margin: 0 40px 30px;
         span {
           margin-right: 15px;
-          font-size: 12px;
+          font-size: 14px;
           line-height: 30px;
           display: inline-block;
           &.hightlight {
@@ -782,6 +798,9 @@ export default {
       &-award {
         font-size: 12px;
         line-height: 30px;
+        span {
+          display: block;
+        }
         &-contest {
           margin-right: 30px;
         }
