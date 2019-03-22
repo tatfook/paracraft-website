@@ -145,7 +145,7 @@
       </div>
       <div class="homepage-achievement-award">
         <span class="homepage-achievement-award-contest">连续5年举办国内外创作大赛</span>
-        <span class="homepage-achievement-award-bright">学生作品获得计算机比赛一等奖</span><br>
+        <span class="homepage-achievement-award-bright">200部Paracraft视频上线</span><br>
         <span>学生作品获得计算机比赛一等奖<span class="homepage-achievement-award-bright">IPTV，抵达3500万家庭</span></span>
       </div>
     </div>
