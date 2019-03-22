@@ -26,7 +26,7 @@
         <p><a class="email-border-content-box-link" href="http://paracraft.keepwork.com/download?lang=zh">下载Paracraft </a></p>
         <p><a class="email-border-content-box-link" href="https://keepwork.com/lixizhi/lessons/books/paracraft_preview">《Paracraft编程入门》</a></p>
         <p>关注微信号Paracraft ，观看部分教学视频</p>
-        <p><img src="@/asset/images/weixin.png" alt=""></p>
+        <p><img src="@/asset/images/weixin.png" class="email-border-content-box-email" alt=""></p>
       </div>
     </div>
   </div>
@@ -77,6 +77,10 @@ export default {
       padding: 30px 34px;
       &-link {
         color: #0090ff;
+      }
+      &-email {
+        max-width: 258px;
+        width: 90%;
       }
     }
   }
