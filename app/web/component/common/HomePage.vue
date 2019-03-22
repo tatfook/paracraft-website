@@ -20,7 +20,7 @@
         <div class="homepage-tags-center-keyword">
           <span>100+部教学视频</span>
           <span>完整的教材</span>
-          <span>覆盖从<span class="homepage-tags-center-keyword-hightlight">小学到大学</span></span>
+          <span>覆盖从<span class="homepage-tags-center-keyword-hightlight">小学</span>到大学</span>
           <span>完整的项目式学习体验 </span>
         </div>
       </div>
@@ -300,6 +300,7 @@ export default {
       &-left {
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 12px;
         &-typical {
           font-size: 41px;
           line-height: 70px;
