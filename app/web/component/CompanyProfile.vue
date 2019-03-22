@@ -40,5 +40,20 @@
     line-height: 32px;
   }
 }
+@media screen and (max-width: 769px) {
+  .company-profile {
+    &-banner {
+      &-center {
+        &-text {
+          padding: 0;
+          text-align: center;
+        }
+      }
+    }
+  &-intro {
+    padding: 0 20px;
+  }
+  }
+}
 </style>
 
