@@ -799,6 +799,9 @@ export default {
       }
     }
     &-video-dialog {
+      .el-dialog {
+        width: 90% !important;
+      }
     }
   }
 }
