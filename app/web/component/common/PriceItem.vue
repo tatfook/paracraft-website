@@ -249,12 +249,15 @@ export default {
         }
         &-step {
           margin-left: 30px;
+          font-size: 14px;
         }
         &-charge {
           padding-left: 40px;
-
+          font-size: 14px;
           &-terms {
             padding-left: 58px;
+          font-size: 14px;
+
             &-num {
               left: 40px;
             }
@@ -265,6 +268,7 @@ export default {
         }
         &-intro {
           padding: 0 8px 0 40px;
+          font-size: 14px;
           &-icon {
             position: absolute;
             top: 10px;
