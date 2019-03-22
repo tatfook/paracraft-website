@@ -37,7 +37,7 @@
             </el-carousel>
           </div>
         </div>
-        <div class="homepage-advantage-intro-box">
+        <div class="homepage-advantage-intro-box homepage-advantage-intro-box-text">
           <div class="box-text">
             <h5 class="box-text-title">下一代的Minecraft</h5>
             <p class="box-text-text">完善的3D场景编辑器</p>
@@ -50,9 +50,8 @@
         </div>
       </div>
       <div class="homepage-advantage-intro homepage-advantage-intro-phone">
-        <div class="homepage-advantage-intro-box">
+        <div class="homepage-advantage-intro-box homepage-advantage-intro-box-text">
           <div class="box-text">
-
             <h5 class="box-text-title">升级版的Scratch可视化编程</h5>
             <p class="box-text-text">从2D到3D全面升级Scratch命令</p>
             <p class="box-text-text">积木式编程与代码编程一键切换</p>
@@ -82,7 +81,7 @@
             </el-carousel>
           </div>
         </div>
-        <div class="homepage-advantage-intro-box">
+        <div class="homepage-advantage-intro-box homepage-advantage-intro-box-text">
           <div class="box-text">
             <h5 class="box-text-title">面向未来教育</h5>
             <p class="box-text-text">丰富有趣的课程内容，孩子学习兴趣浓厚</p>
@@ -480,6 +479,9 @@ export default {
       &-box {
         width: 680px;
         margin: 0 auto;
+        &-text {
+          width: 720px;
+        }
         .block .el-carousel {
           .el-carousel__indicators {
             .el-carousel__indicator {
@@ -769,7 +771,7 @@ export default {
       }
       &-intro {
         // padding: 0 10px;
-        margin:0 10px 20px;
+        margin: 0 10px 20px;
         &-phone {
           flex-wrap: wrap-reverse;
         }
@@ -908,9 +910,8 @@ export default {
   .homepage {
     &-banner {
       &-center {
-
       }
-      }
+    }
     &-advantage {
       &-intro {
         &-box {
@@ -921,7 +922,7 @@ export default {
           }
         }
       }
-    }      
-      }
+    }
+  }
 }
 </style>
