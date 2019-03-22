@@ -167,6 +167,7 @@
         <video width="100%" :src="currentToPlayerVideo" autoplay controls></video>
       </el-dialog>
     </div>
+    <quick-to-top></quick-to-top>
   </div>
 </template>
 
@@ -176,6 +177,7 @@ import VideoPlayer from '@/component/common/VideoPlayer'
 import WorkCarousel from './WorkCarousel'
 import PriceItem from './PriceItem'
 import CompanyItem from './CompanyItem'
+import QuickToTop from './QuickToTop'
 
 export default {
   name: 'HomePage',
@@ -277,7 +279,8 @@ export default {
     VideoPlayer,
     WorkCarousel,
     PriceItem,
-    CompanyItem
+    CompanyItem,
+    QuickToTop
   }
 }
 </script>
@@ -742,11 +745,18 @@ export default {
         font-size: 21px;
       }
       &-intro {
-        overflow: scroll;
+        // overflow: scroll;
         padding: 10px;
         margin-bottom: 20px;
         &-box {
           margin: 0 10px;
+          width: 32%;
+          img {
+            width: 100%;
+          }
+          &-text {
+            display: none;
+          }
         }
       }
       &-tags {
@@ -776,7 +786,7 @@ export default {
       }
     }
     &-teacher {
-    padding-bottom: 30px;
+      padding-bottom: 30px;
       &-title {
         padding: 40px 0 25px;
         font-size: 21px;
