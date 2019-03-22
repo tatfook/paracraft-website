@@ -30,7 +30,7 @@
       <div class="homepage-advantage-intro">
         <div class="homepage-advantage-intro-box">
           <div class="block">
-            <el-carousel :interval="4000" indicator-position="outside">
+            <el-carousel :interval="4000" indicator-position="outside" :autoplay="false">
               <el-carousel-item v-for="(item,index) in carouselPic_1" :key="index">
                 <img :src="item.url" alt="" width="100%">
               </el-carousel-item>
@@ -127,6 +127,12 @@
             <p class="homepage-achievement-intro-box-text">{{pic.text}}</p>
           </div>
         </div>
+        <div class="homepage-achievement-intro-phone">
+          <div class="homepage-achievement-intro-box" v-for="(pic,index) in currentPicArr_phone" :key="index">
+            <img :src="pic.url" alt="" v-show="index == currentTagIndex ? true : false">
+            <p class="homepage-achievement-intro-box-text" v-show="index == currentTagIndex ? true : false">{{pic.text}}</p>
+          </div>
+        </div>
       </div>
       <div class="homepage-achievement-tags">
         <span :class="[{'hightlight': index == currentTagIndex}]" v-for="(i,index) in achievement_tags" :key="index" v-html="i.text"></span>
@@ -146,11 +152,20 @@
             <p class="homepage-achievement-intro-box-text">IPTV，抵达3500万家庭</p>
           </div>
         </div>
+        <div class="homepage-achievement-intro-phone">
+          <div class="homepage-achievement-intro-box" v-for="(pic,index) in currentPicArr_phone_2" :key="index">
+            <img :src="pic.url" alt="" v-show="index == currentTagIndex_2 ? true : false">
+            <p class="homepage-achievement-intro-box-text" v-show="index == currentTagIndex_2 ? true : false">{{pic.text}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="homepage-achievement-tags">
+        <span :class="[{'hightlight': index == currentTagIndex}]" v-for="(i,index) in achievement_tags_2" :key="index" v-html="i.text"></span>
       </div>
       <div class="homepage-achievement-award">
         <span class="homepage-achievement-award-contest">连续5年举办国内外创作大赛</span>
-        <span class="homepage-achievement-award-bright">学生作品获得计算机比赛一等奖</span>
-        <span>200部Paracraft视频上线IPTV，抵达3500万家庭</span>
+        <span class="homepage-achievement-award-bright homepage-achievement-award-contest">学生作品获得计算机比赛一等奖</span>
+        <span class="homepage-achievement-award-contest">200部Paracraft视频上线IPTV，抵达3500万家庭</span>
       </div>
     </div>
     <div class="homepage-teacher">
@@ -245,9 +260,55 @@ export default {
         { text: '3D动画课程入选中国教育电台最美慕课' },
         { text: '2万部用户作品视频' }
       ],
+      achievement_tags_2: [
+        { text: '连续5年举办国内外创作大赛' },
+        { text: '学生作品获得计算机比赛一等奖' },
+        { text: '200部Paracraft视频上线IPTV，抵达3500万家庭' }
+      ],
       achievementTagsTimer: null,
       currentTagIndex: 0,
       currentPicArr: '',
+      currentPicArr_phone: [
+        {
+          url: require('@/asset/images/500万注册用户.jpg'),
+          text: '500万注册用户'
+        },
+        {
+          url: require('@/asset/images/100部教学视频.jpg'),
+          text: '100部教学视频'
+        },
+        {
+          url: require('@/asset/images/50多节在线课程.jpg'),
+          text: '50多节在线课程'
+        },
+        {
+          url: require('@/asset/images/百度贴吧.jpg'),
+          text: '百度贴吧200万帖子'
+        },
+        {
+          url: require('@/asset/images/最美慕课.jpg'),
+          text: '3D动画课程入选中国教育电台最美慕课'
+        },
+        {
+          url: require('@/asset/images/2万部用户作品视频.jpg'),
+          text: '2万部用户作品视频'
+        }
+      ],
+      currentPicArr_phone_2: [
+        {
+          url: require('@/asset/images/连续5年举办创作大赛.jpg'),
+          text: '连续5年举办国内外创作大赛'
+        },
+        {
+          url: require('@/asset/images/学生作品获得.jpg'),
+          text: '学生作品获得计算机比赛一等奖'
+        },
+        {
+          url: require('@/asset/images/抵达3500万家庭.jpg'),
+          text: 'IPTV，抵达3500万家庭'
+        }
+      ],
+      currentTagIndex_2: 0,
       videoDialogVisible: false,
       currentToPlayerVideo: ''
     }
@@ -255,6 +316,7 @@ export default {
   mounted() {
     this.currentPicArr = this.achievement_tags_pic_1
     this.achievementTagsAnimation()
+    this.achievementTagsAnimation_2()
   },
   methods: {
     isShowGatherInfo() {
@@ -272,7 +334,13 @@ export default {
         } else {
           this.currentPicArr = this.achievement_tags_pic_1
         }
-      }, 14000)
+      }, 4000)
+    },
+    achievementTagsAnimation_2() {
+      this.achievementTagsTimer = setInterval(() => {
+        this.currentTagIndex_2 =
+          this.currentTagIndex_2 + 1 > 2 ? 0 : this.currentTagIndex_2 + 1
+      }, 4000)
     },
     showVideo(videoUrl) {
       this.currentToPlayerVideo = videoUrl
@@ -406,10 +474,12 @@ export default {
       display: flex;
       margin-bottom: 90px;
       flex-wrap: wrap;
+      &-phone {
+        flex-wrap: wrap-reverse;
+      }
       &-box {
-        flex: 1;
-        max-width: 680px;
-        min-width: 400px;
+        width: 680px;
+        margin: 0 auto;
         .block .el-carousel {
           .el-carousel__indicators {
             .el-carousel__indicator {
@@ -538,6 +608,9 @@ export default {
         min-width: 930px;
         justify-content: space-around;
       }
+      &-phone {
+        display: none;
+      }
       &-box {
         width: 378px;
         position: relative;
@@ -608,6 +681,7 @@ export default {
     .el-dialog {
       background: rgba(0, 0, 0, 0);
       box-shadow: none;
+      min-width: 510px !important;
       .el-dialog__header {
         padding: 20px;
         position: relative;
@@ -694,8 +768,8 @@ export default {
         font-size: 21px;
       }
       &-intro {
-        padding: 0 10px;
-        margin-bottom: 20px;
+        // padding: 0 10px;
+        margin:0 10px 20px;
         &-phone {
           flex-wrap: wrap-reverse;
         }
@@ -703,7 +777,7 @@ export default {
           min-width: 100%;
           .block .el-carousel {
             .el-carousel__container {
-              height: 240px !important;
+              // height: 240px !important;
             }
           }
           .box-text {
@@ -764,27 +838,30 @@ export default {
         font-size: 21px;
       }
       &-intro {
-        overflow: scroll;
         padding: 10px;
         margin-bottom: 20px;
         &-wrap {
-          display: flex;
+          display: none;
           min-width: 930px;
           justify-content: start;
         }
+        &-phone {
+          display: block;
+        }
         &-box {
-          margin: 0 10px;
+          margin: 0 auto;
           width: 300px;
           img {
             width: 100%;
           }
           &-text {
-            display: none;
+            // display: none;
           }
         }
       }
       &-tags {
         margin: 0 40px 30px;
+        // display: none;
         span {
           margin-right: 15px;
           font-size: 14px;
@@ -798,6 +875,7 @@ export default {
       &-award {
         font-size: 12px;
         line-height: 30px;
+        display: none;
         span {
           display: block;
         }
@@ -821,8 +899,29 @@ export default {
     &-video-dialog {
       .el-dialog {
         width: 90% !important;
+        min-width: 370px !important;
       }
     }
   }
+}
+@media screen and (max-width: 682px) {
+  .homepage {
+    &-banner {
+      &-center {
+
+      }
+      }
+    &-advantage {
+      &-intro {
+        &-box {
+          .block .el-carousel {
+            .el-carousel__container {
+              height: calc((100vw - 36px) / 680 * 404) !important;
+            }
+          }
+        }
+      }
+    }      
+      }
 }
 </style>

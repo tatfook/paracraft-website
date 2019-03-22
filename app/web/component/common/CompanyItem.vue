@@ -4,7 +4,7 @@
     <div class="company-item-intro">
       <div class="company-item-intro-box">
         <div class="company-item-intro-box-carousel">
-          <el-carousel :interval="4000">
+          <el-carousel :interval="4000" indicator-position="outside">
             <el-carousel-item v-for="(item,index) in carouselPic" :key="index">
               <img :src="item.url" alt="">
             </el-carousel-item>
@@ -72,7 +72,6 @@ export default {
 </script>
 
 <style lang="scss">
-$size: 270/502;
 .company-item {
   background: #f9faff;
   &-title {
@@ -94,6 +93,7 @@ $size: 270/502;
         margin: 28px auto 0;
         .el-carousel {
           .el-carousel__container {
+            height: 270px !important;
             .el-carousel__arrow {
               color: #409eff;
               background-color: #ffffff;
@@ -213,12 +213,9 @@ $size: 270/502;
       display: block;
       &-box {
         margin: 10px;
-
         &-carousel {
           .el-carousel {
             .el-carousel__container {
-              height: 185px !important;
-              // height: calc(360px / 270px * 502px) !important;
               max-width: 100%;
               .el-carousel__item {
                 box-shadow: 0px 8px 27px 0px rgba(63, 138, 250, 0.13);
@@ -253,16 +250,31 @@ $size: 270/502;
         }
       }
     }
-  &-bottom {
-    &-center {
-      padding-top: 20px;
-      &-text {
-        font-size: 20px;
-        padding: 0 10px;
-        line-height: 36px;
+    &-bottom {
+      &-center {
+        padding-top: 20px;
+        &-text {
+          font-size: 20px;
+          padding: 0 10px;
+          line-height: 36px;
+        }
       }
     }
   }
+}
+@media screen and (max-width: 504px) {
+  .company-item {
+    &-intro {
+      &-box {
+        &-carousel {
+          .el-carousel {
+            .el-carousel__container {
+              height: calc((100vw - 20px) / 502 * 270) !important;
+            }
+          }
+        }
+      }
+    }
   }
 }
 </style>
