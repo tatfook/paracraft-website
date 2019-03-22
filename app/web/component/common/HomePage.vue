@@ -185,9 +185,10 @@ export default {
     return {
       showGatherInfoDialog: false,
       carouselPic_1: [
-        { url: require('@/asset/images/carouse-pic-1.jpg') },
+        { url: require('@/asset/images/优势1-完善的3D场景编辑器.jpg') },
+        { url: require('@/asset/images/优势1-制作3D骨骼动画人物.jpg') },
         { url: require('@/asset/images/优势1-沉浸式游戏与学习体验.jpg') },
-        { url: require('@/asset/images/carouse-pic-3.jpg') }
+        { url: require('@/asset/images/优势1-追加.jpg') }
       ],
       carouselPic_2: [
         { url: require('@/asset/images/优势2-从可视化到基于.jpg') },
@@ -708,6 +709,12 @@ export default {
                 padding: 0 0 25px;
                 font-size: 14px;
                 text-align: center;
+                &-icon {
+                  width: 15px;
+                  &-right {
+                    width: 15px;
+                  }
+                }
               }
             }
           }
@@ -791,6 +798,8 @@ export default {
         padding: 40px 0 25px;
         font-size: 21px;
       }
+    }
+    &-video-dialog {
     }
   }
 }

@@ -74,7 +74,7 @@ export default {
     }
   },
   methods: {
-    handleClose(infoData = {isSubmitOperation: 0}) {
+    handleClose(infoData = { isSubmitOperation: 0 }) {
       this.$emit('close', infoData)
     },
     submitInfo() {
@@ -86,7 +86,7 @@ export default {
               ...this.infoData
             })
             .then(res => {
-              this.handleClose({...this.infoData,isSubmitOperation: 1})
+              this.handleClose({ ...this.infoData, isSubmitOperation: 1 })
             })
             .catch(err => {
               console.error('err', err)
@@ -157,6 +157,13 @@ export default {
           width: 139px;
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .gather-info-dialog {
+    .el-dialog {
+      width: 90% !important;
     }
   }
 }
