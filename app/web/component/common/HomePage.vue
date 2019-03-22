@@ -781,7 +781,6 @@ export default {
       &-award {
         font-size: 12px;
         line-height: 30px;
-        display: inline-block;
         &-contest {
           margin-right: 30px;
         }
