@@ -171,6 +171,11 @@ export default {
       width: 48%;
       &-cover {
         width: 100%;
+        &-player {
+          width: 40px;
+          margin-left: -20px;
+          margin-top: -20px;
+        }
       }
       &-title {
         font-size: 14px;

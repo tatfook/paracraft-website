@@ -164,7 +164,7 @@ export default {
   }
 }
 @media screen and (max-width: 769px) {
-  .gather-info-dialog {
+  .gather-info {
     .el-dialog__wrapper {
       .el-dialog {
         width: 90% !important;
