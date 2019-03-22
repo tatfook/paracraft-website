@@ -133,13 +133,12 @@ export default {
     margin: 0 auto;
     padding: 0 10px;
     &-reminder {
-      height: 47px;
       background-color: #f1f6fa;
       border: solid 1px #e0edf2;
       margin: 27px 0 35px;
       display: flex;
       align-items: center;
-      padding: 0 15px;
+      padding: 8px 15px;
       font-size: 12px;
       &-icon {
         margin-right: 13px;
