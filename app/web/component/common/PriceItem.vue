@@ -102,7 +102,6 @@ export default {
         position: relative;
         &-icon {
           position: absolute;
-          //   display: inline-block;
           width: 22px;
           height: 22px;
           border-radius: 50%;
@@ -110,18 +109,7 @@ export default {
           text-align: center;
           color: #fff;
           left: -11px;
-          //   margin-right: 21px;
-          //   position: relative;
-          //   &::before {
-          //     content: '';
-          //     display: inline-block;
-          //     width: 2px;
-          //     height: 20px;
-          //     background: #fd9900;
-          //     position: absolute;
-          //     top: 22px;
-          //     left: 10px;
-          //   }
+          line-height: 22px;
         }
         &-last {
           padding-bottom: 0;
@@ -212,7 +200,6 @@ export default {
     padding-bottom: 90px;
     .price-button {
       cursor: pointer;
-      // height: 68px;
       color: #fff;
       border: none;
       min-width: 197px;
