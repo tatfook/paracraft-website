@@ -736,6 +736,7 @@ export default {
               padding-bottom: 20px;
               img {
                 width: 100%;
+                max-width: 426px;
               }
               &-title {
                 margin: 30px 0 20px;
