@@ -82,14 +82,14 @@ export default {
     sendContentToEmail(email) {
       let baseUrl = process.env.KEEPWORK_API_PREFIX
       let origin = window.location.origin
-      let aLink = `${origin}/ceo_letter?name=${this.infoData.realname}`
+      let aLink = `${origin}/ceo_letter?name=${encodeURI(this.infoData.realname)}`
       axios
         .post(`${baseUrl}/keepworks/email`, {
           subject: '已收到您的需求，我们会尽快与您联系，感谢！',
           to: email,
           html: `<p>${
             this.infoData.realname
-          },您好!</p><p>感谢您对Paracraft的关注！我们已经收到了您填写的信息，工作人员将会尽快与您联系。</p><p>完整信件请访问： <a href='${aLink}'></a>${aLink}</p>`,
+          },您好!</p><p>我是Paracraft的创始人李西峙，感谢您对Paracraft的关注！ 我们已经收到了您填写的信息，工作人员将会尽快与您联系。 很高兴您选择了Paracraft。</p><p>很感谢您选择Paracraft,获取更多素材请访问这里链接： <a href='${aLink}'></a>${aLink}</p><p>在1989年，7岁的我照着一本父亲给我的书，编写了我人生中的第一个程序，并从此爱上了编程。 小学期间，我完成了大量个人作品，从入门阶段到了可以随心所欲去编程的状态。 通过Paracraft，我希望将这种愉悦的学习体验带给更多的孩子们。</p><p>如您有任何问题，欢迎随时通过邮件和我联系，我会在看到的第一时间回复您。 您也可以关注我们的微信号（微信搜索：Paracraft）获取支持。</p><p>祝好！</p><p style='text-align:right;'>李西峙<br>CEO & NPL语言与Paracraft创始人<br>Email：lixizhi@paraengine.com<br></p>`,
           from: 'Paracraft团队 <noreply@mail.keepwork.com>'
         })
         .then(res => {})
