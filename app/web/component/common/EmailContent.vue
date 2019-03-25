@@ -41,7 +41,7 @@ export default {
   },
   mounted() {
     console.log('this.route', this.$route)
-    this.name = this.$route.query.name
+    this.name = decodeURI(this.$route.query.name)
   }
 }
 </script>
