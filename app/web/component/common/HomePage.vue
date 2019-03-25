@@ -158,8 +158,8 @@
           </div>
         </div>
       </div>
-      <div class="homepage-achievement-tags">
-        <span :class="[{'hightlight': index == currentTagIndex}]" v-for="(i,index) in achievement_tags_2" :key="index" v-html="i.text"></span>
+      <div class="homepage-achievement-tags homepage-achievement-tags-phone">
+        <span :class="[{'hightlight': index == currentTagIndex_2}]" v-for="(i,index) in achievement_tags_2" :key="index" v-html="i.text"></span>
       </div>
       <div class="homepage-achievement-award">
         <span class="homepage-achievement-award-contest">连续5年举办国内外创作大赛</span>
@@ -265,6 +265,7 @@ export default {
         { text: '200部Paracraft视频上线IPTV，抵达3500万家庭' }
       ],
       achievementTagsTimer: null,
+      achievementTagsTimer_2: null,
       currentTagIndex: 0,
       currentPicArr: '',
       currentPicArr_phone: [
@@ -336,7 +337,7 @@ export default {
       }, 4000)
     },
     achievementTagsAnimation_2() {
-      this.achievementTagsTimer = setInterval(() => {
+      this.achievementTagsTimer_2 = setInterval(() => {
         this.currentTagIndex_2 =
           this.currentTagIndex_2 + 1 > 2 ? 0 : this.currentTagIndex_2 + 1
       }, 4000)
@@ -345,6 +346,10 @@ export default {
       this.currentToPlayerVideo = videoUrl
       this.videoDialogVisible = true
     }
+  },
+   beforeDestroy() {
+    clearInterval(this.achievementTagsTimer)
+    clearInterval(this.achievementTagsTimer_2)
   },
   components: {
     GatherInfoDialog,
@@ -636,6 +641,9 @@ export default {
     &-tags {
       text-align: center;
       margin-bottom: 70px;
+      &-phone {
+        display: none;
+      }
       span {
         margin-right: 58px;
         font-size: 20px;
@@ -651,11 +659,14 @@ export default {
       font-size: 16px;
       text-align: center;
       line-height: 50px;
+      display: flex;
+      justify-content: space-between;
       span {
         display: inline-block;
+        flex: 1;
       }
       &-contest {
-        margin-right: 58px;
+        // margin-right: 58px;
       }
       &-bright {
         font-size: 22px;
@@ -751,6 +762,7 @@ export default {
     &-tags {
       padding: 15px 40px;
       background: #2c49c6;
+
       &-center {
         &-keyword {
           font-size: 12px;
@@ -864,6 +876,9 @@ export default {
       &-tags {
         margin: 0 40px 30px;
         // display: none;
+        &-phone {
+          display: block;
+        }
         span {
           margin-right: 15px;
           font-size: 14px;
