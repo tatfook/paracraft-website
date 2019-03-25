@@ -20,8 +20,12 @@
           <el-form-item label="邮箱：" prop="email">
             <el-input placeholder="请输入邮箱" v-model="infoData.email"></el-input>
           </el-form-item>
-          <el-form-item label="所属单位名称：">
+          <el-form-item label="所属单位名称：" prop="organization">
             <el-input placeholder="请输入单位或者机构名称" v-model="infoData.organization"></el-input>
+          </el-form-item>
+          <el-form-item label="所在城市：" prop="city">
+            <!-- <el-input placeholder="请输入您所在的城市" v-model="infoData.city"></el-input> -->
+            <el-cascader placeholder="" :options="cityName" filterable change-on-select v-model="infoData.city"></el-cascader>
           </el-form-item>
           <el-form-item label="描述：">
             <el-input type="textarea" placeholder="请简单描述一下你想了解的问题" v-model="infoData.description"></el-input>
@@ -36,6 +40,7 @@
 </template>
 <script>
 import axios from 'axios'
+import cityName from '@/component/data/cityName.js'
 
 export default {
   name: 'GetInfoDialog',
@@ -49,6 +54,7 @@ export default {
         cellphone: '',
         email: '',
         organization: '',
+        city: [],
         description: ''
       },
       infoDataRules: {
@@ -69,8 +75,15 @@ export default {
             message: '请输入正确的邮箱地址',
             trigger: ['blur', 'change']
           }
+        ],
+        organization: [
+          { required: true, message: '请输入您所在的单位名称', trigger: 'blur' }
+        ],
+        city: [
+          { required: true, message: '请选择您所在的城市', trigger: 'blur' }
         ]
-      }
+      },
+      cityName: cityName
     }
   },
   methods: {
@@ -79,11 +92,15 @@ export default {
     },
     submitInfo() {
       let baseUrl = process.env.KEEPWORK_API_PREFIX
+      let { city, ..._infoData } = this.infoData
       this.$refs.infoForm.validate(valid => {
         if (valid) {
           axios
             .post(`${baseUrl}/paracraftVisitors/upsert`, {
-              ...this.infoData
+              ..._infoData,
+              extra: {
+                city: city
+              }
             })
             .then(res => {
               this.handleClose({ ...this.infoData, isSubmitOperation: 1 })

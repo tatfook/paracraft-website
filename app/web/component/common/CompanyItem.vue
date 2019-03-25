@@ -1,6 +1,7 @@
 <template>
   <div class="company-item">
     <h4 class="company-item-title">公司介绍</h4>
+    <p class="company-item-ourself"><img src="@/asset/images/引号.png">我们是一家探索面向个人的3D设计，人工智能与未来教育的软件公司<img src="@/asset/images/引号2.png"></p>
     <div class="company-item-intro">
       <div class="company-item-intro-box">
         <div class="company-item-intro-box-carousel">
@@ -20,18 +21,16 @@
         <p class="company-item-intro-box-text"><span class="company-item-intro-box-text-icon">-</span> 2015年并入上市公司大富科技（300134）子公司</p>
         <p class="company-item-intro-box-text"><span class="company-item-intro-box-text-icon">-</span> 2018年推出keepwork个人作品网</p>
         <p class="company-item-intro-box-btn">
-          <el-button class="company-item-intro-box-btn-watch" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/2948/raw#NPL.mp4')">观看视频</el-button>
+          <el-button class="company-item-intro-box-btn-watch" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/2948/raw#NPL.mp4')">观看团队视频</el-button>
         </p>
       </div>
     </div>
-    <p class="company-item-ourself"><img src="@/asset/images/引号.png">我们是一家探索面向个人的3D设计，人工智能与未来教育的软件公司<img src="@/asset/images/引号2.png"></p>
     <div class="company-item-tags">
       <div class="company-item-tags-center">
         <span class="company-item-tags-center-word"><span class="company-item-tags-center-word-hightlight">15年</span>技术积累</span>
         <span class="company-item-tags-center-word"> 原创NPL语言</span>
         <span class="company-item-tags-center-word">分布式的3D游戏引擎</span>
-        <span class="company-item-tags-center-word"><span class="company-item-tags-center-word-hightlight">22项</span>软件著作权及PCT国际专利</span>
-        <span class="company-item-tags-center-word"><span class="company-item-tags-center-word-hightlight">发明专利</span></span>
+        <span class="company-item-tags-center-word"><span class="company-item-tags-center-word-hightlight">30项</span>软件著作权及PCT国际专利</span>
         <span class="company-item-tags-center-word">开源200万NPL代码</span>
         <span class="company-item-tags-center-word"><span class="company-item-tags-center-word-hightlight">自主知识产权</span></span>
         <span class="company-item-tags-center-word">主创人员<span class="company-item-tags-center-word-hightlight">10-30年编程经验</span></span>
@@ -85,7 +84,7 @@ export default {
   &-intro {
     display: flex;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     &-box {
       flex: 1;
       &-carousel {
@@ -149,8 +148,8 @@ export default {
     font-size: 16px;
     color: #5e94be;
     text-align: center;
-    margin: 50px 0 0;
-    padding-bottom: 70px;
+    margin: 20px 0 0;
+    padding-bottom: 20px;
     img {
       margin: 10px 10px 0;
       width: 15px;

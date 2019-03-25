@@ -88,6 +88,7 @@
             <p class="box-text-text">完整的编程学习生态系统和课程体系，满足学生和老师的需要</p>
             <p class="box-text-text">专业的教师培训+一站式课堂管理平台，助力老师打造高效课堂</p>
             <p class="box-text-text">教学课程可深度定制开发，助力学校和教学机构教学升级</p>
+            <p class="box-text-text">基于PBL项目式学习的个人网站创作</p>
             <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>教育的本质就是让人保持(Keep)有事可做(Work)<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
           </div>
         </div>
@@ -168,7 +169,7 @@
       </div>
     </div>
     <div class="homepage-teacher">
-      <h4 class="homepage-teacher-title">作品是最好的老师</h4>
+      <h4 class="homepage-teacher-title">用户作品欣赏</h4>
       <div class="homepage-teacher-center">
         <work-carousel @showVideo="showVideo"></work-carousel>
       </div>
@@ -181,7 +182,7 @@
     </div>
     <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
     <div v-if="videoDialogVisible" class="homepage-video-dialog">
-      <el-dialog :visible.sync="videoDialogVisible" width="40%" center>
+      <el-dialog :visible.sync="videoDialogVisible" width="50%" center>
         <video width="100%" :src="currentToPlayerVideo" autoplay controls></video>
       </el-dialog>
     </div>
@@ -253,7 +254,7 @@ export default {
       ],
       achievement_tags: [
         { text: '500万注册用户' },
-        { text: '100部教学视频' },
+        { text: '100部动画创作教学视频' },
         { text: '50多节在线课程<br>' },
         { text: '百度贴吧200万帖子' },
         { text: '3D动画课程入选中国教育电台最美慕课' },
@@ -347,7 +348,7 @@ export default {
       this.videoDialogVisible = true
     }
   },
-   beforeDestroy() {
+  beforeDestroy() {
     clearInterval(this.achievementTagsTimer)
     clearInterval(this.achievementTagsTimer_2)
   },
@@ -915,8 +916,17 @@ export default {
     }
     &-video-dialog {
       .el-dialog {
-        width: 90% !important;
-        min-width: 370px !important;
+        min-width: 85% !important;
+        // min-width: 340px !important;
+        .el-dialog__header {
+          .el-dialog__headerbtn {
+            top: -2px;
+            right: -20px;
+            .el-icon-close:before {
+              font-size: 26px;
+            }
+          }
+        }
       }
     }
   }
