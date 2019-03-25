@@ -8,7 +8,7 @@
       <div class="gather-info-dialog-content">
         <div class="gather-info-dialog-content-reminder">
           <img class="gather-info-dialog-content-reminder-icon" src="@/asset/images/hint.png" alt="hint">
-          表单提交成功后我们将于1-3个工作日内与您联系，如有紧急情况请在Paracraft微信公众号中留言，我们将及时回复！
+          表单提交成功后我们将立即发送“下载与体验”的资料到您的邮箱，并将于1-3个工作日与您联系。
         </div>
         <el-form :model="infoData" :rules="infoDataRules" ref="infoForm" label-position="top" label-width="100px" class="gather-info-dialog-content-form">
           <el-form-item label="联系人姓名：" prop="realname">
@@ -24,7 +24,6 @@
             <el-input placeholder="请输入单位或者机构名称" v-model="infoData.organization"></el-input>
           </el-form-item>
           <el-form-item label="所在城市：" prop="city">
-            <!-- <el-input placeholder="请输入您所在的城市" v-model="infoData.city"></el-input> -->
             <el-cascader placeholder="" :options="cityName" filterable change-on-select v-model="infoData.city"></el-cascader>
           </el-form-item>
           <el-form-item label="描述：">
