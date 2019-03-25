@@ -260,6 +260,8 @@ export default {
             position: absolute;
             top: 10px;
             left: 18px;
+            width: 8px;
+            height: 3px;
           }
         }
       }

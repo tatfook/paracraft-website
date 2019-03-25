@@ -601,7 +601,7 @@ export default {
   }
   &-achievement {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 70px;
     &-title {
       text-align: center;
       font-size: 34px;
@@ -792,7 +792,9 @@ export default {
           min-width: 100%;
           .block .el-carousel {
             .el-carousel__container {
-              // height: 240px !important;
+              .el-carousel__item {
+              box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+              }
             }
           }
           .box-text {
@@ -805,14 +807,18 @@ export default {
               padding-left: 20px;
               font-size: 14px;
               line-height: 25px;
+              &::before {
+                width: 8px;
+                height: 3px;
+              }
               &-bottom {
                 padding: 0 0 25px;
                 font-size: 14px;
                 text-align: center;
                 &-icon {
-                  width: 15px;
+                  width: 12px;
                   &-right {
-                    width: 15px;
+                    width: 12px;
                   }
                 }
               }
