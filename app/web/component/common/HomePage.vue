@@ -84,7 +84,7 @@
           </div>
           <div class="homepage-achievement-intro-box">
             <img src="@/asset/images/IPTV，抵达3500万家庭2.jpg" alt="">
-            <p class="homepage-achievement-intro-box-text">IPTV，抵达3500万家庭</p>
+            <p class="homepage-achievement-intro-box-text">200部Paracraft视频上线IPTV，抵达3500万家庭</p>
           </div>
         </div>
         <div class="homepage-achievement-intro-phone">
@@ -147,7 +147,7 @@ export default {
         },
         {
           url: require('@/asset/images/100部教学视频.jpg'),
-          text: '100部教学视频'
+          text: '100部动画创作教学视频'
         },
         {
           url: require('@/asset/images/50多节在线课程.jpg'),
@@ -192,7 +192,7 @@ export default {
         },
         {
           url: require('@/asset/images/100部教学视频.jpg'),
-          text: '100部教学视频'
+          text: '100部动画创作教学视频'
         },
         {
           url: require('@/asset/images/50多节在线课程.jpg'),
@@ -222,7 +222,7 @@ export default {
         },
         {
           url: require('@/asset/images/IPTV，抵达3500万家庭2.jpg'),
-          text: 'IPTV，抵达3500万家庭'
+          text: '200部Paracraft视频上线IPTV，抵达3500万家庭'
         }
       ],
       currentTagIndex_2: 0,
