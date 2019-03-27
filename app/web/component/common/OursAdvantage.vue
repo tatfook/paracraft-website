@@ -191,7 +191,7 @@ export default {
               margin-right: 15px;
             }
             &-bottom {
-              padding: 0 0 32px 84px;
+              padding: 0 0 30px 84px;
               font-size: 22px;
               color: #1298ff;
               margin-top: 25px;
