@@ -81,22 +81,27 @@ export default {
         { url: require('@/asset/images/优势1-完善的3D场景编辑器.jpg') },
         { url: require('@/asset/images/优势1-制作3D骨骼动画人物.jpg') },
         { url: require('@/asset/images/优势1-沉浸式游戏与学习体验.jpg') },
-        { url: require('@/asset/images/优势1-追加.jpg') }
+        { url: require('@/asset/images/优势1-追加.jpg') },
+        { url: require('@/asset/images/动画教学样片-封面.jpg') }
       ],
       carouselPic_2: [
-        { url: require('@/asset/images/优势2-从可视化到基于.jpg') },
+        { url: require('@/asset/images/优势2-从2D到3D全面升级Scratch命令.jpg') },
         { url: require('@/asset/images/优势2-开发从游戏.jpg') },
         {
-          url: require('@/asset/images/优势2-开发从简单到复杂的3D动画与游戏.jpg')
+          url: require('@/asset/images/优势22.jpg')
+        },
+        {
+          url: require('@/asset/images/编程教学样片-封面.jpg')
         }
       ],
       carouselPic_3: [
+        { url: require('@/asset/images/01.jpg') },
+        { url: require('@/asset/images/02.jpg') },
+        { url: require('@/asset/images/03.jpg') },
+        { url: require('@/asset/images/04.jpg') },
         { url: require('@/asset/images/优势3-未来教育.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台2.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台4.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台5.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台6.jpg') }
+        { url: require('@/asset/images/课程开发样片-封面.jpg') },
+        { url: require('@/asset/images/未来教育-互动学习辅导平台.jpg') }
       ]
     }
   },
@@ -227,10 +232,10 @@ export default {
                 height: 0;
                 width: 0;
                 position: absolute;
-                top: 8px;
-                left: 14px;
+                top: 10px;
+                left: 17px;
                 display: inline-block;
-                border: 10px solid transparent;
+                border: 8px solid transparent;
                 border-left-color: #fff;
               }
             }

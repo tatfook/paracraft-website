@@ -32,17 +32,17 @@
           <h4 class="homepage-service-bg-center-title">服务项目</h4>
           <div class="homepage-service-bg-center-intro">
             <div class="homepage-service-bg-center-intro-box">
-              <img src="@/asset/images/课程与数字化教学服务.png" alt="">
+              <img  class="homepage-service-bg-center-intro-box-img" src="@/asset/images/课程与数字化教学服务.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">编程课程体系与数字化教学服务</h6>
               <p class="homepage-service-bg-center-intro-box-text">独立研发的完善的编程课程体系，并有专业的配套教材，适合中小学生从入门到精通编程</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
-              <img src="@/asset/images/Paracraft-软件贴牌.png" alt="">
+              <img class="homepage-service-bg-center-intro-box-img"  src="@/asset/images/Paracraft-软件贴牌.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">Paracraft 软件贴牌</h6>
               <p class="homepage-service-bg-center-intro-box-text">在客户端或网站启动界面加上您指定的Logo和文字，以及3D引擎商业化授权</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
-              <img src="@/asset/images/课程定制开发.png" alt="">
+              <img class="homepage-service-bg-center-intro-box-img"  src="@/asset/images/课程定制开发.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">课程定制开发</h6>
               <p class="homepage-service-bg-center-intro-box-text">不止提供编程课程定制开发，我们还提供数学、物理、化学、生物等其他学科的3D游戏化和数字化课件外包开发服务，使教学更具有针对性，学习效率提升，促进教学质量的提升</p>
             </div>
@@ -76,11 +76,11 @@
             <p class="homepage-achievement-intro-box-text">连续5年举办国内外创作大赛</p>
           </div>
           <div class="homepage-achievement-intro-box">
-            <img src="@/asset/images/学生作品获得.jpg" alt="">
+            <img src="@/asset/images/开展50多次Paracraft线下培训课.jpg" alt="">
             <p class="homepage-achievement-intro-box-text">学生作品获得计算机比赛一等奖</p>
           </div>
           <div class="homepage-achievement-intro-box">
-            <img src="@/asset/images/抵达3500万家庭.jpg" alt="">
+            <img src="@/asset/images/IPTV，抵达3500万家庭2.jpg" alt="">
             <p class="homepage-achievement-intro-box-text">IPTV，抵达3500万家庭</p>
           </div>
         </div>
@@ -213,11 +213,11 @@ export default {
           text: '连续5年举办国内外创作大赛'
         },
         {
-          url: require('@/asset/images/学生作品获得.jpg'),
+          url: require('@/asset/images/开展50多次Paracraft线下培训课.jpg'),
           text: '学生作品获得计算机比赛一等奖'
         },
         {
-          url: require('@/asset/images/抵达3500万家庭.jpg'),
+          url: require('@/asset/images/IPTV，抵达3500万家庭2.jpg'),
           text: 'IPTV，抵达3500万家庭'
         }
       ],
@@ -403,6 +403,9 @@ export default {
             width: 426px;
             text-align: center;
             color: #fff;
+            &-img{
+              width: 426px;
+            }
             &-title {
               font-size: 24px;
               margin: 53px 0 28px;
@@ -610,7 +613,7 @@ export default {
             &-box {
               width: 100%;
               padding-bottom: 20px;
-              img {
+              &-img {
                 width: 100%;
                 max-width: 426px;
               }
