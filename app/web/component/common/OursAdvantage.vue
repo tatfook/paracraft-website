@@ -90,18 +90,18 @@ export default {
         {
           url: require('@/asset/images/优势22.jpg')
         },
-        {
+        // {
           // url: require('@/asset/images/编程教学样片-封面.jpg')
-        }
+        // }
       ],
       carouselPic_3: [
+        { url: require('@/asset/images/优势3-未来教育.jpg') },
+        { url: require('@/asset/images/未来教育-互动学习辅导平台.jpg') },
         { url: require('@/asset/images/01.jpg') },
         { url: require('@/asset/images/02.jpg') },
         { url: require('@/asset/images/03.jpg') },
         { url: require('@/asset/images/04.jpg') },
-        { url: require('@/asset/images/优势3-未来教育.jpg') },
         // { url: require('@/asset/images/课程开发样片-封面.jpg') },
-        { url: require('@/asset/images/未来教育-互动学习辅导平台.jpg') }
       ]
     }
   },
