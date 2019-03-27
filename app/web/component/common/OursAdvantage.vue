@@ -82,7 +82,7 @@ export default {
         { url: require('@/asset/images/优势1-制作3D骨骼动画人物.jpg') },
         { url: require('@/asset/images/优势1-沉浸式游戏与学习体验.jpg') },
         { url: require('@/asset/images/优势1-追加.jpg') },
-        { url: require('@/asset/images/动画教学样片-封面.jpg') }
+        // { url: require('@/asset/images/动画教学样片-封面.jpg') }
       ],
       carouselPic_2: [
         { url: require('@/asset/images/优势2-从2D到3D全面升级Scratch命令.jpg') },
@@ -91,7 +91,7 @@ export default {
           url: require('@/asset/images/优势22.jpg')
         },
         {
-          url: require('@/asset/images/编程教学样片-封面.jpg')
+          // url: require('@/asset/images/编程教学样片-封面.jpg')
         }
       ],
       carouselPic_3: [
@@ -100,7 +100,7 @@ export default {
         { url: require('@/asset/images/03.jpg') },
         { url: require('@/asset/images/04.jpg') },
         { url: require('@/asset/images/优势3-未来教育.jpg') },
-        { url: require('@/asset/images/课程开发样片-封面.jpg') },
+        // { url: require('@/asset/images/课程开发样片-封面.jpg') },
         { url: require('@/asset/images/未来教育-互动学习辅导平台.jpg') }
       ]
     }

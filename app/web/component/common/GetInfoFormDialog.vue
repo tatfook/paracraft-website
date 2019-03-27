@@ -119,6 +119,7 @@ export default {
 <style lang="scss">
 .gather-info-dialog {
   .el-dialog {
+    margin-top: 8vh !important;
     .el-dialog__header,
     .el-dialog__body {
       padding: 0;
@@ -132,7 +133,7 @@ export default {
     }
   }
   &-title {
-    height: 149px;
+    height: 129px;
     background: url(../../asset/images/mianfei.jpg);
     color: #fff;
     text-align: center;
@@ -151,7 +152,7 @@ export default {
     &-reminder {
       background-color: #f1f6fa;
       border: solid 1px #e0edf2;
-      margin: 27px 0 35px;
+      margin: 20px 0 25px;
       display: flex;
       align-items: center;
       padding: 8px 15px;
@@ -162,7 +163,19 @@ export default {
     }
     &-form {
       .el-form-item {
-        margin-bottom: 10px;
+        margin-bottom: 16px;
+        .el-form-item__label{
+          line-height: 20px;
+        }
+        .el-form-item__content{
+          line-height: 32px;
+          .el-input{
+            .el-input__inner{
+              height: 32px;
+              line-height: 32px;
+            }
+          }
+        }
       }
       &-submit {
         text-align: center;

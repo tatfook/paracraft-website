@@ -25,27 +25,30 @@
         </div>
       </div>
     </div>
-    <ours-advantage  @showVideo="showVideo"></ours-advantage>
+    <ours-advantage @showVideo="showVideo"></ours-advantage>
     <div class="homepage-service" id="oursService">
       <div class="homepage-service-bg">
         <div class="homepage-service-bg-center">
           <h4 class="homepage-service-bg-center-title">服务项目</h4>
           <div class="homepage-service-bg-center-intro">
             <div class="homepage-service-bg-center-intro-box">
-              <img  class="homepage-service-bg-center-intro-box-img" src="@/asset/images/课程与数字化教学服务.png" alt="">
+              <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/课程与数字化教学服务.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">编程课程体系与数字化教学服务</h6>
               <p class="homepage-service-bg-center-intro-box-text">独立研发的完善的编程课程体系，并有专业的配套教材，适合中小学生从入门到精通编程</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
-              <img class="homepage-service-bg-center-intro-box-img"  src="@/asset/images/Paracraft-软件贴牌.png" alt="">
+              <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/Paracraft-软件贴牌.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">Paracraft 软件贴牌</h6>
               <p class="homepage-service-bg-center-intro-box-text">在客户端或网站启动界面加上您指定的Logo和文字，以及3D引擎商业化授权</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
-              <img class="homepage-service-bg-center-intro-box-img"  src="@/asset/images/课程定制开发.png" alt="">
+              <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/课程定制开发.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">课程定制开发</h6>
               <p class="homepage-service-bg-center-intro-box-text">不止提供编程课程定制开发，我们还提供数学、物理、化学、生物等其他学科的3D游戏化和数字化课件外包开发服务，使教学更具有针对性，学习效率提升，促进教学质量的提升</p>
             </div>
+          </div>
+          <div class="homepage-service-bg-center-price">
+            <span class="homepage-service-bg-center-price-button" @click="skipToArea('price')">查看价格</span>
           </div>
         </div>
       </div>
@@ -77,7 +80,7 @@
           </div>
           <div class="homepage-achievement-intro-box">
             <img src="@/asset/images/开展50多次Paracraft线下培训课.jpg" alt="">
-            <p class="homepage-achievement-intro-box-text">学生作品获得计算机比赛一等奖</p>
+            <p class="homepage-achievement-intro-box-text">开展50多次Paracraft线下培训课</p>
           </div>
           <div class="homepage-achievement-intro-box">
             <img src="@/asset/images/IPTV，抵达3500万家庭2.jpg" alt="">
@@ -96,7 +99,7 @@
       </div>
       <div class="homepage-achievement-award">
         <span class="homepage-achievement-award-contest">连续5年举办国内外创作大赛</span>
-        <span class="homepage-achievement-award-bright homepage-achievement-award-contest">学生作品获得计算机比赛一等奖</span>
+        <span class="homepage-achievement-award-bright homepage-achievement-award-contest">开展50多次Paracraft线下培训课</span>
         <span class="homepage-achievement-award-contest">200部Paracraft视频上线IPTV，抵达3500万家庭</span>
       </div>
     </div>
@@ -130,6 +133,7 @@ import PriceItem from './PriceItem'
 import CompanyItem from './CompanyItem'
 import QuickToTop from './QuickToTop'
 import OursAdvantage from './OursAdvantage'
+import scrollIntoView from 'scroll-into-view-if-needed'
 
 export default {
   name: 'HomePage',
@@ -174,7 +178,7 @@ export default {
       ],
       achievement_tags_2: [
         { text: '连续5年举办国内外创作大赛' },
-        { text: '学生作品获得计算机比赛一等奖' },
+        { text: '开展50多次Paracraft线下培训课' },
         { text: '200部Paracraft视频上线IPTV，抵达3500万家庭' }
       ],
       achievementTagsTimer: null,
@@ -214,7 +218,7 @@ export default {
         },
         {
           url: require('@/asset/images/开展50多次Paracraft线下培训课.jpg'),
-          text: '学生作品获得计算机比赛一等奖'
+          text: '开展50多次Paracraft线下培训课'
         },
         {
           url: require('@/asset/images/IPTV，抵达3500万家庭2.jpg'),
@@ -258,6 +262,14 @@ export default {
     showVideo(videoUrl) {
       this.currentToPlayerVideo = videoUrl
       this.videoDialogVisible = true
+    },
+    skipToArea(key) {
+      let theId = document.getElementById(key)
+      scrollIntoView(theId, {
+        scrollMode: 'if-needed',
+        behavior: 'smooth',
+        block: 'start'
+      })
     }
   },
   beforeDestroy() {
@@ -281,7 +293,8 @@ export default {
   &-banner {
     background: linear-gradient(to right, #351d85, #081746);
     &-center {
-      background: url(../../asset/images/banner.jpg) top center;
+      background: url(../../asset/images/banner.jpg) top center no-repeat;
+      background-size: auto 100%;
       max-width: 1920px;
       min-height: 594px;
       box-sizing: border-box;
@@ -383,6 +396,7 @@ export default {
       max-width: 1920px;
       margin: 0 auto;
       background: url(../../asset/images/service-bg.jpg) top center no-repeat;
+      background-size: auto 100%;
       &-center {
         max-width: 1400px;
         margin: 0 auto;
@@ -403,7 +417,7 @@ export default {
             width: 426px;
             text-align: center;
             color: #fff;
-            &-img{
+            &-img {
               width: 426px;
             }
             &-title {
@@ -417,6 +431,19 @@ export default {
               line-height: 29px;
               padding: 0 30px;
             }
+          }
+        }
+        &-price {
+          text-align: center;
+          padding-bottom: 85px;
+          &-button {
+            padding: 18px 47px;
+            display: inline-block;
+            font-size: 18px;
+            color: #0090ff;
+            border-radius: 36px;
+            background: #fff;
+            cursor: pointer;
           }
         }
       }
@@ -505,7 +532,7 @@ export default {
     &-title {
       text-align: center;
       font-size: 34px;
-      padding: 97px 0 71px;
+      padding: 97px 0 26px;
       font-weight: normal;
       margin: 0;
     }
@@ -623,6 +650,13 @@ export default {
               }
             }
           }
+          &-price {
+            padding-bottom: 55px;
+            &-button {
+              padding: 13px 30px;
+              font-size: 16px;
+            }
+          }
         }
       }
     }
@@ -696,7 +730,6 @@ export default {
     &-video-dialog {
       .el-dialog {
         min-width: 85% !important;
-        // min-width: 340px !important;
         .el-dialog__header {
           .el-dialog__headerbtn {
             top: -2px;
