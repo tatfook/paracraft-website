@@ -24,7 +24,7 @@
       <div class="email-border-content-box">
         <p>通过下面链接了解Paracraft：</p>
         <p><a class="email-border-content-box-link" href="http://paracraft.keepwork.com/download?lang=zh">下载Paracraft </a></p>
-        <p><a class="email-border-content-box-link" href="https://keepwork.com/lixizhi/lessons/books/paracraft_preview">《Paracraft编程入门》</a></p>
+        <p><a class="email-border-content-box-link" href="http://cdn.keepwork.com/paracraft/book/paracraft_book_sample.pdf">《Paracraft编程入门》</a></p>
         <p>关注微信号Paracraft ，观看部分教学视频</p>
         <p><img src="@/asset/images/weixin.png" class="email-border-content-box-email" alt=""></p>
       </div>

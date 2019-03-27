@@ -37,8 +37,8 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">联系我们</li>
-          <li>电话：0755-86967012</li>
-          <li>邮箱：support@paraengine.com</li>
+          <li>电话：<br>0755-86967012</li>
+          <li>邮箱：<br>support@paraengine.com</li>
         </ul>
       </div>
       <div class="common-footer-content-part common-footer-content-part-last">

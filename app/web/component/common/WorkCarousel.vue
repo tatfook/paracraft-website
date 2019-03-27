@@ -1,12 +1,13 @@
 <template>
   <div class="works">
+    <div class="works-say"><img src="@/asset/images/引号.png">作品是最好的老师<img src="@/asset/images/引号2.png"></div>
     <div class="works-cabinet">
       <div class="works-cabinet-box" v-for="(item,index) in currentPageData" :key="index">
         <div class="works-cabinet-box-cover">
           <img class="works-cabinet-box-cover-img" :src="item.coverUrl">
           <img class="works-cabinet-box-cover-player" src="@/asset/images/作品播放.png" alt="" @click="showVideo(item)">
         </div>
-        <h5 class="works-cabinet-box-title">{{item.workName}}</h5>
+        <h5 class="works-cabinet-box-title">{{item.workName}} <span class="works-cabinet-box-title-type" v-show="item.type">{{item.type}}</span></h5>
         <p class="works-cabinet-box-author">作者： {{item.author}}</p>
       </div>
     </div>
@@ -106,6 +107,21 @@ export default {
         font-size: 16px;
         padding: 16px 0 11px 20px;
         margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+        &-type {
+          position: absolute;
+          right: 10px;
+          top: 12px;
+          background: #f0f0f0;
+          font-size: 14px;
+          color: #666;
+          padding: 5px 12px;
+          font-weight: normal;
+          border-radius: 14px;
+        }
       }
       &-author {
         color: #999;
@@ -160,6 +176,16 @@ export default {
       &-right {
         transform: rotate(180deg);
       }
+    }
+  }
+  &-say {
+    text-align: center;
+    padding: 0 0 50px;
+    font-size: 16px;
+    color: #5e94be; 
+    img{
+      margin: 0 10px;
+      width: 15px;
     }
   }
 }
