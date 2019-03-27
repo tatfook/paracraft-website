@@ -43,11 +43,11 @@
       </div>
       <div class="common-footer-content-part common-footer-content-part-last">
         <ul class="common-footer-content-part-list">
-          <li class="common-footer-content-part-list-title">关于Paracraft</li>
+          <li class="common-footer-content-part-list-title">更多视频请关注</li>
           <li>
             <img class="common-footer-content-part-list-weixin" src="@/asset/images/weixin.png" alt="">
           </li>
-          <li>Paracraft公众号</li>
+          <li>公众号：paracraft</li>
         </ul>
       </div>
     </div>

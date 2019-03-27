@@ -25,74 +25,7 @@
         </div>
       </div>
     </div>
-    <div class="homepage-advantage" id="oursAdvantage">
-      <h4 class="homepage-advantage-title">我们的优势</h4>
-      <div class="homepage-advantage-intro">
-        <div class="homepage-advantage-intro-box">
-          <div class="block">
-            <el-carousel :interval="4000" indicator-position="outside">
-              <el-carousel-item v-for="(item,index) in carouselPic_1" :key="index">
-                <img :src="item.url" alt="" width="100%">
-              </el-carousel-item>
-            </el-carousel>
-          </div>
-        </div>
-        <div class="homepage-advantage-intro-box homepage-advantage-intro-box-text">
-          <div class="box-text">
-            <h5 class="box-text-title">下一代的Minecraft</h5>
-            <p class="box-text-text">完善的3D场景编辑器</p>
-            <p class="box-text-text">制作3D骨骼动画人物</p>
-            <p class="box-text-text">直接在3D世界中编程</p>
-            <p class="box-text-text">沉浸式游戏与学习体验</p>
-            <p class="box-text-text">支持PC/移动端多平台</p>
-            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>随心所欲创造属于你的3D动画与游戏<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
-          </div>
-        </div>
-      </div>
-      <div class="homepage-advantage-intro homepage-advantage-intro-phone">
-        <div class="homepage-advantage-intro-box homepage-advantage-intro-box-text">
-          <div class="box-text">
-            <h5 class="box-text-title">升级版的Scratch可视化编程</h5>
-            <p class="box-text-text">从2D到3D全面升级Scratch命令</p>
-            <p class="box-text-text">积木式编程与代码编程一键切换</p>
-            <p class="box-text-text">开发从简单到复杂的3D动画与游戏</p>
-            <p class="box-text-text">分享你的作品到网站或发布到手机应用商店</p>
-            <p class="box-text-text">历经15年，自主研发的NPL语言与专业3D引擎</p>
-            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>从可视化编程，到文本编程，到发布专业应用程序<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
-          </div>
-        </div>
-        <div class="homepage-advantage-intro-box">
-          <div class="block">
-            <el-carousel :interval="4000" indicator-position="outside">
-              <el-carousel-item v-for="(item,index) in carouselPic_2" :key="index">
-                <img :src="item.url" alt="" width="100%">
-              </el-carousel-item>
-            </el-carousel>
-          </div>
-        </div>
-      </div>
-      <div class="homepage-advantage-intro">
-        <div class="homepage-advantage-intro-box">
-          <div class="block">
-            <el-carousel :interval="4000" indicator-position="outside">
-              <el-carousel-item v-for="(item,index) in carouselPic_3" :key="index">
-                <img :src="item.url" alt="" width="100%">
-              </el-carousel-item>
-            </el-carousel>
-          </div>
-        </div>
-        <div class="homepage-advantage-intro-box homepage-advantage-intro-box-text">
-          <div class="box-text">
-            <h5 class="box-text-title">面向未来教育</h5>
-            <p class="box-text-text">丰富有趣的课程内容，孩子学习兴趣浓厚</p>
-            <p class="box-text-text">完整的编程学习生态系统和课程体系，满足学生和老师的需要</p>
-            <p class="box-text-text">专业的教师培训+一站式课堂管理平台，助力老师打造高效课堂</p>
-            <p class="box-text-text">教学课程可深度定制开发，助力学校和教学机构教学升级</p>
-            <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>教育的本质就是让人保持(Keep)有事可做(Work)<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ours-advantage  @showVideo="showVideo"></ours-advantage>
     <div class="homepage-service" id="oursService">
       <div class="homepage-service-bg">
         <div class="homepage-service-bg-center">
@@ -158,8 +91,8 @@
           </div>
         </div>
       </div>
-      <div class="homepage-achievement-tags">
-        <span :class="[{'hightlight': index == currentTagIndex}]" v-for="(i,index) in achievement_tags_2" :key="index" v-html="i.text"></span>
+      <div class="homepage-achievement-tags homepage-achievement-tags-phone">
+        <span :class="[{'hightlight': index == currentTagIndex_2}]" v-for="(i,index) in achievement_tags_2" :key="index" v-html="i.text"></span>
       </div>
       <div class="homepage-achievement-award">
         <span class="homepage-achievement-award-contest">连续5年举办国内外创作大赛</span>
@@ -168,7 +101,7 @@
       </div>
     </div>
     <div class="homepage-teacher">
-      <h4 class="homepage-teacher-title">作品是最好的老师</h4>
+      <h4 class="homepage-teacher-title">用户作品欣赏</h4>
       <div class="homepage-teacher-center">
         <work-carousel @showVideo="showVideo"></work-carousel>
       </div>
@@ -181,7 +114,7 @@
     </div>
     <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
     <div v-if="videoDialogVisible" class="homepage-video-dialog">
-      <el-dialog :visible.sync="videoDialogVisible" width="40%" center>
+      <el-dialog :visible.sync="videoDialogVisible" width="50%" center>
         <video width="100%" :src="currentToPlayerVideo" autoplay controls></video>
       </el-dialog>
     </div>
@@ -196,33 +129,13 @@ import WorkCarousel from './WorkCarousel'
 import PriceItem from './PriceItem'
 import CompanyItem from './CompanyItem'
 import QuickToTop from './QuickToTop'
+import OursAdvantage from './OursAdvantage'
 
 export default {
   name: 'HomePage',
   data() {
     return {
       showGatherInfoDialog: false,
-      carouselPic_1: [
-        { url: require('@/asset/images/优势1-完善的3D场景编辑器.jpg') },
-        { url: require('@/asset/images/优势1-制作3D骨骼动画人物.jpg') },
-        { url: require('@/asset/images/优势1-沉浸式游戏与学习体验.jpg') },
-        { url: require('@/asset/images/优势1-追加.jpg') }
-      ],
-      carouselPic_2: [
-        { url: require('@/asset/images/优势2-从可视化到基于.jpg') },
-        { url: require('@/asset/images/优势2-开发从游戏.jpg') },
-        {
-          url: require('@/asset/images/优势2-开发从简单到复杂的3D动画与游戏.jpg')
-        }
-      ],
-      carouselPic_3: [
-        { url: require('@/asset/images/优势3-未来教育.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台2.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台4.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台5.jpg') },
-        { url: require('@/asset/images/优势3-辅导平台6.jpg') }
-      ],
       achievement_tags_pic_1: [
         {
           url: require('@/asset/images/500万注册用户.jpg'),
@@ -253,7 +166,7 @@ export default {
       ],
       achievement_tags: [
         { text: '500万注册用户' },
-        { text: '100部教学视频' },
+        { text: '100部动画创作教学视频' },
         { text: '50多节在线课程<br>' },
         { text: '百度贴吧200万帖子' },
         { text: '3D动画课程入选中国教育电台最美慕课' },
@@ -265,6 +178,7 @@ export default {
         { text: '200部Paracraft视频上线IPTV，抵达3500万家庭' }
       ],
       achievementTagsTimer: null,
+      achievementTagsTimer_2: null,
       currentTagIndex: 0,
       currentPicArr: '',
       currentPicArr_phone: [
@@ -336,7 +250,7 @@ export default {
       }, 4000)
     },
     achievementTagsAnimation_2() {
-      this.achievementTagsTimer = setInterval(() => {
+      this.achievementTagsTimer_2 = setInterval(() => {
         this.currentTagIndex_2 =
           this.currentTagIndex_2 + 1 > 2 ? 0 : this.currentTagIndex_2 + 1
       }, 4000)
@@ -346,13 +260,18 @@ export default {
       this.videoDialogVisible = true
     }
   },
+  beforeDestroy() {
+    clearInterval(this.achievementTagsTimer)
+    clearInterval(this.achievementTagsTimer_2)
+  },
   components: {
     GatherInfoDialog,
     VideoPlayer,
     WorkCarousel,
     PriceItem,
     CompanyItem,
-    QuickToTop
+    QuickToTop,
+    OursAdvantage
   }
 }
 </script>
@@ -458,99 +377,6 @@ export default {
       }
     }
   }
-  &-advantage {
-    max-width: 1400px;
-    margin: 0 auto;
-    min-height: 433px;
-    &-title {
-      text-align: center;
-      margin: 0;
-      font-size: 34px;
-      font-weight: normal;
-      padding: 120px 0 60px;
-    }
-    &-intro {
-      display: flex;
-      margin-bottom: 90px;
-      flex-wrap: wrap;
-      &-phone {
-        flex-wrap: wrap-reverse;
-      }
-      &-box {
-        width: 680px;
-        margin: 0 auto;
-        &-text {
-          width: 720px;
-        }
-        .block .el-carousel {
-          .el-carousel__indicators {
-            .el-carousel__indicator {
-              &.is-active button {
-                background: #409eff;
-              }
-            }
-          }
-          .el-carousel__container {
-            height: 404px !important;
-            max-width: 100%;
-            .el-carousel__item {
-              box-shadow: 0px 8px 27px 0px rgba(63, 138, 250, 0.13);
-              .el-carousel__mask {
-                opacity: 0.6;
-              }
-            }
-            .el-carousel__arrow {
-              color: #409eff;
-              background-color: #ffffff;
-              box-shadow: 0px 4px 11px 0px rgba(172, 172, 172, 0.32);
-            }
-          }
-        }
-        .box-text {
-          box-shadow: 0px 8px 27px 0px rgba(63, 138, 250, 0.13);
-          border-radius: 6px;
-          min-height: 404px;
-          background: url(../../asset/images/advantage-bg.png);
-          &-title {
-            font-size: 28px;
-            color: #333;
-            margin: 0;
-            padding: 45px 0 35px 74px;
-          }
-          &-text {
-            padding-left: 74px;
-            font-size: 18px;
-            color: #666;
-            line-height: 36px;
-            margin: 0;
-            &::before {
-              content: '';
-              border: 2px solid #0090ff;
-              display: inline-block;
-              width: 12px;
-              height: 6px;
-              border-top-color: transparent;
-              border-right-color: transparent;
-              transform: rotate(-45deg) translateY(-16%) translateX(40%);
-              margin-right: 15px;
-            }
-            &-bottom {
-              padding: 0 0 44px 84px;
-              font-size: 22px;
-              color: #1298ff;
-              margin-top: 35px;
-              &-icon {
-                margin-right: 10px;
-                &-right {
-                  margin-left: 10px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   &-service {
     background: linear-gradient(to right, #0471a8, #0432a8);
     &-bg {
@@ -595,7 +421,7 @@ export default {
   }
   &-achievement {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 70px;
     &-title {
       text-align: center;
       font-size: 34px;
@@ -636,6 +462,9 @@ export default {
     &-tags {
       text-align: center;
       margin-bottom: 70px;
+      &-phone {
+        display: none;
+      }
       span {
         margin-right: 58px;
         font-size: 20px;
@@ -651,11 +480,14 @@ export default {
       font-size: 16px;
       text-align: center;
       line-height: 50px;
+      display: flex;
+      justify-content: space-between;
       span {
         display: inline-block;
+        flex: 1;
       }
       &-contest {
-        margin-right: 58px;
+        // margin-right: 58px;
       }
       &-bright {
         font-size: 22px;
@@ -751,6 +583,7 @@ export default {
     &-tags {
       padding: 15px 40px;
       background: #2c49c6;
+
       &-center {
         &-keyword {
           font-size: 12px;
@@ -760,50 +593,6 @@ export default {
           }
           &-hightlight {
             font-size: 16px;
-          }
-        }
-      }
-    }
-    &-advantage {
-      &-title {
-        padding: 40px 0 25px;
-        font-size: 21px;
-      }
-      &-intro {
-        // padding: 0 10px;
-        margin: 0 10px 20px;
-        &-phone {
-          flex-wrap: wrap-reverse;
-        }
-        &-box {
-          min-width: 100%;
-          .block .el-carousel {
-            .el-carousel__container {
-              // height: 240px !important;
-            }
-          }
-          .box-text {
-            min-height: auto;
-            &-title {
-              font-size: 16px;
-              padding: 40px 20px 30px;
-            }
-            &-text {
-              padding-left: 20px;
-              font-size: 14px;
-              line-height: 25px;
-              &-bottom {
-                padding: 0 0 25px;
-                font-size: 14px;
-                text-align: center;
-                &-icon {
-                  width: 15px;
-                  &-right {
-                    width: 15px;
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -864,6 +653,9 @@ export default {
       &-tags {
         margin: 0 40px 30px;
         // display: none;
+        &-phone {
+          display: block;
+        }
         span {
           margin-right: 15px;
           font-size: 14px;
@@ -900,24 +692,14 @@ export default {
     }
     &-video-dialog {
       .el-dialog {
-        width: 90% !important;
-        min-width: 370px !important;
-      }
-    }
-  }
-}
-@media screen and (max-width: 682px) {
-  .homepage {
-    &-banner {
-      &-center {
-      }
-    }
-    &-advantage {
-      &-intro {
-        &-box {
-          .block .el-carousel {
-            .el-carousel__container {
-              height: calc((100vw - 36px) / 680 * 404) !important;
+        min-width: 85% !important;
+        // min-width: 340px !important;
+        .el-dialog__header {
+          .el-dialog__headerbtn {
+            top: -2px;
+            right: -20px;
+            .el-icon-close:before {
+              font-size: 26px;
             }
           }
         }

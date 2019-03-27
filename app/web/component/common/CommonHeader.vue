@@ -1,7 +1,7 @@
 <template>
   <div class="common-header">
     <el-menu :default-active="activeIndex" class="common-header-menu" mode="horizontal" @select="handleSelect">
-      <el-menu-item index="top"><img class="common-header-menu-logoimg" src="@/asset/images/logo.png" alt="paracraft"> <span class="common-header-menu-logo">Paracraft 创意空间</span></el-menu-item>
+      <el-menu-item index="top"  class="common-header-menu-first"><img class="common-header-menu-logoimg" src="@/asset/images/logo.png" alt="paracraft"> <span class="common-header-menu-logo">Paracraft创意空间</span></el-menu-item>
       <el-menu-item index="oursAdvantage" class="common-header-menu-hidden-item">我们的优势</el-menu-item>
       <el-menu-item index="oursService" class="common-header-menu-hidden-item">服务项目</el-menu-item>
       <el-menu-item index="price" class="common-header-menu-hidden-item">价格</el-menu-item>
@@ -75,6 +75,12 @@ export default {
     display: none;
   }
   &-menu {
+    &-first {
+      padding-right: 80px;
+    }
+    &-hidden-item {
+      padding: 0 35px;
+    }
     &-logoimg {
       width: 41px;
     }
@@ -140,6 +146,9 @@ export default {
       }
     }
     &-menu {
+      &-first {
+        padding-right: 30px;
+      }
       &-hidden-item {
         display: none;
       }
