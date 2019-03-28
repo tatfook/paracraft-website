@@ -89,7 +89,7 @@ export default {
       ],
       carouselPic_2: [
         {
-          url: require('@/asset/images/优势2-从2D到3D全面升级Scratch命令.jpg')
+          url: require('@/asset/images/优势2-从2D到3D全面升级Scratch命令-顺序图1.jpg')
         },
         {
           url: require('@/asset/images/优势22.jpg')
