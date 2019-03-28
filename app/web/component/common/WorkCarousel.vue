@@ -3,7 +3,7 @@
     <div class="works-say"><img src="@/asset/images/引号.png">作品是最好的老师<img src="@/asset/images/引号2.png"></div>
     <div class="works-cabinet">
       <div class="works-cabinet-box" v-for="(item,index) in currentPageData" :key="index">
-        <div class="works-cabinet-box-cover">
+        <div class="works-cabinet-box-cover" @click="showVideo(item)">
           <img class="works-cabinet-box-cover-img" :src="item.coverUrl">
           <img class="works-cabinet-box-cover-player" src="@/asset/images/作品播放.png" alt="" @click="showVideo(item)">
         </div>
@@ -86,9 +86,14 @@ export default {
       margin-bottom: 40px;
       background-color: #ffffff;
       box-shadow: 0px 8px 12px 0px rgba(98, 98, 98, 0.08);
+      &:hover {
+        box-shadow: 0px 8px 12px 0px rgba(98, 98, 98, 0.4);
+        transition: all 200ms ease-in;
+      }
       &-cover {
         width: 380px;
         position: relative;
+        cursor: pointer;
         &-img {
           width: 100%;
           object-fit: cover;
@@ -182,36 +187,47 @@ export default {
     text-align: center;
     padding: 0 0 50px;
     font-size: 16px;
-    color: #5e94be; 
-    img{
+    color: #5e94be;
+    img {
       margin: 0 10px;
       width: 15px;
     }
   }
 }
 @media screen and (max-width: 769px) {
-.works {
-  &-cabinet {
-    padding: 8px;
-    &-box {
-      width: 48%;
-      &-cover {
-        width: 100%;
-        &-player {
-          width: 40px;
-          margin-left: -20px;
-          margin-top: -20px;
+  .works {
+    &-cabinet {
+      padding: 8px;
+      min-height: 590px;
+      &-box {
+        width: 48%;
+        height: auto;
+        &-cover {
+          width: 100%;
+          &-player {
+            width: 40px;
+            margin-left: -20px;
+            margin-top: -20px;
+          }
         }
-      }
-      &-title {
-        font-size: 14px;
-      }
-      &-author{
-        font-size: 12px;
+        &-title {
+          font-size: 14px;
+          padding: 4px 0 4px 4px;
+          font-weight: normal;
+          &-type {
+            padding:0 5px;
+            top: 4px;
+            right: 4px;
+            font-size: 12px;
+          }
+        }
+        &-author {
+          font-size: 12px;
+          padding: 0 0 0 4px;
+        }
       }
     }
   }
-}
 }
 </style>
 

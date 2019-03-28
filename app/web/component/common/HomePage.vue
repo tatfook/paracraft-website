@@ -44,7 +44,7 @@
             <div class="homepage-service-bg-center-intro-box">
               <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/课程定制开发.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">课程定制开发</h6>
-              <p class="homepage-service-bg-center-intro-box-text">不止提供编程课程定制开发，我们还提供数学、物理、化学、生物等其他学科的3D游戏化和数字化课件外包开发服务，使教学更具有针对性，学习效率提升，促进教学质量的提升</p>
+              <p class="homepage-service-bg-center-intro-box-text">我们不止提供编程课程定制开发，还提供数学、物理、化学、生物等其他学科的3D游戏化和数字化课件外包开发服务，使教学更具有针对性，学习效率提升，促进教学质量的提升</p>
             </div>
           </div>
           <div class="homepage-service-bg-center-price">
@@ -380,8 +380,9 @@ export default {
         font-size: 20px;
         text-align: center;
         & > span {
-          margin: 45px;
+          margin:0 45px;
           line-height: 70px;
+          display: inline-block;
         }
         &-hightlight {
           font-weight: bold;
@@ -618,8 +619,9 @@ export default {
         &-keyword {
           font-size: 12px;
           & > span {
-            margin: 10px;
+            margin: 0 10px;
             line-height: 30px;
+            display: inline-block;
           }
           &-hightlight {
             font-size: 16px;
@@ -678,12 +680,11 @@ export default {
         }
         &-box {
           margin: 0 auto;
-          width: 300px;
+          max-width: 100%;
           img {
             width: 100%;
           }
           &-text {
-            // display: none;
           }
         }
       }

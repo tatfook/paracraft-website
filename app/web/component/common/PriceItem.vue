@@ -230,6 +230,8 @@ export default {
         margin: 0 10px 20px;
         &-top {
           padding-left: 20px;
+          height: 50px;
+          line-height: 50px;
         }
         &-flow {
           padding-left: 20px;
