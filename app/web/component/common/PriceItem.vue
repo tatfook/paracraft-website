@@ -86,6 +86,7 @@ export default {
         color: #333;
         font-weight: bold;
         padding-left: 67px;
+        margin-bottom: 43px;
       }
       &-flow {
         color: #333333;

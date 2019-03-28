@@ -380,7 +380,7 @@ export default {
         font-size: 20px;
         text-align: center;
         & > span {
-          margin:0 45px;
+          margin: 0 45px;
           line-height: 70px;
           display: inline-block;
         }
@@ -445,6 +445,9 @@ export default {
             border-radius: 36px;
             background: #fff;
             cursor: pointer;
+            &:hover {
+              background: #e0e9ff;
+            }
           }
         }
       }
@@ -511,11 +514,14 @@ export default {
       font-size: 16px;
       text-align: center;
       line-height: 50px;
-      display: flex;
-      justify-content: space-between;
-      span {
-        display: inline-block;
-        flex: 1;
+      // display: flex;
+      // justify-content: space-between;
+      // span {
+      //   display: inline-block;
+      //   flex: 1;
+      // }
+      span + span {
+        margin-left: 30px;
       }
       &-contest {
         // margin-right: 58px;
@@ -523,7 +529,7 @@ export default {
       &-bright {
         font-size: 22px;
         color: #333;
-        margin-left: 18px;
+        // margin-left: 18px;
       }
     }
   }
