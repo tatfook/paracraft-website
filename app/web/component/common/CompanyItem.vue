@@ -234,8 +234,8 @@ export default {
       }
     }
     &-ourself {
-      margin-top: 20px;
-      padding: 0 30px 44px;
+      margin-top: 0;
+      padding: 0 30px 14px;
     }
     &-tags {
       &-center {

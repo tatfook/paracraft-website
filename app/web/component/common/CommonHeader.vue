@@ -1,7 +1,7 @@
 <template>
   <div class="common-header">
     <el-menu :default-active="activeIndex" class="common-header-menu" mode="horizontal" @select="handleSelect">
-      <el-menu-item index="top"  class="common-header-menu-first"><img class="common-header-menu-logoimg" src="@/asset/images/logo.png" alt="paracraft"> <span class="common-header-menu-logo">Paracraft创意空间</span></el-menu-item>
+      <el-menu-item index="top" class="common-header-menu-first"><img class="common-header-menu-logoimg" src="@/asset/images/logo.png" alt="paracraft"> <span class="common-header-menu-logo">Paracraft创意空间</span></el-menu-item>
       <el-menu-item index="oursAdvantage" class="common-header-menu-hidden-item">我们的优势</el-menu-item>
       <el-menu-item index="oursService" class="common-header-menu-hidden-item">服务项目</el-menu-item>
       <el-menu-item index="price" class="common-header-menu-hidden-item">价格</el-menu-item>
@@ -142,18 +142,30 @@ export default {
       display: flex;
       justify-content: space-around;
       &-item {
-        line-height: 68px;
+        line-height: 38px;
       }
     }
     &-menu {
       &-first {
-        padding-right: 30px;
+        padding-right: 0;
       }
       &-hidden-item {
         display: none;
       }
       &-logo {
         font-size: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 376px) {
+  .common-header {
+    &-menu {
+      &-first {
+        padding: 0 0 0 10px;
+      }
+      .pull-right{
+        padding: 0 10px 0 0;
       }
     }
   }

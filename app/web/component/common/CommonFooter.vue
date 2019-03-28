@@ -232,9 +232,12 @@ export default {
         display: flex;
         padding: 10px;
         color: #fff;
+        background: rgb(32,32,32);
+        font-size: 14px;
         &-left {
           display: flex;
           align-items: center;
+          // min-width: 236px;
           &-content {
             &-text {
               padding: 0 20px 0 0;
@@ -242,7 +245,12 @@ export default {
           }
         }
         &-right {
+          flex: 1;
           text-align: center;
+          img {
+            width: 100%;
+            max-width: 140px;
+          }
         }
       }
     }

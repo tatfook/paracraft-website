@@ -198,8 +198,10 @@ export default {
   .works {
     &-cabinet {
       padding: 8px;
+      min-height: 590px;
       &-box {
         width: 48%;
+        height: auto;
         &-cover {
           width: 100%;
           &-player {
@@ -210,9 +212,18 @@ export default {
         }
         &-title {
           font-size: 14px;
+          padding: 4px 0 4px 4px;
+          font-weight: normal;
+          &-type {
+            padding:0 5px;
+            top: 4px;
+            right: 4px;
+            font-size: 12px;
+          }
         }
         &-author {
           font-size: 12px;
+          padding: 0 0 0 4px;
         }
       }
     }

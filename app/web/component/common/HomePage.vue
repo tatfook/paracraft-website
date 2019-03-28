@@ -380,8 +380,9 @@ export default {
         font-size: 20px;
         text-align: center;
         & > span {
-          margin: 45px;
+          margin:0 45px;
           line-height: 70px;
+          display: inline-block;
         }
         &-hightlight {
           font-weight: bold;
@@ -618,8 +619,9 @@ export default {
         &-keyword {
           font-size: 12px;
           & > span {
-            margin: 10px;
+            margin: 0 10px;
             line-height: 30px;
+            display: inline-block;
           }
           &-hightlight {
             font-size: 16px;
@@ -678,12 +680,11 @@ export default {
         }
         &-box {
           margin: 0 auto;
-          width: 300px;
+          max-width: 100%;
           img {
             width: 100%;
           }
           &-text {
-            // display: none;
           }
         }
       }
