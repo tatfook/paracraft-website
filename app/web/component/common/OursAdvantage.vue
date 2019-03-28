@@ -82,9 +82,10 @@ export default {
     return {
       carouselPic_1: [
         { url: require('@/asset/images/优势1-沉浸式游戏与学习体验.jpg') },
-        { url: require('@/asset/images/优势1-完善的3D场景编辑器.jpg') },
-        { url: require('@/asset/images/优势1-追加.jpg') },
-        { url: require('@/asset/images/优势1-制作3D骨骼动画人物.jpg') }
+        { url: require('@/asset/images/优势1-制作3D骨骼动画人物-顺序图2.jpg') },
+        { url: require('@/asset/images/优势1-完善的3D场景编辑器-顺序图3.jpg') },
+        { url: require('@/asset/images/优势1-顺序图4.jpg') },
+        { url: require('@/asset/images/适配-顺序图5.jpg') },
       ],
       carouselPic_2: [
         {
