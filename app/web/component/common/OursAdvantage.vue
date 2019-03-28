@@ -35,7 +35,7 @@
           <p class="box-text-text">分享你的作品到网站或发布到手机应用商店</p>
           <p class="box-text-text">历经15年，自主研发的NPL语言与专业3D引擎</p>
           <p class="box-text-text-bottom-phone">从可视化编程，到文本编程，到发布专业应用程序</p>
-          <p class="box-text-button"><span class="box-text-button-sty" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/3280/raw#编程教学样片.mp4')">编程教学样片</span></p>
+          <p class="box-text-button"><span class="box-text-button-sty" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/3304/raw#编程教学样片.mp4')">编程教学样片</span></p>
           <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>从可视化编程，到文本编程，到发布专业应用程序<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
         </div>
       </div>
