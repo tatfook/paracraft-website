@@ -191,7 +191,7 @@ export default {
 @media screen and (max-width: 769px) {
   .gather-info-dialog {
     .el-dialog {
-      width: 90% !important;
+      width: 100% !important;
     }
   }
 }

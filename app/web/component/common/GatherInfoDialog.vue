@@ -167,7 +167,8 @@ export default {
   .gather-info {
     .el-dialog__wrapper {
       .el-dialog {
-        width: 90% !important;
+        width: 100% !important;
+        margin-top: 0 !important;
       }
     }
   }

@@ -87,13 +87,14 @@
     <div class="common-footer-phone-contact">
       <div class="common-footer-phone-contact-left">
         <div class="common-footer-phone-contact-left-content">
-          <p class="common-footer-phone-contact-left-content-text">电话：0755-86967012</p>
-          <p class="common-footer-phone-contact-left-content-text">邮箱：support@paraengine.com</p>
+          <p class="common-footer-phone-contact-left-content-text">电话：<br>0755-86967012</p>
+          <p class="common-footer-phone-contact-left-content-text">邮箱：<br>support@paraengine.com</p>
         </div>
       </div>
       <div class="common-footer-phone-contact-right">
+        <p class="common-footer-phone-contact-right-more">更多视频请关注</p>
         <img class="common-footer-content-part-list-weixin" src="@/asset/images/weixin.png" alt="">
-        <p>Paracraft公众号</p>
+        <p class="common-footer-phone-contact-right-text">Paracraft公众号</p>
       </div>
     </div>
     <div class="common-footer-bottom">
@@ -151,10 +152,11 @@ export default {
     &-part {
       flex: 1;
       color: #fff;
+      font-size: 14px;
       &-list {
         list-style: none;
         padding: 0 0 20px;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 35px;
         a {
           text-decoration: none;
@@ -180,8 +182,21 @@ export default {
   }
   &-phone {
     display: none;
+    /deep/ .el-collapse-item{
+      .el-collapse-item__header{
+        font-size: 14px;
+      }
+    }
     &-contact {
       display: none;
+      &-right {
+        &-more {
+          font-size: 16px;
+        }
+        &-text {
+          color: rgb(179, 179, 179)
+        }
+      }
     }
   }
   &-bottom {
