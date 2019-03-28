@@ -19,7 +19,7 @@
           <p class="box-text-text">直接在3D世界中编程</p>
           <p class="box-text-text">沉浸式游戏与学习体验</p>
           <p class="box-text-text">支持PC/移动端多平台</p>
-          <p class="box-text-button"><span class="box-text-button-sty" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/3216/raw#动画教学样片.mp4')">动画教学样片</span></p>
+          <p class="box-text-button"><span class="box-text-button-sty" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/3279/raw#功能演示视频.mp4')">功能演示视频</span></p>
           <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>随心所欲创造属于你的3D动画与游戏<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
         </div>
       </div>
@@ -33,7 +33,7 @@
           <p class="box-text-text">开发从简单到复杂的3D动画与游戏</p>
           <p class="box-text-text">分享你的作品到网站或发布到手机应用商店</p>
           <p class="box-text-text">历经15年，自主研发的NPL语言与专业3D引擎</p>
-          <p class="box-text-button"><span class="box-text-button-sty" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/3215/raw#编程教学样片.mp4')">编程教学样片</span></p>
+          <p class="box-text-button"><span class="box-text-button-sty" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/3280/raw#编程教学样片.mp4')">编程教学样片</span></p>
           <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>从可视化编程，到文本编程，到发布专业应用程序<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
         </div>
       </div>
@@ -65,7 +65,7 @@
           <p class="box-text-text">专业的教师培训+一站式课堂管理平台，助力老师打造高效课堂</p>
           <p class="box-text-text">教学课程可深度定制开发，助力学校和教学机构教学升级</p>
           <p class="box-text-text">基于PBL项目式学习的个人网站创作</p>
-          <p class="box-text-button"><span class="box-text-button-sty" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/3214/raw#课件开发样片.mp4')">课件开发样片</span></p>
+          <p class="box-text-button"><span class="box-text-button-sty" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/3281/raw#课件演示样片.mp4')">课件演示样片</span></p>
           <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>教育的本质就是让人保持(Keep)有事可做(Work)<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
         </div>
       </div>
@@ -78,18 +78,18 @@ export default {
   data() {
     return {
       carouselPic_1: [
-        { url: require('@/asset/images/优势1-完善的3D场景编辑器.jpg') },
-        { url: require('@/asset/images/优势1-制作3D骨骼动画人物.jpg') },
         { url: require('@/asset/images/优势1-沉浸式游戏与学习体验.jpg') },
+        { url: require('@/asset/images/优势1-完善的3D场景编辑器.jpg') },
         { url: require('@/asset/images/优势1-追加.jpg') },
+        { url: require('@/asset/images/优势1-制作3D骨骼动画人物.jpg') },
         // { url: require('@/asset/images/动画教学样片-封面.jpg') }
       ],
       carouselPic_2: [
         { url: require('@/asset/images/优势2-从2D到3D全面升级Scratch命令.jpg') },
-        { url: require('@/asset/images/优势2-开发从游戏.jpg') },
         {
           url: require('@/asset/images/优势22.jpg')
         },
+        { url: require('@/asset/images/优势2-开发从游戏.jpg') },
         // {
           // url: require('@/asset/images/编程教学样片-封面.jpg')
         // }
