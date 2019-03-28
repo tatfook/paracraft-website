@@ -20,7 +20,26 @@
 
         <p class="price-item-content-charge price-item-content-charge-per"><span class="price-item-content-intro-icon"></span>我们还提供额外的教师培训服务。每位老师3000元/年<br>联系我们可申请最多3名免费教师培训名额</p>
         <!-- <p class="price-item-content-charge price-item-content-charge-per">联系我们可申请最多3名免费教师培训名额</p> -->
-        <!-- <div class="price-item-content-counter"></div> -->
+        <div class="price-item-content-counter">
+          <div class="price-item-content-counter-count">
+            <p class="price-item-content-counter-count-member">学生人数</p>
+            <p class="price-item-content-counter-count-num">费用：{{studentCharge}}元/年/人</p>
+            <el-slider v-model="sliderValue_student" show-input max="700">
+            </el-slider>
+            <p class="price-item-content-counter-count-member">老师人数</p>
+            <p class="price-item-content-counter-count-num">费用：{{teacherCharge}}元/年/人</p>
+            <el-slider v-model="sliderValue_teacher" show-input max="200">
+            </el-slider>
+          </div>
+          <div class="price-item-content-counter-result">
+            <p class="price-item-content-counter-result-title">价格预算清单</p>
+            <p class="price-item-content-counter-result-text">请拖动滑竿或直接输入相关人数的预计用量，以估算使用Paracraft服务的总成本</p>
+            <div class="price-item-content-counter-result-total">
+              <p>合计：￥<span class="price-item-content-counter-result-total-hightlight">{{totalCharge}}</span>/年</p>
+            </div>
+            <!-- <p class="price-item-content-counter-result-export">↓导出清单</p> -->
+          </div>
+        </div>
         <div class="price-item-content-hint">
           包年一次性付费优惠更多，欢迎洽谈。
         </div>
@@ -54,6 +73,53 @@
 <script>
 export default {
   name: 'PriceItem',
+  data() {
+    return {
+      sliderValue_student: 0,
+      sliderValue_teacher: 0,
+      // studentCharge: 0,
+      // teacherCharge: 0
+    }
+  },
+  computed: {
+    studentCharge(){
+      if(this.sliderValue_student < 6) {
+        return 0
+      }else if(this.sliderValue_student < 101) {
+        return 2000
+      }else if(this.sliderValue_student < 501) {
+        return 1800
+      }else{
+        return 1500
+      }
+    },
+    teacherCharge(){
+      if(this.sliderValue_teacher < 4) {
+        return 0
+      }else{
+        return 3000
+      }
+    },
+    totalCharge(){
+      let student_charge = 0
+      if(this.sliderValue_student < 6) {
+        student_charge = 0
+      }else if(this.sliderValue_student >= 6 && this.sliderValue_student < 101) {
+        student_charge = (this.sliderValue_student - 5) * 2000
+      }else if(this.sliderValue_student >= 101 &&this.sliderValue_student < 501) {
+        student_charge =  (this.sliderValue_student - 100) * 1800 + 95 * 2000
+      }else{
+        student_charge = (this.sliderValue_student - 500) * 1500 + 400 * 1800 + 95 * 2000
+      }
+      let teacher_charge = 0
+      if(this.sliderValue_teacher < 4) {
+        teacher_charge = 0
+      }else {
+        teacher_charge = (this.sliderValue_teacher - 3) * 3000
+      }
+      return student_charge + teacher_charge
+    }
+  },
   methods: {
     isShowGatherInfo() {
       this.$emit('isShowGatherInfo')
@@ -142,12 +208,70 @@ export default {
         }
       }
       &-counter {
+        padding: 20px 41px 0;
+        display: flex;
+        &-count {
+          flex: 1;
+          border: solid 1px #e5e5e5;
+          padding: 0 26px 50px;
+          &-member {
+            font-size: 18px;
+            color: #333;
+            margin-top: 36px;
+          }
+          &-num {
+            font-size: 16px;
+            color: #999;
+          }
+        }
+        &-result {
+          width: 355px;
+          margin-left: 26px;
+          border: solid 1px #e5e5e5;
+          &-title {
+            background: #f8f6f6;
+            line-height: 50px;
+            font-size: 20px;
+            margin: 0;
+            padding-left: 21px;
+          }
+          &-text {
+            width: 282px;
+            text-align: center;
+            margin: 60px auto 90px;
+            color: #999;
+            font-size: 14px;
+          }
+          &-total{
+            width: 310px;
+            min-height: 66px;
+            color: #fff;
+            margin: 0 auto;
+            font-size: 16px;
+            background: #0090ff;
+            p{
+              margin: 0;
+              line-height: 60px;
+              text-align: right;
+              padding-right: 10px;
+            }
+            &-hightlight {
+              font-size: 30px;
+            }
+          }
+          &-export {
+            color: #999;
+            text-align: right;
+            padding-right: 21px;
+            cursor: pointer;
+          }
+        }
       }
       &-hint {
         background: rgb(255, 245, 229);
         color: #ee6a00;
         line-height: 60px;
-        margin: 67px 67px 0;
+        margin: 67px 41px 0;
         padding-left: 24px;
       }
       &-intro {
@@ -246,7 +370,7 @@ export default {
           font-size: 14px;
           &-terms {
             padding-left: 58px;
-          font-size: 14px;
+            font-size: 14px;
 
             &-num {
               left: 40px;
