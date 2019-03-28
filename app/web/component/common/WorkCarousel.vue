@@ -82,7 +82,7 @@ export default {
     min-height: 626px;
     &-box {
       width: 380px;
-      max-height: 273px;
+      // max-height: 273px;
       margin-bottom: 40px;
       background-color: #ffffff;
       box-shadow: 0px 8px 12px 0px rgba(98, 98, 98, 0.08);
@@ -162,9 +162,6 @@ export default {
       background: #6ab7f9;
       position: relative;
       cursor: pointer;
-      // &:hover {
-      //   background: #6ab7f9;
-      // }
       &::before {
         position: absolute;
         top: 8px;
@@ -198,10 +195,11 @@ export default {
   .works {
     &-cabinet {
       padding: 8px;
-      min-height: 590px;
+      min-height: 480px;
       &-box {
         width: 48%;
         height: auto;
+        margin-bottom: 12px;
         &-cover {
           width: 100%;
           &-player {
@@ -223,7 +221,7 @@ export default {
         }
         &-author {
           font-size: 12px;
-          padding: 0 0 0 4px;
+          padding: 0 0 5px 4px;
         }
       }
     }
