@@ -75,7 +75,7 @@ export default {
   background: #f9faff;
   &-title {
     margin: 0;
-    padding: 94px 0 30px;
+    padding: 94px 0 26px;
     text-align: center;
     color: #333;
     font-size: 30px;
@@ -148,8 +148,8 @@ export default {
     font-size: 16px;
     color: #5e94be;
     text-align: center;
-    margin: 20px 0 0;
-    padding-bottom: 20px;
+    margin: 0;
+    padding-bottom: 42px;
     img {
       margin: 10px 10px 0;
       width: 15px;

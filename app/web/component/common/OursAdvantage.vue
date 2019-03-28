@@ -150,7 +150,7 @@ export default {
             height: 404px !important;
             max-width: 100%;
             .el-carousel__item {
-              box-shadow: 0px 8px 27px 0px rgba(63, 138, 250, 0.13);
+              // box-shadow: 0px 8px 27px 0px rgba(63, 138, 250, 0.13);
               .el-carousel__mask {
                 opacity: 0.6;
               }
@@ -166,7 +166,7 @@ export default {
           box-shadow: 0px 8px 27px 0px rgba(63, 138, 250, 0.13);
           border-radius: 6px;
           min-height: 404px;
-          background: url(../../asset/images/advantage-bg.png);
+          // background: url(../../asset/images/advantage-bg.png);
           &-title {
             font-size: 28px;
             color: #333;

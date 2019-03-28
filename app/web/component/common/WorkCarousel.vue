@@ -7,7 +7,7 @@
           <img class="works-cabinet-box-cover-img" :src="item.coverUrl">
           <img class="works-cabinet-box-cover-player" src="@/asset/images/作品播放.png" alt="" @click="showVideo(item)">
         </div>
-        <h5 class="works-cabinet-box-title">{{item.workName}} <span class="works-cabinet-box-title-type" v-show="item.type">{{item.type}}</span></h5>
+        <h5 class="works-cabinet-box-title">{{item.workName}}<span class="works-cabinet-box-title-type" v-show="item.type">{{item.type}}</span></h5>
         <p class="works-cabinet-box-author">作者： {{item.author}}</p>
       </div>
     </div>
@@ -110,7 +110,7 @@ export default {
       &-title {
         color: #333;
         font-size: 16px;
-        padding: 16px 0 11px 20px;
+        padding: 10px 68px 11px 20px;
         margin: 0;
         overflow: hidden;
         white-space: nowrap;
@@ -118,8 +118,8 @@ export default {
         position: relative;
         &-type {
           position: absolute;
-          right: 10px;
-          top: 12px;
+          right: 20px;
+          top: 9px;
           background: #f0f0f0;
           font-size: 14px;
           color: #666;
@@ -212,7 +212,7 @@ export default {
         }
         &-title {
           font-size: 14px;
-          padding: 4px 0 4px 4px;
+          padding: 4px 30px 4px 4px;
           font-weight: normal;
           &-type {
             padding:0 5px;
