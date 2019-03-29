@@ -321,6 +321,7 @@ export default {
             padding-top: 40px;
             min-height: 170px;
             border: 1px solid transparent;
+            box-sizing: border-box;
           }
           &-text {
             width: 282px;
@@ -488,6 +489,17 @@ export default {
         &-counter {
           &-count {
             margin: 0 0 10px;
+          }
+          &-result {
+            width: 100%;
+            &-item {
+              width: 100%;
+              box-sizing: border-box;
+              padding: 0 10px;
+            }
+            &-total {
+              width: 100%;
+            }
           }
         }
         &-hint {
