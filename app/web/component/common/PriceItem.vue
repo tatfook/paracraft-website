@@ -24,23 +24,27 @@
           <div class="price-item-content-counter-count">
             <p class="price-item-content-counter-count-member">学生人数</p>
             <p class="price-item-content-counter-count-num">费用：{{studentCharge}}元/年/人</p>
-            <el-slider v-model="sliderValue_student" show-input max="700">
+            <el-slider v-model="sliderValue_student" show-input :max="800">
             </el-slider>
             <p class="price-item-content-counter-count-member">老师人数</p>
             <p class="price-item-content-counter-count-num">费用：{{teacherCharge}}元/年/人</p>
-            <el-slider v-model="sliderValue_teacher" show-input max="200">
+            <el-slider v-model="sliderValue_teacher" show-input :max="300">
             </el-slider>
           </div>
           <div class="price-item-content-counter-result">
             <p class="price-item-content-counter-result-title">价格预算清单</p>
-            <p class="price-item-content-counter-result-text" v-show="!allStudentsCharge && !allTeachersCharge">请拖动滑竿或直接输入相关人数的预计用量，以估算使用Paracraft服务的总成本</p>
-            <div class="price-item-content-counter-result-item" v-show="allStudentsCharge">
-              <span class="price-item-content-counter-result-item-key">学生费用：</span>
-              <span class="price-item-content-counter-result-item-value">￥{{allStudentsCharge}}</span>
-            </div>
-            <div class="price-item-content-counter-result-item" v-show="allTeachersCharge">
-              <span class="price-item-content-counter-result-item-key">教师费用：</span>
-              <span class="price-item-content-counter-result-item-value">￥{{allTeachersCharge}}</span>
+            <div class="price-item-content-counter-result-content">
+              <p class="price-item-content-counter-result-text" v-show="!allStudentsCharge && !allTeachersCharge">请拖动滑竿或直接输入相关人数的预计用量，以估算使用Paracraft服务的总成本</p>
+              <div class="price-item-content-counter-result-item" v-show="allStudentsCharge">
+                <span class="price-item-content-counter-result-item-key">学生服务</span>
+                <span class="price-item-content-counter-result-item-value">￥{{_allStudentsCharge}}</span>
+                <p class="price-item-content-counter-result-item-hint">学生费用{{studentCharge}}元/年/人</p>
+              </div>
+              <div class="price-item-content-counter-result-item" v-show="allTeachersCharge">
+                <span class="price-item-content-counter-result-item-key">老师服务：</span>
+                <span class="price-item-content-counter-result-item-value">￥{{_allTeachersCharge}}</span>
+                <p class="price-item-content-counter-result-item-hint">老师费用{{teacherCharge}}元/年/人</p>
+              </div>
             </div>
             <div class="price-item-content-counter-result-total">
               <p>合计：￥<span class="price-item-content-counter-result-total-hightlight">{{totalCharge}}</span>/年</p>
@@ -84,9 +88,9 @@ export default {
   data() {
     return {
       sliderValue_student: 0,
-      sliderValue_teacher: 0
-      // studentCharge: 0,
-      // teacherCharge: 0
+      sliderValue_teacher: 0,
+      // over_studentChargeTenThousand: 0,
+      // over_teacherChargeTenThousand: 0
     }
   },
   computed: {
@@ -115,7 +119,7 @@ export default {
         this.sliderValue_student >= 6 &&
         this.sliderValue_student < 101
       ) {
-        return (this.sliderValue_student - 5) * 2000
+          return (this.sliderValue_student - 5) * 2000
       } else if (
         this.sliderValue_student >= 101 &&
         this.sliderValue_student < 501
@@ -125,6 +129,9 @@ export default {
         return (this.sliderValue_student - 500) * 1500 + 400 * 1800 + 95 * 2000
       }
     },
+    _allStudentsCharge(){
+      return this.allStudentsCharge >= 10000 ? this.allStudentsCharge / 10000 + '万' : this.allStudentsCharge
+    },
     allTeachersCharge() {
       if (this.sliderValue_teacher < 4) {
         return 0
@@ -132,8 +139,11 @@ export default {
         return (this.sliderValue_teacher - 3) * 3000
       }
     },
+    _allTeachersCharge() {
+      return this.allTeachersCharge >= 10000 ? this.allTeachersCharge / 10000 + '万' : this.allTeachersCharge
+    },
     totalCharge() {
-      return this.allStudentsCharge + this.allTeachersCharge
+      return this.allStudentsCharge + this.allTeachersCharge >=10000 ? (this.allStudentsCharge + this.allTeachersCharge) / 10000 + '万' : (this.allStudentsCharge + this.allTeachersCharge)
     }
   },
   methods: {
@@ -143,7 +153,11 @@ export default {
     exportList() {
       import('@/component/data/Export2Excel').then(excel => {
         const tHeader = ['服务类型', '数量', '价格/年']
-        let data = [['学生', this.sliderValue_student, this.allStudentsCharge], ['老师', this.sliderValue_teacher, this.allTeachersCharge], ['', '总价（元）', this.totalCharge]]
+        let data = [
+          ['学生', this.sliderValue_student, this.allStudentsCharge],
+          ['老师', this.sliderValue_teacher, this.allTeachersCharge],
+          ['', '总价（元）', this.totalCharge]
+        ]
         excel.export_json_to_excel({
           header: tHeader,
           data,
@@ -265,10 +279,16 @@ export default {
             margin: 0;
             padding-left: 21px;
           }
+          &-content {
+            padding-top: 40px;
+            min-height: 170px;
+            border: 1px solid transparent;
+          }
           &-text {
             width: 282px;
             text-align: center;
-            margin: 60px auto 90px;
+            margin: 0 auto 90px;
+            padding-top: 40px;
             color: #999;
             font-size: 14px;
           }
@@ -283,12 +303,17 @@ export default {
               float: right;
               color: #0090ff;
             }
+            &-hint{
+              color: #999;
+              margin: 0;
+              font-size: 14px;
+            }
           }
           &-total {
             width: 310px;
             min-height: 66px;
             color: #fff;
-            margin: 60px auto 0;
+            margin: 30px auto 0;
             font-size: 16px;
             background: #0090ff;
             p {

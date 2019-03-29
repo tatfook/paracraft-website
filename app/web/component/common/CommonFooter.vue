@@ -94,7 +94,7 @@
       <div class="common-footer-phone-contact-right">
         <p class="common-footer-phone-contact-right-more">更多视频请关注</p>
         <img class="common-footer-content-part-list-weixin" src="@/asset/images/weixin.png" alt="">
-        <p class="common-footer-phone-contact-right-text">Paracraft公众号</p>
+        <p class="common-footer-phone-contact-right-text">公众号：paracraft</p>
       </div>
     </div>
     <div class="common-footer-bottom">
