@@ -25,10 +25,12 @@
     "egg-view-vue-ssr": "^3.0.2",
     "element-ui": "^2.6.1",
     "extend": "~3.0.0",
+    "file-saver": "^2.0.1",
     "lodash": "^4.17.11",
     "mint-ui": "^2.2.9",
     "mockjs": "^1.0.1-beta3",
     "moment": "^2.24.0",
+    "script-loader": "^0.7.2",
     "scroll-into-view-if-needed": "^2.2.20",
     "video.js": "^7.4.1",
     "vue": "^2.5.0",
@@ -36,7 +38,8 @@
     "vue-router": "^3.0.1",
     "vue-video-player": "^5.0.2",
     "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0"
+    "vuex-router-sync": "^5.0.0",
+    "xlsx": "^0.14.1"
   },
   "devDependencies": {
     "autod-egg": "^1.0.0",

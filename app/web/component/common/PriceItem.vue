@@ -33,11 +33,19 @@
           </div>
           <div class="price-item-content-counter-result">
             <p class="price-item-content-counter-result-title">价格预算清单</p>
-            <p class="price-item-content-counter-result-text">请拖动滑竿或直接输入相关人数的预计用量，以估算使用Paracraft服务的总成本</p>
+            <p class="price-item-content-counter-result-text" v-show="!allStudentsCharge && !allTeachersCharge">请拖动滑竿或直接输入相关人数的预计用量，以估算使用Paracraft服务的总成本</p>
+            <div class="price-item-content-counter-result-item" v-show="allStudentsCharge">
+              <span class="price-item-content-counter-result-item-key">学生费用：</span>
+              <span class="price-item-content-counter-result-item-value">￥{{allStudentsCharge}}</span>
+            </div>
+            <div class="price-item-content-counter-result-item" v-show="allTeachersCharge">
+              <span class="price-item-content-counter-result-item-key">教师费用：</span>
+              <span class="price-item-content-counter-result-item-value">￥{{allTeachersCharge}}</span>
+            </div>
             <div class="price-item-content-counter-result-total">
               <p>合计：￥<span class="price-item-content-counter-result-total-hightlight">{{totalCharge}}</span>/年</p>
             </div>
-            <!-- <p class="price-item-content-counter-result-export">↓导出清单</p> -->
+            <p class="price-item-content-counter-result-export" @click="exportList()">↓导出清单</p>
           </div>
         </div>
         <div class="price-item-content-hint">
@@ -76,53 +84,73 @@ export default {
   data() {
     return {
       sliderValue_student: 0,
-      sliderValue_teacher: 0,
+      sliderValue_teacher: 0
       // studentCharge: 0,
       // teacherCharge: 0
     }
   },
   computed: {
-    studentCharge(){
-      if(this.sliderValue_student < 6) {
+    studentCharge() {
+      if (this.sliderValue_student < 6) {
         return 0
-      }else if(this.sliderValue_student < 101) {
+      } else if (this.sliderValue_student < 101) {
         return 2000
-      }else if(this.sliderValue_student < 501) {
+      } else if (this.sliderValue_student < 501) {
         return 1800
-      }else{
+      } else {
         return 1500
       }
     },
-    teacherCharge(){
-      if(this.sliderValue_teacher < 4) {
+    teacherCharge() {
+      if (this.sliderValue_teacher < 4) {
         return 0
-      }else{
+      } else {
         return 3000
       }
     },
-    totalCharge(){
-      let student_charge = 0
-      if(this.sliderValue_student < 6) {
-        student_charge = 0
-      }else if(this.sliderValue_student >= 6 && this.sliderValue_student < 101) {
-        student_charge = (this.sliderValue_student - 5) * 2000
-      }else if(this.sliderValue_student >= 101 &&this.sliderValue_student < 501) {
-        student_charge =  (this.sliderValue_student - 100) * 1800 + 95 * 2000
-      }else{
-        student_charge = (this.sliderValue_student - 500) * 1500 + 400 * 1800 + 95 * 2000
+    allStudentsCharge() {
+      if (this.sliderValue_student < 6) {
+        return 0
+      } else if (
+        this.sliderValue_student >= 6 &&
+        this.sliderValue_student < 101
+      ) {
+        return (this.sliderValue_student - 5) * 2000
+      } else if (
+        this.sliderValue_student >= 101 &&
+        this.sliderValue_student < 501
+      ) {
+        return (this.sliderValue_student - 100) * 1800 + 95 * 2000
+      } else {
+        return (this.sliderValue_student - 500) * 1500 + 400 * 1800 + 95 * 2000
       }
-      let teacher_charge = 0
-      if(this.sliderValue_teacher < 4) {
-        teacher_charge = 0
-      }else {
-        teacher_charge = (this.sliderValue_teacher - 3) * 3000
+    },
+    allTeachersCharge() {
+      if (this.sliderValue_teacher < 4) {
+        return 0
+      } else {
+        return (this.sliderValue_teacher - 3) * 3000
       }
-      return student_charge + teacher_charge
+    },
+    totalCharge() {
+      return this.allStudentsCharge + this.allTeachersCharge
     }
   },
   methods: {
     isShowGatherInfo() {
       this.$emit('isShowGatherInfo')
+    },
+    exportList() {
+      import('@/component/data/Export2Excel').then(excel => {
+        const tHeader = ['服务类型', '数量', '价格/年']
+        let data = [['学生', this.sliderValue_student, this.allStudentsCharge], ['老师', this.sliderValue_teacher, this.allTeachersCharge], ['', '总价（元）', this.totalCharge]]
+        excel.export_json_to_excel({
+          header: tHeader,
+          data,
+          filename: '费用清单'
+        })
+        this.downloadLoading = false
+      })
     }
   }
 }
@@ -210,10 +238,12 @@ export default {
       &-counter {
         padding: 20px 41px 0;
         display: flex;
+        flex-wrap: wrap;
         &-count {
           flex: 1;
           border: solid 1px #e5e5e5;
           padding: 0 26px 50px;
+          margin-right: 26px;
           &-member {
             font-size: 18px;
             color: #333;
@@ -226,8 +256,8 @@ export default {
         }
         &-result {
           width: 355px;
-          margin-left: 26px;
           border: solid 1px #e5e5e5;
+          // padding-bottom: 30px;
           &-title {
             background: #f8f6f6;
             line-height: 50px;
@@ -242,14 +272,26 @@ export default {
             color: #999;
             font-size: 14px;
           }
-          &-total{
+          &-item {
+            width: 300px;
+            margin: 20px auto;
+            font-size: 20px;
+            padding-right: 10px;
+            &-key {
+            }
+            &-value {
+              float: right;
+              color: #0090ff;
+            }
+          }
+          &-total {
             width: 310px;
             min-height: 66px;
             color: #fff;
-            margin: 0 auto;
+            margin: 60px auto 0;
             font-size: 16px;
             background: #0090ff;
-            p{
+            p {
               margin: 0;
               line-height: 60px;
               text-align: right;
@@ -375,6 +417,11 @@ export default {
             &-num {
               left: 40px;
             }
+          }
+        }
+        &-counter {
+          &-count {
+            margin: 0 0 10px;
           }
         }
         &-hint {
