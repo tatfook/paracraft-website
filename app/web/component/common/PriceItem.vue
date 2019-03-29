@@ -24,12 +24,22 @@
           <div class="price-item-content-counter-count">
             <p class="price-item-content-counter-count-member">学生人数</p>
             <p class="price-item-content-counter-count-num">费用：{{studentCharge}}元/年/人</p>
-            <el-slider v-model="sliderValue_student" show-input :max="800">
-            </el-slider>
+            <div class="price-item-content-counter-count-slider">
+              <div class="price-item-content-counter-count-slider-left">
+                <el-slider v-model="sliderValue_student" show-input :max="800">
+                </el-slider>
+              </div>
+              <div class="price-item-content-counter-count-slider-right">人</div>
+            </div>
             <p class="price-item-content-counter-count-member">老师人数</p>
             <p class="price-item-content-counter-count-num">费用：{{teacherCharge}}元/年/人</p>
-            <el-slider v-model="sliderValue_teacher" show-input :max="300">
-            </el-slider>
+            <div class="price-item-content-counter-count-slider">
+              <div class="price-item-content-counter-count-slider-left">
+                <el-slider v-model="sliderValue_teacher" show-input :max="300">
+                </el-slider>
+              </div>
+              <div class="price-item-content-counter-count-slider-right">人</div>
+            </div>
           </div>
           <div class="price-item-content-counter-result">
             <p class="price-item-content-counter-result-title">价格预算清单</p>
@@ -88,7 +98,7 @@ export default {
   data() {
     return {
       sliderValue_student: 0,
-      sliderValue_teacher: 0,
+      sliderValue_teacher: 0
       // over_studentChargeTenThousand: 0,
       // over_teacherChargeTenThousand: 0
     }
@@ -119,7 +129,7 @@ export default {
         this.sliderValue_student >= 6 &&
         this.sliderValue_student < 101
       ) {
-          return (this.sliderValue_student - 5) * 2000
+        return (this.sliderValue_student - 5) * 2000
       } else if (
         this.sliderValue_student >= 101 &&
         this.sliderValue_student < 501
@@ -129,8 +139,10 @@ export default {
         return (this.sliderValue_student - 500) * 1500 + 400 * 1800 + 95 * 2000
       }
     },
-    _allStudentsCharge(){
-      return this.allStudentsCharge >= 10000 ? this.allStudentsCharge / 10000 + '万' : this.allStudentsCharge
+    _allStudentsCharge() {
+      return this.allStudentsCharge >= 10000
+        ? this.allStudentsCharge / 10000 + '万'
+        : this.allStudentsCharge
     },
     allTeachersCharge() {
       if (this.sliderValue_teacher < 4) {
@@ -140,10 +152,14 @@ export default {
       }
     },
     _allTeachersCharge() {
-      return this.allTeachersCharge >= 10000 ? this.allTeachersCharge / 10000 + '万' : this.allTeachersCharge
+      return this.allTeachersCharge >= 10000
+        ? this.allTeachersCharge / 10000 + '万'
+        : this.allTeachersCharge
     },
     totalCharge() {
-      return this.allStudentsCharge + this.allTeachersCharge >=10000 ? (this.allStudentsCharge + this.allTeachersCharge) / 10000 + '万' : (this.allStudentsCharge + this.allTeachersCharge)
+      return this.allStudentsCharge + this.allTeachersCharge >= 10000
+        ? (this.allStudentsCharge + this.allTeachersCharge) / 10000 + '万'
+        : this.allStudentsCharge + this.allTeachersCharge
     }
   },
   methods: {
@@ -263,6 +279,17 @@ export default {
             color: #333;
             margin-top: 36px;
           }
+          &-slider {
+            display: flex;
+            &-left {
+              flex: 1;
+            }
+            &-right {
+              width: 30px;
+              line-height: 38px;
+              padding-left: 3px;
+            }
+          }
           &-num {
             font-size: 16px;
             color: #999;
@@ -271,7 +298,6 @@ export default {
         &-result {
           width: 355px;
           border: solid 1px #e5e5e5;
-          // padding-bottom: 30px;
           &-title {
             background: #f8f6f6;
             line-height: 50px;
@@ -303,7 +329,7 @@ export default {
               float: right;
               color: #0090ff;
             }
-            &-hint{
+            &-hint {
               color: #999;
               margin: 0;
               font-size: 14px;
@@ -331,6 +357,9 @@ export default {
             text-align: right;
             padding-right: 21px;
             cursor: pointer;
+            &:hover {
+              color: #0090ff;
+            }
           }
         }
       }
