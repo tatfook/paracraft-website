@@ -20,6 +20,7 @@
 
         <p class="price-item-content-charge price-item-content-charge-per"><span class="price-item-content-intro-icon"></span>我们还提供额外的教师培训服务。每位老师3000元/年<br>联系我们可申请最多3名免费教师培训名额</p>
         <!-- <p class="price-item-content-charge price-item-content-charge-per">联系我们可申请最多3名免费教师培训名额</p> -->
+        <p class="price-item-content-calculate"><img src="" alt=""><span class="price-item-content-calculate-weight">价格计算器</span>（您可根据自身需求进行合理规划，灵活使用多种计算模式，获得最优成本收益）</p>
         <div class="price-item-content-counter">
           <div class="price-item-content-counter-count">
             <p class="price-item-content-counter-count-member">学生人数</p>
@@ -44,13 +45,13 @@
           <div class="price-item-content-counter-result">
             <p class="price-item-content-counter-result-title">价格预算清单</p>
             <div class="price-item-content-counter-result-content">
-              <p class="price-item-content-counter-result-text" v-show="!allStudentsCharge && !allTeachersCharge">请拖动滑竿或直接输入相关人数的预计用量，以估算使用Paracraft服务的总成本</p>
-              <div class="price-item-content-counter-result-item" v-show="allStudentsCharge">
+              <p class="price-item-content-counter-result-text" v-show="!sliderValue_student && !sliderValue_teacher">请拖动滑竿或直接输入相关人数的预计用量，以估算使用Paracraft服务的总成本</p>
+              <div class="price-item-content-counter-result-item" v-show="sliderValue_student">
                 <span class="price-item-content-counter-result-item-key">学生服务</span>
                 <span class="price-item-content-counter-result-item-value">￥{{_allStudentsCharge}}</span>
                 <p class="price-item-content-counter-result-item-hint">学生费用{{studentCharge}}元/年/人</p>
               </div>
-              <div class="price-item-content-counter-result-item" v-show="allTeachersCharge">
+              <div class="price-item-content-counter-result-item" v-show="sliderValue_teacher">
                 <span class="price-item-content-counter-result-item-key">老师服务：</span>
                 <span class="price-item-content-counter-result-item-value">￥{{_allTeachersCharge}}</span>
                 <p class="price-item-content-counter-result-item-hint">老师费用{{teacherCharge}}元/年/人</p>
@@ -168,7 +169,7 @@ export default {
     },
     exportList() {
       import('@/component/data/Export2Excel').then(excel => {
-        const tHeader = ['服务类型', '数量', '价格/年']
+        const tHeader = ['服务类型', '数量', '价格/年/元']
         let data = [
           ['学生', this.sliderValue_student, this.allStudentsCharge],
           ['老师', this.sliderValue_teacher, this.allTeachersCharge],
@@ -263,6 +264,17 @@ export default {
             margin: 0;
             padding-left: 98px;
           }
+        }
+      }
+      &-calculate{
+        padding-left: 67px;
+        font-size: 14px;
+        color: #666;
+        margin: 45px 0 3px;
+        &-weight {
+          font-size: 16px;
+          color: #333;
+          font-weight: bold;
         }
       }
       &-counter {
