@@ -19,7 +19,7 @@
         <p class="company-item-intro-box-text"><span class="company-item-intro-box-text-icon">-</span> 2007年，获得IDG和著名IT企业家的联合投资</p>
         <p class="company-item-intro-box-text"><span class="company-item-intro-box-text-icon">-</span> 2009年，使用NPL语言发行"魔法哈奇": 国内首个3D儿童创想乐园，累计500万注册用户</p>
         <p class="company-item-intro-box-text"><span class="company-item-intro-box-text-icon">-</span> 2015年，并入上市公司大富科技（300134）</p>
-        <p class="company-item-intro-box-text"><span class="company-item-intro-box-text-icon">-</span> 2018年，年推出keepwork个人作品网</p>
+        <p class="company-item-intro-box-text"><span class="company-item-intro-box-text-icon">-</span> 2018年，推出keepwork个人作品网</p>
         <p class="company-item-intro-box-btn">
           <el-button class="company-item-intro-box-btn-watch" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/2948/raw#NPL.mp4')">观看团队视频</el-button>
         </p>
