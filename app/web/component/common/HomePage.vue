@@ -34,17 +34,17 @@
             <div class="homepage-service-bg-center-intro-box">
               <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/课程与数字化教学服务.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">编程课程体系与数字化教学服务</h6>
-              <p class="homepage-service-bg-center-intro-box-text">独立研发的完善的编程课程体系，并有专业的配套教材，适合中小学生从入门到精通编程</p>
+              <p class="homepage-service-bg-center-intro-box-text">独立研发的完善的编程课程体系，并有专业的配套教材，适合中小学生从入门到精通编程。</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
               <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/Paracraft-软件贴牌.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">Paracraft 软件贴牌</h6>
-              <p class="homepage-service-bg-center-intro-box-text">在客户端或网站启动界面加上您指定的Logo和文字，以及3D引擎商业化授权</p>
+              <p class="homepage-service-bg-center-intro-box-text">在客户端或网站启动界面加上您指定的Logo和文字，以及3D引擎商业化授权。</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
               <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/课程定制开发.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">课程定制开发</h6>
-              <p class="homepage-service-bg-center-intro-box-text">我们不止提供编程课程定制开发，还提供数学、物理、化学、生物等其他学科的3D游戏化和数字化课件外包开发服务，使教学更具有针对性，学习效率提升，促进教学质量的提升</p>
+              <p class="homepage-service-bg-center-intro-box-text">我们不止提供编程课程定制开发，还提供英语，语文，历史，政治、数学、物理、化学、生物等其他学科的3D游戏化和数字化课件外包开发服务，使课堂与课后作业更加生动有趣，增强学生自主学习的动力，提升教学效率。</p>
             </div>
           </div>
           <div class="homepage-service-bg-center-price">
@@ -74,10 +74,10 @@
       </div>
       <div class="homepage-achievement-intro">
         <div class="homepage-achievement-intro-wrap">
-          <div class="homepage-achievement-intro-box">
+          <!-- <div class="homepage-achievement-intro-box">
             <img src="@/asset/images/连续5年举办创作大赛.jpg" alt="">
             <p class="homepage-achievement-intro-box-text">连续5年举办国内外创作大赛</p>
-          </div>
+          </div> -->
           <div class="homepage-achievement-intro-box">
             <img src="@/asset/images/开展50多次Paracraft线下培训课.jpg" alt="">
             <p class="homepage-achievement-intro-box-text">开展50多次Paracraft线下培训课</p>
@@ -98,7 +98,7 @@
         <span :class="[{'hightlight': index == currentTagIndex_2}]" v-for="(i,index) in achievement_tags_2" :key="index" v-html="i.text"></span>
       </div>
       <div class="homepage-achievement-award">
-        <span class="homepage-achievement-award-contest">连续5年举办国内外创作大赛</span>
+        <!-- <span class="homepage-achievement-award-contest">连续5年举办国内外创作大赛</span> -->
         <span class="homepage-achievement-award-bright homepage-achievement-award-contest">开展50多次Paracraft线下培训课</span>
         <span class="homepage-achievement-award-contest">200部Paracraft视频上线IPTV，抵达3500万家庭</span>
       </div>
@@ -142,8 +142,8 @@ export default {
       showGatherInfoDialog: false,
       achievement_tags_pic_1: [
         {
-          url: require('@/asset/images/500万注册用户.jpg'),
-          text: '500万注册用户'
+          url: require('@/asset/images/魔法哈奇注册用户达到500万画板.jpg'),
+          text: '基于NPL语言开发的大型网游《魔法哈奇》注册用户达到500万'
         },
         {
           url: require('@/asset/images/100部教学视频.jpg'),
@@ -156,8 +156,8 @@ export default {
       ],
       achievement_tags_pic_2: [
         {
-          url: require('@/asset/images/百度贴吧.jpg'),
-          text: '百度贴吧200万帖子'
+          url: require('@/asset/images/连续5年举办创作大赛.jpg'),
+          text: '连续5年举办国内外创作大赛'
         },
         {
           url: require('@/asset/images/最美慕课.jpg'),
@@ -169,15 +169,15 @@ export default {
         }
       ],
       achievement_tags: [
-        { text: '500万注册用户' },
+        { text: '基于NPL语言开发的大型网游《魔法哈奇》注册用户达到500万' },
         { text: '100部动画创作教学视频' },
         { text: '50多节在线课程<br>' },
-        { text: '百度贴吧200万帖子' },
+        { text: '连续5年举办国内外创作大赛' },
         { text: '3D动画课程入选中国教育电台最美慕课' },
         { text: '2万部用户作品视频' }
       ],
       achievement_tags_2: [
-        { text: '连续5年举办国内外创作大赛' },
+        // { text: '连续5年举办国内外创作大赛' },
         { text: '开展50多次Paracraft线下培训课' },
         { text: '200部Paracraft视频上线IPTV，抵达3500万家庭' }
       ],
@@ -187,8 +187,8 @@ export default {
       currentPicArr: '',
       currentPicArr_phone: [
         {
-          url: require('@/asset/images/500万注册用户.jpg'),
-          text: '500万注册用户'
+          url: require('@/asset/images/魔法哈奇注册用户达到500万画板.jpg'),
+          text: '基于NPL语言开发的大型网游《魔法哈奇》注册用户达到500万'
         },
         {
           url: require('@/asset/images/100部教学视频.jpg'),
@@ -199,8 +199,8 @@ export default {
           text: '50多节在线课程'
         },
         {
-          url: require('@/asset/images/百度贴吧.jpg'),
-          text: '百度贴吧200万帖子'
+          url: require('@/asset/images/连续5年举办创作大赛.jpg'),
+          text: '连续5年举办国内外创作大赛'
         },
         {
           url: require('@/asset/images/最美慕课.jpg'),
@@ -212,10 +212,10 @@ export default {
         }
       ],
       currentPicArr_phone_2: [
-        {
-          url: require('@/asset/images/连续5年举办创作大赛.jpg'),
-          text: '连续5年举办国内外创作大赛'
-        },
+        // {
+        //   url: require('@/asset/images/连续5年举办创作大赛.jpg'),
+        //   text: '连续5年举办国内外创作大赛'
+        // },
         {
           url: require('@/asset/images/开展50多次Paracraft线下培训课.jpg'),
           text: '开展50多次Paracraft线下培训课'
