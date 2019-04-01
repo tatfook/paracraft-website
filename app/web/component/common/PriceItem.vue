@@ -20,7 +20,7 @@
 
         <p class="price-item-content-charge price-item-content-charge-per"><span class="price-item-content-intro-icon"></span>我们还提供额外的教师培训服务。每位老师3000元/年<br>联系我们可申请最多3名免费教师培训名额</p>
         <!-- <p class="price-item-content-charge price-item-content-charge-per">联系我们可申请最多3名免费教师培训名额</p> -->
-        <p class="price-item-content-calculate"><img src="" alt=""><span class="price-item-content-calculate-weight">价格计算器</span>（您可根据自身需求进行合理规划，灵活使用多种计算模式，获得最优成本收益）</p>
+        <p class="price-item-content-calculate"><img src="@/asset/images/计算器.png" alt="@/asset/images/计算器.png"><span class="price-item-content-calculate-weight">价格计算器</span>（您可根据自身需求进行合理规划，灵活使用多种计算模式，获得最优成本收益）</p>
         <div class="price-item-content-counter">
           <div class="price-item-content-counter-count">
             <p class="price-item-content-counter-count-member">学生人数</p>
@@ -290,10 +290,12 @@ export default {
         font-size: 14px;
         color: #666;
         margin: 45px 0 3px;
+        display: flex;
         &-weight {
           font-size: 16px;
           color: #333;
           font-weight: bold;
+          padding-left: 10px;
         }
       }
       &-counter {
