@@ -74,10 +74,10 @@
       </div>
       <div class="homepage-achievement-intro">
         <div class="homepage-achievement-intro-wrap">
-          <!-- <div class="homepage-achievement-intro-box">
-            <img src="@/asset/images/连续5年举办创作大赛.jpg" alt="">
-            <p class="homepage-achievement-intro-box-text">连续5年举办国内外创作大赛</p>
-          </div> -->
+          <div class="homepage-achievement-intro-box">
+            <img src="@/asset/images/《魔法哈奇》百度贴吧200万帖子.jpg" alt="">
+            <p class="homepage-achievement-intro-box-text">《魔法哈奇》百度贴吧200万帖子</p>
+          </div>
           <div class="homepage-achievement-intro-box">
             <img src="@/asset/images/开展50多次Paracraft线下培训课.jpg" alt="">
             <p class="homepage-achievement-intro-box-text">开展50多次Paracraft线下培训课</p>
@@ -98,7 +98,7 @@
         <span :class="[{'hightlight': index == currentTagIndex_2}]" v-for="(i,index) in achievement_tags_2" :key="index" v-html="i.text"></span>
       </div>
       <div class="homepage-achievement-award">
-        <!-- <span class="homepage-achievement-award-contest">连续5年举办国内外创作大赛</span> -->
+        <span class="homepage-achievement-award-contest">《魔法哈奇》百度贴吧200万帖子</span>
         <span class="homepage-achievement-award-bright homepage-achievement-award-contest">开展50多次Paracraft线下培训课</span>
         <span class="homepage-achievement-award-contest">200部Paracraft视频上线IPTV，抵达3500万家庭</span>
       </div>
@@ -143,7 +143,7 @@ export default {
       achievement_tags_pic_1: [
         {
           url: require('@/asset/images/魔法哈奇注册用户达到500万画板.jpg'),
-          text: '基于NPL语言开发的大型网游《魔法哈奇》注册用户达到500万'
+          text: '使用Paracraft开发的《魔法哈奇》注册用户500万'
         },
         {
           url: require('@/asset/images/100部教学视频.jpg'),
@@ -169,7 +169,7 @@ export default {
         }
       ],
       achievement_tags: [
-        { text: '基于NPL语言开发的大型网游《魔法哈奇》注册用户达到500万' },
+        { text: '使用Paracraft开发的《魔法哈奇》注册用户500万' },
         { text: '100部动画创作教学视频' },
         { text: '50多节在线课程<br>' },
         { text: '连续5年举办国内外创作大赛' },
@@ -177,7 +177,7 @@ export default {
         { text: '2万部用户作品视频' }
       ],
       achievement_tags_2: [
-        // { text: '连续5年举办国内外创作大赛' },
+        { text: '《魔法哈奇》百度贴吧200万帖子' },
         { text: '开展50多次Paracraft线下培训课' },
         { text: '200部Paracraft视频上线IPTV，抵达3500万家庭' }
       ],
@@ -188,7 +188,7 @@ export default {
       currentPicArr_phone: [
         {
           url: require('@/asset/images/魔法哈奇注册用户达到500万画板.jpg'),
-          text: '基于NPL语言开发的大型网游《魔法哈奇》注册用户达到500万'
+          text: '使用Paracraft开发的《魔法哈奇》注册用户500万'
         },
         {
           url: require('@/asset/images/100部教学视频.jpg'),
@@ -212,10 +212,10 @@ export default {
         }
       ],
       currentPicArr_phone_2: [
-        // {
-        //   url: require('@/asset/images/连续5年举办创作大赛.jpg'),
-        //   text: '连续5年举办国内外创作大赛'
-        // },
+        {
+          url: require('@/asset/images/《魔法哈奇》百度贴吧200万帖子.jpg'),
+          text: '《魔法哈奇》百度贴吧200万帖子'
+        },
         {
           url: require('@/asset/images/开展50多次Paracraft线下培训课.jpg'),
           text: '开展50多次Paracraft线下培训课'
