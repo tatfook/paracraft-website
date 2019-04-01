@@ -101,9 +101,9 @@ export default {
     submitInfo() {
       let baseUrl = process.env.KEEPWORK_API_PREFIX
       let { city, ..._infoData } = this.infoData
-      this.submitSuccessLoading = true
       this.$refs.infoForm.validate(valid => {
         if (valid) {
+          this.submitSuccessLoading = true
           axios
             .post(`${baseUrl}/paracraftVisitors/upsert`, {
               ..._infoData,

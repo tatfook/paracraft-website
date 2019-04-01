@@ -64,9 +64,9 @@
           <h5 class="box-text-title">丰富的师资培训方案</h5>
           <p class="box-text-text">完整的编程学习生态系统和课程体系</p>
           <p class="box-text-text">老师3天可入门上岗，课程循序渐进，支持边教边学</p>
-          <p class="box-text-text"> 软件吸引人，学生课后自学动力强，教学质量有保证</p>
+          <p class="box-text-text">软件吸引人，学生课后自学动力强，教学质量有保证</p>
           <p class="box-text-text">支持学长制，导师制，课堂教学等多种模式，提升PBL项目式学习效率</p>
-          <p class="box-text-text"> 长期提供教师培训与答疑服务</p>
+          <p class="box-text-text">长期提供教师培训与答疑服务</p>
           <p class="box-text-text-bottom-phone">教育的本质就是让人保持(Keep)有事可做(Work)</p>
           <p class="box-text-button"><span class="box-text-button-sty" @click="showVideo('https://api.keepwork.com/storage/v0/siteFiles/3281/raw#课件演示样片.mp4')">课件演示样片</span></p>
           <p class="box-text-text-bottom"><span><img class="box-text-text-bottom-icon" src="@/asset/images/引号.png" alt=""></span>教育的本质就是让人保持(Keep)有事可做(Work)<span><img class="box-text-text-bottom-icon-right" src="@/asset/images/引号2.png" alt=""></span></p>
