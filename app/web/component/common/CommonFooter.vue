@@ -31,7 +31,7 @@
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">关于我们</li>
           <li><a href="/companyProfile ">公司简介</a></li>
-          <li><a href="/paracraft_biz_brochure.pdf">宣传页下载</a></li>
+          <li><a href="https://api.keepwork.com/storage/v0/siteFiles/3317/raw#paracraft_biz_brochure.pdf">宣传页下载</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
