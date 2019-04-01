@@ -510,6 +510,10 @@ export default {
             }
           }
         }
+        &-calculate {
+          display: block;
+          padding-left: 20px;
+        }
         &-counter {
           &-count {
             margin: 0 0 10px;
