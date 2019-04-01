@@ -27,7 +27,7 @@
             <p class="price-item-content-counter-count-num">费用：{{studentCharge}}元/年/人</p>
             <div class="price-item-content-counter-count-slider">
               <div class="price-item-content-counter-count-slider-left">
-                <el-slider v-model="sliderValue_student" show-input :max="100000">
+                <el-slider v-model="sliderValue_student" show-input :max="3000">
                 </el-slider>
               </div>
               <div class="price-item-content-counter-count-slider-right">人</div>
@@ -36,7 +36,7 @@
             <p class="price-item-content-counter-count-num">费用：{{teacherCharge}}元/年/人</p>
             <div class="price-item-content-counter-count-slider">
               <div class="price-item-content-counter-count-slider-left">
-                <el-slider v-model="sliderValue_teacher" show-input :max="1000">
+                <el-slider v-model="sliderValue_teacher" show-input :max="300">
                 </el-slider>
               </div>
               <div class="price-item-content-counter-count-slider-right">人</div>
