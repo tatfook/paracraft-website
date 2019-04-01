@@ -30,7 +30,7 @@
             <el-input type="textarea" placeholder="请简单描述一下你想了解的问题" v-model="infoData.description"></el-input>
           </el-form-item>
           <el-form-item class="gather-info-dialog-content-form-submit">
-            <el-button class="gather-info-dialog-content-form-submit-btn" type="primary" @click="submitInfo()">提交</el-button>
+            <el-button class="gather-info-dialog-content-form-submit-btn" type="primary" @click="submitInfo()" :loading="submitSuccessLoading">提交</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -55,6 +55,7 @@ export default {
       }
     }
     return {
+      submitSuccessLoading: false,
       infoData: {
         realname: '',
         cellphone: '',
@@ -100,6 +101,7 @@ export default {
     submitInfo() {
       let baseUrl = process.env.KEEPWORK_API_PREFIX
       let { city, ..._infoData } = this.infoData
+      this.submitSuccessLoading = true
       this.$refs.infoForm.validate(valid => {
         if (valid) {
           axios
@@ -111,6 +113,7 @@ export default {
             })
             .then(res => {
               this.handleClose({ ...this.infoData, isSubmitOperation: 1 })
+              this.submitSuccessLoading = false
             })
             .catch(err => {
               console.error('err', err)
