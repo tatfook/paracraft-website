@@ -27,7 +27,7 @@
             <p class="price-item-content-counter-count-num">费用：{{studentCharge}}元/年/人</p>
             <div class="price-item-content-counter-count-slider">
               <div class="price-item-content-counter-count-slider-left">
-                <el-slider v-model="sliderValue_student" show-input :max="800">
+                <el-slider v-model="sliderValue_student" show-input :max="100000">
                 </el-slider>
               </div>
               <div class="price-item-content-counter-count-slider-right">人</div>
@@ -36,7 +36,7 @@
             <p class="price-item-content-counter-count-num">费用：{{teacherCharge}}元/年/人</p>
             <div class="price-item-content-counter-count-slider">
               <div class="price-item-content-counter-count-slider-left">
-                <el-slider v-model="sliderValue_teacher" show-input :max="300">
+                <el-slider v-model="sliderValue_teacher" show-input :max="1000">
                 </el-slider>
               </div>
               <div class="price-item-content-counter-count-slider-right">人</div>
@@ -49,12 +49,16 @@
               <div class="price-item-content-counter-result-item" v-show="sliderValue_student">
                 <span class="price-item-content-counter-result-item-key">学生服务</span>
                 <span class="price-item-content-counter-result-item-value">￥{{_allStudentsCharge}}</span>
-                <p class="price-item-content-counter-result-item-hint">学生费用{{studentCharge}}元/年/人</p>
+                <p class="price-item-content-counter-result-item-hint">学生费用{{studentCharge}}元/年/人 · {{sliderValue_student}}人</p>
               </div>
               <div class="price-item-content-counter-result-item" v-show="sliderValue_teacher">
                 <span class="price-item-content-counter-result-item-key">老师服务：</span>
                 <span class="price-item-content-counter-result-item-value">￥{{_allTeachersCharge}}</span>
-                <p class="price-item-content-counter-result-item-hint">老师费用{{teacherCharge}}元/年/人</p>
+                <p class="price-item-content-counter-result-item-hint">老师费用{{teacherCharge}}元/年/人 · {{sliderValue_teacher}}人</p>
+              </div>
+              <div class="price-item-content-counter-result-item" v-show="sliderValue_student || sliderValue_teacher">
+                <span class="price-item-content-counter-result-item-key">优惠</span>
+                <span class="price-item-content-counter-result-item-count">￥{{discounts}}</span>
               </div>
             </div>
             <div class="price-item-content-counter-result-total">
@@ -156,6 +160,21 @@ export default {
       return this.allTeachersCharge >= 10000
         ? this.allTeachersCharge / 10000 + '万'
         : this.allTeachersCharge
+    },
+    discounts() {
+      let studentCount = 0
+      let teacherCount = 0
+      if (this.sliderValue_student <= 5) {
+        studentCount = 2000 * this.sliderValue_student
+      } else {
+        studentCount = 10000
+      }
+      if (this.sliderValue_teacher <= 3) {
+        teacherCount = 3000 * this.sliderValue_teacher
+      } else {
+        teacherCount = 9000
+      }
+      return studentCount + teacherCount
     },
     totalCharge() {
       return this.allStudentsCharge + this.allTeachersCharge >= 10000
@@ -266,7 +285,7 @@ export default {
           }
         }
       }
-      &-calculate{
+      &-calculate {
         padding-left: 67px;
         font-size: 14px;
         color: #666;
@@ -319,7 +338,7 @@ export default {
           }
           &-content {
             padding-top: 40px;
-            min-height: 170px;
+            min-height: 238px;
             border: 1px solid transparent;
             box-sizing: border-box;
           }
@@ -339,6 +358,9 @@ export default {
             &-key {
             }
             &-value {
+              float: right;
+            }
+            &-count {
               float: right;
               color: #0090ff;
             }

@@ -47,6 +47,12 @@ export default {
     showGatherInfoDialog: Boolean
   },
   data() {
+    let validatePhoneNumber = (rule, value, callback) => {
+      if (!/^1\d{10}$/.test(value)) {
+        callback(new Error('手机号码格式有误'))
+      } else {
+      }
+    }
     return {
       infoData: {
         realname: '',
@@ -65,7 +71,8 @@ export default {
             required: true,
             message: '请输入手机号码',
             trigger: 'blur'
-          }
+          },
+          { validator: validatePhoneNumber, trigger: ['change', 'blur'] }
         ],
         email: [
           { required: true, message: '请输入邮箱', trigger: 'blur' },
@@ -164,13 +171,13 @@ export default {
     &-form {
       .el-form-item {
         margin-bottom: 16px;
-        .el-form-item__label{
+        .el-form-item__label {
           line-height: 20px;
         }
-        .el-form-item__content{
+        .el-form-item__content {
           line-height: 32px;
-          .el-input{
-            .el-input__inner{
+          .el-input {
+            .el-input__inner {
               height: 32px;
               line-height: 32px;
             }
