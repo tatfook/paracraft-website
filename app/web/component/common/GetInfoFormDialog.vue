@@ -51,6 +51,7 @@ export default {
       if (!/^1\d{10}$/.test(value)) {
         callback(new Error('手机号码格式有误'))
       } else {
+        callback()
       }
     }
     return {
