@@ -34,7 +34,7 @@
             <div class="homepage-service-bg-center-intro-box">
               <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/课程与数字化教学服务.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">编程课程体系与数字化教学服务</h6>
-              <p class="homepage-service-bg-center-intro-box-text">独立研发的完善的编程课程体系，并有专业的配套教材，适合中小学生从入门到精通编程。</p>
+              <p class="homepage-service-bg-center-intro-box-text">助力中小学培训机构和学校开展编程教学。独立研发多本动画与编程教材，提供师资培训服务。</p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
               <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/Paracraft-软件贴牌.png" alt="">
