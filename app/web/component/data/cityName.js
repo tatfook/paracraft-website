@@ -1288,6 +1288,10 @@ export const cityName = [{
   {
     value: '澳门',
     label: '澳门'
+  },
+  {
+    value: '其它地区',
+    label: '其它地区'
   }
 ]
 export default cityName
