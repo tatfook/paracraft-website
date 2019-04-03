@@ -98,6 +98,10 @@ export const cityName = [{
         value: '云浮',
         label: '云浮'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -139,6 +143,10 @@ export const cityName = [{
         value: '龙岩',
         label: '龙岩'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -152,6 +160,18 @@ export const cityName = [{
         value: '三亚',
         label: '三亚'
       },
+      {
+        value: '三沙',
+        label: '三沙'
+      },
+      {
+        value: '儋州',
+        label: '儋州'
+      },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -189,6 +209,10 @@ export const cityName = [{
         value: '临沧',
         label: '临沧'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -246,6 +270,10 @@ export const cityName = [{
         value: '娄底',
         label: '娄底'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -256,8 +284,8 @@ export const cityName = [{
         label: '武汉'
       },
       {
-        value: '襄樊',
-        label: '襄樊'
+        value: '襄阳',
+        label: '襄阳'
       },
       {
         value: '宜昌',
@@ -299,6 +327,10 @@ export const cityName = [{
         value: '咸宁',
         label: '咸宁'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -372,6 +404,10 @@ export const cityName = [{
         value: '驻马店',
         label: '驻马店'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -421,6 +457,10 @@ export const cityName = [{
         value: '吕梁',
         label: '吕梁'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -466,6 +506,10 @@ export const cityName = [{
         value: '榆林',
         label: '榆林'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -518,6 +562,10 @@ export const cityName = [{
       {
         value: '陇南',
         label: '陇南'
+      },
+      {
+        value: '其他',
+        label: '其他'
       }
     ]
   },
@@ -568,6 +616,10 @@ export const cityName = [{
         value: '抚州',
         label: '抚州'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -576,11 +628,16 @@ export const cityName = [{
     children: [{
       value: '西宁',
       label: '西宁'
-    }, ]
+    },
+    {
+      value: '其他',
+      label: '其他'
+    }
+  ]
   },
   {
-    value: '新疆',
-    label: '新疆',
+    value: '新疆维吾尔',
+    label: '新疆维吾尔',
     children: [{
         value: '乌鲁木齐',
         label: '乌鲁木齐'
@@ -588,6 +645,18 @@ export const cityName = [{
       {
         value: '克拉玛依',
         label: '克拉玛依'
+      },
+      {
+        value: '吐鲁番',
+        label: '吐鲁番'
+      },
+      {
+        value: '哈密',
+        label: '哈密'
+      },
+      {
+        value: '其他',
+        label: '其他'
       }
     ]
   },
@@ -597,7 +666,28 @@ export const cityName = [{
     children: [{
       value: '拉萨',
       label: '拉萨'
-    }]
+    },
+    {
+      value: '日喀则',
+      label: '昌都'
+    },
+    {
+      value: '林芝',
+      label: '林芝'
+    },
+    {
+      value: '山南',
+      label: '山南'
+    },
+    {
+      value: '那曲',
+      label: '那曲'
+    },
+    {
+      value: '其他',
+      label: '其他'
+    }
+  ]
   },
   {
     value: '宁夏',
@@ -612,11 +702,15 @@ export const cityName = [{
       },
       {
         value: '吴忠',
-        label: '固原'
+        label: '吴忠'
       },
       {
         value: '中卫',
         label: '中卫'
+      },
+      {
+        value: '其他',
+        label: '其他'
       }
     ]
   },
@@ -644,8 +738,8 @@ export const cityName = [{
         label: '通辽'
       },
       {
-        value: '赫尔多斯',
-        label: '赫尔多斯'
+        value: '鄂尔多斯',
+        label: '鄂尔多斯'
       },
       {
         value: '呼伦贝尔',
@@ -658,6 +752,10 @@ export const cityName = [{
       {
         value: '乌兰察布',
         label: '乌兰察布'
+      },
+      {
+        value: '其他',
+        label: '其他'
       }
     ]
   },
@@ -707,6 +805,10 @@ export const cityName = [{
       }, {
         value: '贵港',
         label: '贵港'
+      },
+      {
+        value: '其他',
+        label: '其他'
       }
     ]
   },
@@ -729,6 +831,18 @@ export const cityName = [{
         value: '安顺',
         label: '安顺'
       },
+      {
+        value: '毕节',
+        label: '毕节'
+      },
+      {
+        value: '铜仁',
+        label: '铜仁'
+      },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -801,6 +915,14 @@ export const cityName = [{
       {
         value: '资阳',
         label: '资阳'
+      },
+      {
+        value: '巴中',
+        label: '巴中'
+      },
+      {
+        value: '其他',
+        label: '其他'
       }
     ]
   },
@@ -851,6 +973,10 @@ export const cityName = [{
         value: '台州',
         label: '台州'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -897,8 +1023,8 @@ export const cityName = [{
         label: '安庆'
       },
       {
-        value: '巢湖',
-        label: '巢湖'
+        value: '六安',
+        label: '六安'
       },
       {
         value: '马鞍山',
@@ -919,6 +1045,10 @@ export const cityName = [{
       {
         value: '铜陵',
         label: '铜陵'
+      },
+      {
+        value: '其他',
+        label: '其他'
       }
     ]
   },
@@ -976,6 +1106,10 @@ export const cityName = [{
       {
         value: '宿迁',
         label: '宿迁'
+      },
+      {
+        value: '其他',
+        label: '其他'
       }
     ]
   },
@@ -1027,10 +1161,6 @@ export const cityName = [{
         label: '日照'
       },
       {
-        value: '莱芜',
-        label: '莱芜'
-      },
-      {
         value: '临沂',
         label: '临沂'
       },
@@ -1050,6 +1180,10 @@ export const cityName = [{
         value: '滨州',
         label: '滨州'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -1099,6 +1233,10 @@ export const cityName = [{
         value: '邢台',
         label: '邢台',
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -1147,6 +1285,14 @@ export const cityName = [{
       {
         value: '绥化',
         label: '绥化'
+      },
+      {
+        value: '七台河',
+        label: '七台河'
+      },
+      {
+        value: '其他',
+        label: '其他'
       }
     ]
   },
@@ -1185,6 +1331,10 @@ export const cityName = [{
         value: '白城',
         label: '白城'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -1246,6 +1396,10 @@ export const cityName = [{
         value: '葫芦岛',
         label: '葫芦岛'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -1279,6 +1433,10 @@ export const cityName = [{
         value: '嘉义',
         label: '嘉义'
       },
+      {
+        value: '其他',
+        label: '其他'
+      }
     ]
   },
   {
@@ -1290,8 +1448,8 @@ export const cityName = [{
     label: '澳门'
   },
   {
-    value: '其它地区',
-    label: '其它地区'
+    value: '其他地区',
+    label: '其他地区'
   }
 ]
 export default cityName
