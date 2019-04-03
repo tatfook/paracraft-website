@@ -143,7 +143,7 @@ export default {
       achievement_tags_pic_1: [
         {
           url: require('@/asset/images/魔法哈奇注册用户达到500万画板.jpg'),
-          text: '使用Paracraft开发的《魔法哈奇》注册用户500万'
+          text: '使用Paracraft开发的《魔法哈奇》注册用户超过500万'
         },
         {
           url: require('@/asset/images/100部教学视频.jpg'),
@@ -169,7 +169,7 @@ export default {
         }
       ],
       achievement_tags: [
-        { text: '使用Paracraft开发的《魔法哈奇》注册用户500万' },
+        { text: '使用Paracraft开发的《魔法哈奇》注册用户超过500万' },
         { text: '100部动画创作教学视频' },
         { text: '50多节在线课程<br>' },
         { text: '连续5年举办国内外创作大赛' },
@@ -188,7 +188,7 @@ export default {
       currentPicArr_phone: [
         {
           url: require('@/asset/images/魔法哈奇注册用户达到500万画板.jpg'),
-          text: '使用Paracraft开发的《魔法哈奇》注册用户500万'
+          text: '使用Paracraft开发的《魔法哈奇》注册用户超过500万'
         },
         {
           url: require('@/asset/images/100部教学视频.jpg'),

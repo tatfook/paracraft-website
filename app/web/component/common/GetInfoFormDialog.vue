@@ -48,8 +48,8 @@ export default {
   },
   data() {
     let validatePhoneNumber = (rule, value, callback) => {
-      if (!/^1\d{10}$/.test(value)) {
-        callback(new Error('手机号码格式有误'))
+      if (!/^1[34578]\d{9}$/.test(value)) {
+        callback(new Error('请输入正确的手机号'))
       } else {
         callback()
       }
