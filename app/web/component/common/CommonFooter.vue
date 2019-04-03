@@ -5,9 +5,9 @@
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">产品</li>
           <li @click="handleSelect('top')">Paracraft 创意空间</li>
-          <li><a href="http://paracraft.keepwork.com/download?lang=zh">免费下载</a></li>
-          <li><a href="https://keepwork.com/">作品社区</a></li>
-          <li><a href="https://keepwork.com/NPL">NPL动画与编程大赛</a></li>
+          <li><a href="http://paracraft.keepwork.com/download?lang=zh" target="_blank">免费下载</a></li>
+          <li><a href="https://keepwork.com/" target="_blank">作品社区</a></li>
+          <li><a href="https://keepwork.com/NPL" target="_blank">NPL动画与编程大赛</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
@@ -21,17 +21,17 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">致社区</li>
-          <li><a href="https://keepwork.com/official/paracraft/to-educators">致教育者</a></li>
-          <li><a href="https://keepwork.com/official/paracraft/to-parents">给父母的话</a></li>
-          <li><a href="https://keepwork.com/official/paracraft/to-developers">致开发者</a></li>
-          <li><a href="https://github.com/LiXizhi/NPLRuntime/wiki">对爱好编程的你说</a></li>
+          <li><a href="https://keepwork.com/official/paracraft/to-educators" target="_blank">致教育者</a></li>
+          <li><a href="https://keepwork.com/official/paracraft/to-parents" target="_blank">给父母的话</a></li>
+          <li><a href="https://keepwork.com/official/paracraft/to-developers" target="_blank">致开发者</a></li>
+          <li><a href="https://github.com/LiXizhi/NPLRuntime/wiki" target="_blank">对爱好编程的你说</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">关于我们</li>
           <li><a href="/companyProfile ">公司简介</a></li>
-          <li><a href="https://api.keepwork.com/storage/v0/siteFiles/3324/raw#paracraft_biz_brochure.pdf">宣传页下载</a></li>
+          <li><a href="https://api.keepwork.com/storage/v0/siteFiles/3324/raw#paracraft_biz_brochure.pdf" target="_blank">宣传页下载</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
@@ -182,8 +182,8 @@ export default {
   }
   &-phone {
     display: none;
-    /deep/ .el-collapse-item{
-      .el-collapse-item__header{
+    /deep/ .el-collapse-item {
+      .el-collapse-item__header {
         font-size: 14px;
       }
     }
@@ -194,7 +194,7 @@ export default {
           font-size: 16px;
         }
         &-text {
-          color: rgb(179, 179, 179)
+          color: rgb(179, 179, 179);
         }
       }
     }
@@ -247,7 +247,7 @@ export default {
         display: flex;
         padding: 10px;
         color: #fff;
-        background: rgb(32,32,32);
+        background: rgb(32, 32, 32);
         font-size: 14px;
         &-left {
           display: flex;

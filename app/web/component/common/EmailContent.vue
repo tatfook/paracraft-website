@@ -23,8 +23,8 @@
       <p class="email-border-content-ending">Email：lixizhi@paraengine.com</p>
       <div class="email-border-content-box">
         <p>通过下面链接了解Paracraft：</p>
-        <p><a class="email-border-content-box-link" href="http://paracraft.keepwork.com/download?lang=zh">下载Paracraft </a></p>
-        <p><a class="email-border-content-box-link" href="http://cdn.keepwork.com/paracraft/book/paracraft_book_sample.pdf">《Paracraft编程入门》</a></p>
+        <p><a class="email-border-content-box-link" href="http://paracraft.keepwork.com/download?lang=zh" target="_blank">下载Paracraft </a></p>
+        <p><a class="email-border-content-box-link" href="http://cdn.keepwork.com/paracraft/book/paracraft_book_sample.pdf" target="_blank">《Paracraft编程入门》</a></p>
         <p>关注微信号Paracraft ，观看部分教学视频</p>
         <p><img src="@/asset/images/weixin.png" class="email-border-content-box-email" alt=""></p>
       </div>
@@ -60,7 +60,7 @@ export default {
   &-content {
     background: #fff;
     padding: 12px;
-    p{
+    p {
       color: #333;
       font-size: 14px;
     }
