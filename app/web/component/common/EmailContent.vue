@@ -74,7 +74,7 @@ export default {
       text-align: right;
     }
     &-box {
-      margin: 40px;
+      margin: 26px;
       background: rgb(242, 249, 255);
       padding: 30px 34px;
       &-link {
