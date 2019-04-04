@@ -1,19 +1,17 @@
 <template>
   <div class="email-border">
     <div class="email-border-content">
-      <p class="email-border-content-main">{{name}}，您好！</p>
-      <p class="email-border-content-main">我是Paracraft的创始人李西峙，感谢您对Paracraft的关注！
-        我们已经收到了您填写的信息，工作人员将会尽快与您联系。
+      <p class="email-border-content-main">您好！</p>
+      <p class="email-border-content-main">
+        我是Paracraft的作者李西峙。谢谢您对Paracraft的兴趣！
+        我们已经收到了您填写的信息，我们的工作人员会尽快跟您联系。
         很高兴您选择了Paracraft。
       </p>
       <p class="email-border-content-main">
-        在1989年，7岁的我照着一本父亲给我的书，编写了我人生中的第一个程序，并从此爱上了编程。
-        小学期间，我完成了大量个人作品，从入门阶段到了可以随心所欲去编程的状态。
-        通过Paracraft，我希望将这种愉悦的学习体验带给更多的孩子们。
+        1989年，7岁的我照着一本我父亲给我的书编写了我人生中第一个程序，并从此喜欢上了编程，小学期间我完成了大量个人作品，到了随心所欲的状态。通过Paracraft，我希望带给孩子们同我相似的学习体验。
       </p>
       <p class="email-border-content-main">
-        如您有任何问题，欢迎随时通过邮件和我联系，我会在看到的第一时间回复您。
-        您也可以关注我们的微信号（微信搜索：Paracraft）获取支持。
+        期间您有任何技术问题也可以直接Email我 。
       </p>
       <p class="email-border-content-main">
         祝好！
@@ -40,7 +38,6 @@ export default {
     }
   },
   mounted() {
-    console.log('this.route', this.$route)
     this.name = decodeURI(this.$route.query.name)
   }
 }
