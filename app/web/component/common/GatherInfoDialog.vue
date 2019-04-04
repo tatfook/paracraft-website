@@ -87,9 +87,16 @@ export default {
         .post(`${baseUrl}/keepworks/email`, {
           subject: '已收到您的需求，我们会尽快与您联系，感谢！',
           to: email,
-          html: `<div style="width: 90%;max-width:550px;box-shadow: 3px 8px 12px 0px rgba(98, 98, 98, 0.08);background: #fff;margin: 10px auto;padding:30px;"><p style="line-height:270%">${
-            this.infoData.realname
-          },您好!</p><p style="line-height:270%">我是Paracraft的创始人李西峙，感谢您对Paracraft的关注！ 我们已经收到了您填写的信息，工作人员将会尽快与您联系。 很高兴您选择了Paracraft。</p><p style="line-height:270%">很感谢您选择Paracraft,获取更多素材请访问这里链接： <a href='${aLink}'>${aLink}</a></p><p style="line-height:270%">在1989年，7岁的我照着一本父亲给我的书，编写了我人生中的第一个程序，并从此爱上了编程。 小学期间，我完成了大量个人作品，从入门阶段到了可以随心所欲去编程的状态。 通过Paracraft，我希望将这种愉悦的学习体验带给更多的孩子们。</p><p style="line-height:270%">如您有任何问题，欢迎随时通过邮件和我联系，我会在看到的第一时间回复您。 您也可以关注我们的微信号（微信搜索：paracraft）获取支持。</p><p style="line-height:270%">祝好！</p><p style='text-align:right;line-height:270%'>李西峙<br>CEO & NPL语言与Paracraft创始人<br>Email：lixizhi@paraengine.com<br></p></div>`,
+          html: `<div style="width: 90%;max-width:550px;box-shadow: 3px 8px 12px 0px rgba(98, 98, 98, 0.08);background: #fff;margin: 10px auto;padding:30px;">
+          <p style="line-height:270%">您好!</p>
+          <p style="line-height:270%">我是Paracraft的创始人李西峙，谢谢您对Paracraft的兴趣！</p>
+          <p style="line-height:270%">我们已经收到了您填写的信息，我们的工作人员会尽快跟您联系。 </p>
+          <p style="line-height:270%">很感谢您选择了Paracraft，获取更多素材请访问这里链接： <a href='${aLink}'>${aLink}</a></p>
+          <p style="line-height:270%">1989年，7岁的我照着一本我父亲给我的书编写了我人生中第一个程序，并从此喜欢上了编程，小学期间我完成了大量个人作品，到了随心所欲的状态。通过Paracraft，我希望带给孩子们同我相似的学习体验。</p>
+          <p style="line-height:270%">期间您有任何技术问题也可以直接Email我。</p>
+          <p style="line-height:270%">祝好！</p>
+          <p style='text-align:right;line-height:270%'>李西峙<br>CEO & NPL语言与Paracraft创始人<br>Email：lixizhi@paraengine.com<br></p>
+          </div>`,
           from: 'Paracraft团队 <noreply@mail.keepwork.com>'
         })
         .then(res => {})
