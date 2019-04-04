@@ -87,7 +87,7 @@ export default {
         .post(`${baseUrl}/keepworks/email`, {
           subject: '已收到您的需求，我们会尽快与您联系，感谢！',
           to: email,
-          html: `<div style="width: 90%;max-width:550px;box-shadow: 0 0 12px 6px rgba(98, 98, 98, 0.1);background: #fff;margin: 10px auto;padding:30px;">
+          html: `<div style="width: 90%;max-width:550px;box-sizing: border-box;box-shadow: 0 0 12px 6px rgba(98, 98, 98, 0.1);background: #fff;margin: 10px auto;padding:30px;">
           <p style="line-height:270%">${this.infoData.realname}，您好!</p>
           <p style="line-height:270%">我是Paracraft的创始人李西峙，谢谢您对Paracraft的兴趣！</p>
           <p style="line-height:270%">我们已经收到了您填写的信息，我们的工作人员会尽快跟您联系。 </p>
