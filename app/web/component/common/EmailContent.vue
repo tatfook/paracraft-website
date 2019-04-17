@@ -6,7 +6,7 @@
         我是Paracraft的作者李西峙。谢谢您对Paracraft的兴趣！
       </p>
       <p class="email-border-content-main">
-        我们已经收到了您填写的信息，我们的工作人员会尽快跟您联系。
+        我们已经收到了您填写的信息，我们的工作人员会尽快跟您联系，并向您提供试用账号，免费体验我们的课程系统。
       </p>
       <p class="email-border-content-main">
         1989年，7岁的我照着一本我父亲给我的书编写了我人生中第一个程序，并从此喜欢上了编程，小学期间我完成了大量个人作品，到了随心所欲的状态。通过Paracraft，我希望带给孩子们同我相似的学习体验。
@@ -52,7 +52,7 @@ export default {
 <style lang="scss">
 .email-border {
   max-width: 627px;
-  margin: 50px auto;
+  margin: 20px auto;
   background: repeating-linear-gradient(
     -45deg,
     rgb(254, 247, 250) 0,
@@ -77,7 +77,7 @@ export default {
       text-align: right;
     }
     &-box {
-      margin: 26px;
+      margin: 26px 26px 0;
       background: rgb(242, 249, 255);
       padding: 30px 34px;
       &-link {
