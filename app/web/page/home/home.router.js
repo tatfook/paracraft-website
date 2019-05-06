@@ -5,11 +5,13 @@ import Download from '@/component/common/Download'
 import News from '@/component/common/News'
 import EmailContent from '@/component/common/EmailContent'
 import CompanyProfile from '@/component/CompanyProfile'
+import LessonSystem from '@/component/common/LessonSystem'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
+  base: '/',
   routes: [
     {
       path: '/',
@@ -35,6 +37,11 @@ export default new Router({
       path: '/ceo_letter',
       name: 'EmailContent',
       component: EmailContent
+    },
+    {
+      path: '/lessonSystem',
+      name: 'LessonSystem',
+      component: LessonSystem
     }
   ]
 })
