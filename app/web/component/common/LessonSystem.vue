@@ -68,10 +68,146 @@
 						<div class="lesson-system-atlas-center-charts-period-text">课时：12</div>
 					</div>
 				</div>
-				<p class="lesson-system-atlas-center-subtitle">注：针对您具体的教学需求，比如侧重编程还是动画，需要多少课时的课程，可以做些相应的筛选。具体请咨询我们。</p>
+				<p class="lesson-system-atlas-center-hint">注：针对您具体的教学需求，比如侧重编程还是动画，需要多少课时的课程，可以做些相应的筛选。具体请咨询我们。</p>
 			</div>
 		</div>
-
+		<div class="lesson-system-schedule">
+			<h3 class="lesson-system-schedule-title">课表抢先看</h3>
+			<div class="lesson-system-atlas-center-icon"></div>
+			<div class="lesson-system-schedule-table">
+				<h4 class="lesson-system-schedule-table-title">Paracraft入门</h4>
+				<el-table class="lesson-system-schedule-table-case" :data="tableData.paracraftData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
+					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
+					<el-table-column label="教学基本要求">
+						<template slot-scope="scope">
+							<p v-html="scope.row.desc"></p>
+						</template>
+					</el-table-column>
+				</el-table>
+			</div>
+			<div class="lesson-system-schedule-table">
+				<h4 class="lesson-system-schedule-table-title">动画基础</h4>
+				<el-table class="lesson-system-schedule-table-case" :data="tableData.animationData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
+					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
+					<el-table-column label="教学基本要求">
+						<template slot-scope="scope">
+							<p v-html="scope.row.desc"></p>
+						</template>
+					</el-table-column>
+				</el-table>
+			</div>
+			<div class="lesson-system-schedule-table">
+				<h4 class="lesson-system-schedule-table-title">编程基础</h4>
+				<el-table class="lesson-system-schedule-table-case" :data="tableData.programmeData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
+					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
+					<el-table-column label="教学基本要求">
+						<template slot-scope="scope">
+							<p v-html="scope.row.desc"></p>
+						</template>
+					</el-table-column>
+				</el-table>
+			</div>
+			<div class="lesson-system-schedule-table">
+				<h4 class="lesson-system-schedule-table-title">动画进阶</h4>
+				<el-table class="lesson-system-schedule-table-case" :data="tableData.forwardAnimationData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
+					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
+					<el-table-column label="教学基本要求">
+						<template slot-scope="scope">
+							<p v-html="scope.row.desc"></p>
+						</template>
+					</el-table-column>
+				</el-table>
+			</div>
+			<div class="lesson-system-schedule-table">
+				<h4 class="lesson-system-schedule-table-title">编程进阶</h4>
+				<el-table class="lesson-system-schedule-table-case" :data="tableData.forwardProgrammeData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
+					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
+					<el-table-column label="教学基本要求">
+						<template slot-scope="scope">
+							<p v-html="scope.row.desc"></p>
+						</template>
+					</el-table-column>
+				</el-table>
+			</div>
+			<div class="lesson-system-schedule-table">
+				<h4 class="lesson-system-schedule-table-title">编程高阶</h4>
+				<el-table class="lesson-system-schedule-table-case" :data="tableData.highProgrammeData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
+					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
+					<el-table-column label="教学基本要求">
+						<template slot-scope="scope">
+							<p v-html="scope.row.desc"></p>
+						</template>
+					</el-table-column>
+				</el-table>
+			</div>
+			<div class="lesson-system-schedule-table">
+				<h4 class="lesson-system-schedule-table-title">CAD课程</h4>
+				<p class="lesson-system-schedule-table-episode">另外我们还有7节CAD课程，讲授如何使用Paracraft里的NPL CAD模型方块通过编程CAD的方式来建模，可以比基于粒子（方块）创建的3D模型有更高的精度。我们推荐您选用。</p>
+				<el-table class="lesson-system-schedule-table-case" :data="tableData.CADData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
+					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
+					<el-table-column label="教学基本要求">
+						<template slot-scope="scope">
+							<p v-html="scope.row.desc"></p>
+						</template>
+					</el-table-column>
+				</el-table>
+			</div>
+		</div>
+		<div class="lesson-system-suggest">
+			<div class="lesson-system-suggest-center">
+				<h3 class="lesson-system-atlas-center-title">教学建议</h3>
+				<div class="lesson-system-atlas-center-icon"></div>
+				<div class="lesson-system-suggest-center-boxs">
+					<div class="lesson-system-suggest-center-boxs-box-cover">
+						<img class="lesson-system-suggest-center-boxs-box-img" src="@/asset/images/教学建议图01.jpg" alt="">
+					</div>
+					<div class="lesson-system-suggest-center-boxs-box">
+						<h3 class="lesson-system-suggest-center-boxs-box-title">教学</h3>
+						<p class="lesson-system-suggest-center-boxs-box-text"><img class="lesson-system-suggest-center-boxs-box-text-img" src="@/asset/images/教学01.png" alt="">基于实践和项目，鼓励学生先跟着做，通过模仿获得大量实际体验</p>
+						<p class="lesson-system-suggest-center-boxs-box-text"><img class="lesson-system-suggest-center-boxs-box-text-img" src="@/asset/images/教学02.png" alt="">在学生已经有大量体验的基础上，老师引导学生逐步建立起系统的理论知识，在这个过程中仍然要侧重引导学生多观察多自我总结</p>
+					</div>
+				</div>
+				<div class="lesson-system-suggest-center-boxs">
+					<div class="lesson-system-suggest-center-boxs-box">
+						<h3 class="lesson-system-suggest-center-boxs-box-title">学习</h3>
+						<p class="lesson-system-suggest-center-boxs-box-text"><img class="lesson-system-suggest-center-boxs-box-text-img" src="@/asset/images/学法01.png" alt="">进行大量的实践操作</p>
+						<p class="lesson-system-suggest-center-boxs-box-text"><img class="lesson-system-suggest-center-boxs-box-text-img" src="@/asset/images/学法02.png" alt="">通过对比教师示范示例、修改演示等，找到开发打造原创3D动画、游戏的方法和技巧</p>
+						<p class="lesson-system-suggest-center-boxs-box-text"><img class="lesson-system-suggest-center-boxs-box-text-img" src="@/asset/images/学法03.png" alt="">将作品推向市场</p>
+					</div>
+					<div class="lesson-system-suggest-center-boxs-box-cover">
+						<img class="lesson-system-suggest-center-boxs-box-img" src="@/asset/images/教学建议图02.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lesson-system-reference">
+			<h3 class="lesson-system-atlas-center-title">参考资料</h3>
+			<div class="lesson-system-atlas-center-icon"></div>
+			<img class="lesson-system-reference-img" src="@/asset/images/参考资料.jpg" alt="">
+			<div class="lesson-system-reference-books">
+				<div class="lesson-system-reference-books-book">
+					<p class="lesson-system-reference-books-book-name">《Paracraft编程入门》</p>
+					<p class="lesson-system-reference-books-book-author">李西峙主编</p>
+				</div>
+				<div class="lesson-system-reference-books-book">
+					<p class="lesson-system-reference-books-book-name">《Paracraft创意动画入门》</p>
+					<p class="lesson-system-reference-books-book-author">于平主编</p>
+				</div>
+			</div>
+		</div>
+		<div class="lesson-system-bottom">
+			<div class="lesson-system-bottom-center">
+				<p class="lesson-system-bottom-center-text">我们诚心邀请培训机构、学校、教育工作者和我们一起推广Paracraft</p>
+				<span class="lesson-system-bottom-center-button" @click="isShowGatherInfo">立即咨询</span>
+			</div>
+		</div>
 		<gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
 		<quick-to-top></quick-to-top>
 
@@ -80,12 +216,14 @@
 <script>
 import GatherInfoDialog from '@/component/common/GatherInfoDialog'
 import QuickToTop from './QuickToTop'
+import tableData from '@/component/data/lessonSystemWorkData'
 
 export default {
 	name: 'LessonSystem',
 	data() {
 		return {
-			showGatherInfoDialog: false
+			showGatherInfoDialog: false,
+			tableData: tableData
 		}
 	},
 	components: {
@@ -98,6 +236,15 @@ export default {
 		},
 		closeGatherInfoDialog() {
 			this.showGatherInfoDialog = false
+		},
+		tableRowClassName({ row, rowIndex }) {
+			if (rowIndex % 2 === 1) {
+				return 'warning-row'
+			}
+			return ''
+		},
+		headerRowStyle({ row, rowIndex }) {
+			return 'table-header'
 		}
 	}
 }
@@ -267,6 +414,7 @@ export default {
 				font-size: 34px;
 				text-align: center;
 				margin: 0;
+				font-weight: normal;
 			}
 			&-icon {
 				width: 51px;
@@ -283,7 +431,6 @@ export default {
 			&-charts {
 				position: relative;
 				min-height: 400px;
-				border: 1px solid red;
 				&-arrows {
 					position: absolute;
 					top: 10px;
@@ -301,6 +448,7 @@ export default {
 						display: flex;
 						align-items: center;
 						justify-content: center;
+						color: #fff;
 						border-radius: 6px 6px 0px 0px;
 						&:nth-child(1) {
 							background: linear-gradient(90deg, #fc972b 0%, #ffc66c 100%);
@@ -338,6 +486,166 @@ export default {
 						font-size: 16px;
 						color: #333;
 					}
+				}
+			}
+			&-hint {
+				font-size: 16px;
+				text-align: center;
+				color: #666;
+			}
+		}
+	}
+	&-schedule {
+		padding: 93px 0;
+		max-width: 1015px;
+		margin: 0 auto;
+		&-title {
+			font-size: 30px;
+			text-align: center;
+			color: #333;
+			font-weight: normal;
+		}
+		&-table {
+			&-title {
+				text-align: center;
+				margin: 50px 0 24px;
+				color: #2397f3;
+				font-size: 22px;
+				font-weight: normal;
+			}
+			&-episode {
+				text-align: center;
+				margin: 25px auto 28px;
+				max-width: 910px;
+				color: #333;
+				font-size: 16px;
+			}
+			/deep/ .el-table {
+				.warning-row {
+					background: #f5f8fc;
+				}
+			}
+			&-case {
+				/deep/ .el-table__header-wrapper {
+					.el-table__header {
+						.has-gutter {
+							tr.table-header {
+								th {
+									background: #e5f4ff;
+								}
+							}
+						}
+					}
+				}
+				// /deep/ .el-table__body-wrapper {
+				// 	.el-table__body {
+				// 		.el-table__row {
+				// 			&:nth-child(2n) {
+				// 				background: #f5f8fc;
+				// 			}
+				// 		}
+				// 	}
+				// }
+			}
+		}
+	}
+	&-suggest {
+		background-color: #f9faff;
+		&-center {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 97px 0;
+			&-boxs {
+				height: 346px;
+				display: flex;
+				background: #fff;
+				box-shadow: 0px 17px 42px 1px rgba(59, 98, 156, 0.07);
+				margin: 47px 0 70px;
+				border-radius: 0 0 12px 12px;
+				&-box {
+					flex: 1;
+					&-cover {
+						width: 568px;
+					}
+					&-img {
+						height: 346px;
+					}
+					&-title {
+						max-width: 500px;
+						margin: 43px auto 0;
+						border-bottom: 1px solid #d4d4d4;
+						padding-bottom: 24px;
+						font-size: 26px;
+						color: #333;
+						font-weight: normal;
+					}
+					&-text {
+						max-width: 500px;
+						box-sizing: border-box;
+						padding-left: 35px;
+						position: relative;
+						margin: 28px auto;
+						font-size: 16px;
+						line-height: 30px;
+						color: #666;
+						&-img {
+							position: absolute;
+							left: 0;
+							top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	&-reference {
+		padding: 97px 0;
+		max-width: 1200px;
+		margin: 0 auto;
+		&-img {
+			margin: 30px 0 70px 160px;
+		}
+		&-books {
+			display: flex;
+			&-book {
+				flex: 1;
+				text-align: center;
+				&-name {
+					font-size: 20px;
+					color: #303133;
+					line-height: 39px;
+					font-weight: bold;
+				}
+				&-author {
+					font-size: 20px;
+					color: #303133;
+				}
+			}
+		}
+	}
+	&-bottom {
+		background: linear-gradient(to right, rgb(30, 111, 250), rgb(90, 113, 254));
+		text-align: center;
+		&-center {
+			padding-top: 50px;
+			box-sizing: border-box;
+			min-height: 238px;
+			background: url(../../asset/images/马上体验底图.jpg) top center no-repeat;
+			&-text {
+				color: #fff;
+				font-size: 24px;
+			}
+			&-button {
+				display: inline-block;
+				padding: 17px 47px;
+				color: #0090ff;
+				font-size: 18px;
+				background: #fff;
+				border-radius: 28px;
+				margin: 12px 0;
+				cursor: pointer;
+				&:hover {
+					background: #e0e9ff;
 				}
 			}
 		}
