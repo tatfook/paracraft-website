@@ -13,9 +13,9 @@
       </div>
       <div class="homepage-advantage-intro-box homepage-advantage-intro-box-text">
         <div class="box-text">
-          <h5 class="box-text-title">下一代的Minecraft</h5>
+          <h5 class="box-text-title">比Minecraft更进一步</h5>
           <p class="box-text-text">完善的3D场景编辑器</p>
-          <p class="box-text-text">制作3D骨骼动画人物</p>
+          <p class="box-text-text">制作3D骨骼动画角色</p>
           <p class="box-text-text">直接在3D世界中编程</p>
           <p class="box-text-text">沉浸式游戏与学习体验</p>
           <p class="box-text-text">支持PC/移动端多平台</p>
