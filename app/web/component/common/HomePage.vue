@@ -35,6 +35,7 @@
               <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/课程与数字化教学服务.png" alt="">
               <h6 class="homepage-service-bg-center-intro-box-title">编程课程体系与数字化教学服务</h6>
               <p class="homepage-service-bg-center-intro-box-text">助力中小学培训机构和学校开展编程教学。独立研发多本动画与编程教材，提供师资培训服务。</p>
+              <p class="homepage-service-bg-center-intro-box-obtain"><a  class="homepage-service-bg-center-intro-box-obtain-link" href=""  @click.stop.prevent="isShowGatherInfo">获取课程体系</a></p>
             </div>
             <div class="homepage-service-bg-center-intro-box">
               <img class="homepage-service-bg-center-intro-box-img" src="@/asset/images/Paracraft-软件贴牌.png" alt="">
@@ -431,6 +432,13 @@ export default {
               opacity: 0.8;
               line-height: 29px;
               padding: 0 30px;
+            }
+            &-obtain {
+              &-link {
+                color: #feef00;
+                font-size: 18px;
+                line-height: 35px;
+              }
             }
           }
         }
