@@ -4,7 +4,8 @@
       <h4 class="price-item-title">价格</h4>
       <div class="price-item-content">
         <div class="price-item-content-top">
-          编程课程服务
+          <span>编程课程服务</span>
+          <span class="price-item-content-top-link" @click="isShowGatherInfo">获取课程体系</span>
         </div>
         <p class="price-item-content-flow">通用流程</p>
         <p class="price-item-content-step"><span class="price-item-content-step-icon">1</span>留下您的联系方式，我们的服务人员将邀请您体验具体课程内容</p>
@@ -229,8 +230,16 @@ export default {
         font-size: 22px;
         color: #333;
         font-weight: bold;
-        padding-left: 67px;
+        padding:0 30px 0 67px;
         margin-bottom: 43px;
+        &-link {
+          font-size: 18px;
+          font-weight: normal;
+          color: #0090ff;
+          float: right;
+          text-decoration: underline;
+          cursor: pointer;
+        }
       }
       &-flow {
         color: #333333;
