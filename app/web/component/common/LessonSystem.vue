@@ -77,7 +77,7 @@
 			<div class="lesson-system-schedule-table">
 				<h4 class="lesson-system-schedule-table-title">Paracraft入门</h4>
 				<el-table class="lesson-system-schedule-table-case" :data="tableData.paracraftData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
-					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="id" label="序号" width="94"></el-table-column>
 					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
 					<el-table-column label="教学基本要求">
 						<template slot-scope="scope">
@@ -89,7 +89,7 @@
 			<div class="lesson-system-schedule-table">
 				<h4 class="lesson-system-schedule-table-title">动画基础</h4>
 				<el-table class="lesson-system-schedule-table-case" :data="tableData.animationData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
-					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="id" label="序号" width="94"></el-table-column>
 					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
 					<el-table-column label="教学基本要求">
 						<template slot-scope="scope">
@@ -101,7 +101,7 @@
 			<div class="lesson-system-schedule-table">
 				<h4 class="lesson-system-schedule-table-title">编程基础</h4>
 				<el-table class="lesson-system-schedule-table-case" :data="tableData.programmeData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
-					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="id" label="序号" width="94"></el-table-column>
 					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
 					<el-table-column label="教学基本要求">
 						<template slot-scope="scope">
@@ -113,7 +113,7 @@
 			<div class="lesson-system-schedule-table">
 				<h4 class="lesson-system-schedule-table-title">动画进阶</h4>
 				<el-table class="lesson-system-schedule-table-case" :data="tableData.forwardAnimationData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
-					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="id" label="序号" width="94"></el-table-column>
 					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
 					<el-table-column label="教学基本要求">
 						<template slot-scope="scope">
@@ -125,7 +125,7 @@
 			<div class="lesson-system-schedule-table">
 				<h4 class="lesson-system-schedule-table-title">编程进阶</h4>
 				<el-table class="lesson-system-schedule-table-case" :data="tableData.forwardProgrammeData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
-					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="id" label="序号" width="94"></el-table-column>
 					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
 					<el-table-column label="教学基本要求">
 						<template slot-scope="scope">
@@ -137,7 +137,7 @@
 			<div class="lesson-system-schedule-table">
 				<h4 class="lesson-system-schedule-table-title">编程高阶</h4>
 				<el-table class="lesson-system-schedule-table-case" :data="tableData.highProgrammeData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
-					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="id" label="序号" width="94"></el-table-column>
 					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
 					<el-table-column label="教学基本要求">
 						<template slot-scope="scope">
@@ -150,7 +150,7 @@
 				<h4 class="lesson-system-schedule-table-title">CAD课程</h4>
 				<p class="lesson-system-schedule-table-episode">另外我们还有7节CAD课程，讲授如何使用Paracraft里的NPL CAD模型方块通过编程CAD的方式来建模，可以比基于粒子（方块）创建的3D模型有更高的精度。我们推荐您选用。</p>
 				<el-table class="lesson-system-schedule-table-case" :data="tableData.CADData" border style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
-					<el-table-column prop="id" label="序号" width="180"></el-table-column>
+					<el-table-column prop="id" label="序号" width="94"></el-table-column>
 					<el-table-column prop="name" label="课程名称" width="280"></el-table-column>
 					<el-table-column label="教学基本要求">
 						<template slot-scope="scope">
@@ -196,7 +196,7 @@
 					<p class="lesson-system-reference-books-book-name">《Paracraft编程入门》</p>
 					<p class="lesson-system-reference-books-book-author">李西峙主编</p>
 				</div>
-				<div class="lesson-system-reference-books-book">
+				<div class="lesson-system-reference-books-book lesson-system-reference-books-book-animation">
 					<p class="lesson-system-reference-books-book-name">《Paracraft创意动画入门》</p>
 					<p class="lesson-system-reference-books-book-author">于平主编</p>
 				</div>
@@ -253,7 +253,7 @@ export default {
 <style lang="scss" scoped>
 .lesson-system {
 	&-banner {
-		background: linear-gradient(to right, #351d85, #081746);
+		background: linear-gradient(to right, rgb(74,88,221), rgb(35,114,245));
 		&-center {
 			background: url(../../asset/images/lesson-banner.jpg) top center no-repeat;
 			background-size: auto 100%;
@@ -288,7 +288,7 @@ export default {
 				&-target {
 					font-size: 34px;
 					color: #fff;
-					margin: 38px 0 90px;
+					margin: 8px 0 60px;
 				}
 				&-free {
 					display: inline-block;
@@ -366,10 +366,11 @@ export default {
 			display: flex;
 			justify-content: space-around;
 			flex-wrap: wrap;
+			padding-bottom: 80px;
 			&-box {
 				width: 400px;
 				box-sizing: border-box;
-				padding: 76px 0;
+				padding: 66px 0;
 				position: relative;
 				&::before {
 					content: '';
@@ -521,6 +522,9 @@ export default {
 				font-size: 16px;
 			}
 			/deep/ .el-table {
+				td {
+					padding: 2px 0;
+				}
 				.warning-row {
 					background: #f5f8fc;
 				}
@@ -532,6 +536,7 @@ export default {
 							tr.table-header {
 								th {
 									background: #e5f4ff;
+									color: #333;
 								}
 							}
 						}
@@ -562,6 +567,7 @@ export default {
 				box-shadow: 0px 17px 42px 1px rgba(59, 98, 156, 0.07);
 				margin: 47px 0 70px;
 				border-radius: 0 0 12px 12px;
+				overflow: hidden;
 				&-box {
 					flex: 1;
 					&-cover {
@@ -599,26 +605,33 @@ export default {
 		}
 	}
 	&-reference {
-		padding: 97px 0;
-		max-width: 1200px;
+		padding: 97px 0 40px;
+		max-width: 1307px;
 		margin: 0 auto;
 		&-img {
-			margin: 30px 0 70px 160px;
+			margin: 30px 0 5px;
 		}
 		&-books {
 			display: flex;
+			justify-content:center;
 			&-book {
-				flex: 1;
+				width: 540px;
 				text-align: center;
+				&-animation {
+					padding-left: 26px;
+					box-sizing: border-box;
+				}
 				&-name {
 					font-size: 20px;
 					color: #303133;
 					line-height: 39px;
 					font-weight: bold;
+					margin-bottom: 4px;
 				}
 				&-author {
 					font-size: 20px;
 					color: #303133;
+					margin-top: 4px;
 				}
 			}
 		}

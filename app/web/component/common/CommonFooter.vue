@@ -67,6 +67,7 @@
             <li @click="handleSelect('oursAdvantage')">我们的优势</li>
             <li @click="handleSelect('oursService')">服务项目</li>
             <li @click="handleSelect('price')">价格</li>
+            <li><a href="/lessonSystem">课程体系</a></li>
           </ul>
         </el-collapse-item>
         <el-collapse-item title="致社区" name="3">
