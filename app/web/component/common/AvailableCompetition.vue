@@ -74,6 +74,7 @@ export default {
   }
   &-item {
     display: inline-block;
+    vertical-align: middle;
     width: 428px;
     height: 241px;
     margin: 24px 24px 0 0;
