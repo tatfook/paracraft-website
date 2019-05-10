@@ -16,7 +16,7 @@
           <li @click="handleSelect('oursAdvantage')">我们的优势</li>
           <li @click="handleSelect('oursService')">服务项目</li>
           <li @click="handleSelect('price')">价格</li>
-          <li><a href="/lessonSystem">课程体系</a></li>
+          <li><a href="" @click.stop.prevent="goLessonSystem">课程体系</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
@@ -67,7 +67,7 @@
             <li @click="handleSelect('oursAdvantage')">我们的优势</li>
             <li @click="handleSelect('oursService')">服务项目</li>
             <li @click="handleSelect('price')">价格</li>
-            <li><a href="/lessonSystem">课程体系</a></li>
+            <li><a href="" @click.stop.prevent="goLessonSystem">课程体系</a></li>
           </ul>
         </el-collapse-item>
         <el-collapse-item title="致社区" name="3">
@@ -141,6 +141,18 @@ export default {
         default:
           break
       }
+    },
+    goLessonSystem() {
+      let client_width = document.body.clientWidth
+      if (client_width < 769) {
+        this.$router.push({
+          name: 'LessonSystem_Phone'
+        })
+        return
+      }
+      this.$router.push({
+        name: 'LessonSystem'
+      })
     }
   }
 }
