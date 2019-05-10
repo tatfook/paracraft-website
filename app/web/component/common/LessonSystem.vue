@@ -643,7 +643,8 @@ export default {
       background: url(../../asset/images/马上体验底图.jpg) top center no-repeat;
       &-text {
         color: #fff;
-        font-size: 24px;
+        font-size: 20px;
+        padding: 0 10px;
       }
       &-button {
         display: inline-block;
