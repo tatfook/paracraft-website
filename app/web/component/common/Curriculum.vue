@@ -151,7 +151,6 @@
       </div>
       <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
       <quick-to-top></quick-to-top>
-
     </div>
     <div class="lesson-system-phone">
       <div class="lesson-system-phone-banner">
@@ -262,8 +261,6 @@
           <span class="lesson-system-phone-bottom-center-button" @click="isShowGatherInfo">立即咨询</span>
         </div>
       </div>
-      <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
-      <quick-to-top></quick-to-top>
     </div>
   </div>
 </template>
