@@ -11,63 +11,8 @@
         <p class="price-item-content-step"><span class="price-item-content-step-icon">1</span>留下您的联系方式，我们的服务人员将邀请您体验具体课程内容</p>
         <p class="price-item-content-step"><span class="price-item-content-step-icon">2</span>与我们签约，并按需采购课程</p>
         <p class="price-item-content-step  price-item-content-step-last"><span class="price-item-content-step-icon">3</span>在线添加学生与老师，开始教学</p>
-
         <p class="price-item-content-flow">收费标准</p>
-        <p class="price-item-content-charge"><span class="price-item-content-intro-icon"></span>我们按照学生数目收取年费</p>
-        <p class="price-item-content-charge-terms"><span class="price-item-content-charge-terms-num">1.</span> 5人以内免费</p>
-        <p class="price-item-content-charge-terms"><span class="price-item-content-charge-terms-num">2.</span> 学生数量100以内，单个学生费用2000元/年</p>
-        <p class="price-item-content-charge-terms"><span class="price-item-content-charge-terms-num">3.</span> 学生数量100到500之间，新加入的学生费用为1800元/年</p>
-        <p class="price-item-content-charge-terms"><span class="price-item-content-charge-terms-num">4.</span> 学生数量大于500，新加入的学生费用为1500元/年</p>
-
         <p class="price-item-content-charge price-item-content-charge-per"><span class="price-item-content-intro-icon"></span>我们还提供额外的教师培训服务。每位老师3000元/年<br>联系我们可申请最多3名免费教师培训名额</p>
-        <!-- <p class="price-item-content-charge price-item-content-charge-per">联系我们可申请最多3名免费教师培训名额</p> -->
-        <p class="price-item-content-calculate"><img class="price-item-content-calculate-img" src="@/asset/images/计算器.png" alt="@/asset/images/计算器.png"><span class="price-item-content-calculate-weight">价格计算器</span>（您可根据自身需求进行合理规划，灵活使用多种计算模式，获得最优成本收益）</p>
-        <div class="price-item-content-counter">
-          <div class="price-item-content-counter-count">
-            <p class="price-item-content-counter-count-member">学生人数</p>
-            <p class="price-item-content-counter-count-num">费用：{{studentCharge}}元/年/人</p>
-            <div class="price-item-content-counter-count-slider">
-              <div class="price-item-content-counter-count-slider-left">
-                <el-slider v-model="sliderValue_student" show-input :max="3000">
-                </el-slider>
-              </div>
-              <div class="price-item-content-counter-count-slider-right">人</div>
-            </div>
-            <p class="price-item-content-counter-count-member">老师人数</p>
-            <p class="price-item-content-counter-count-num">费用：{{teacherCharge}}元/年/人</p>
-            <div class="price-item-content-counter-count-slider">
-              <div class="price-item-content-counter-count-slider-left">
-                <el-slider v-model="sliderValue_teacher" show-input :max="300">
-                </el-slider>
-              </div>
-              <div class="price-item-content-counter-count-slider-right">人</div>
-            </div>
-          </div>
-          <div class="price-item-content-counter-result">
-            <p class="price-item-content-counter-result-title">价格预算清单</p>
-            <div class="price-item-content-counter-result-content">
-              <p class="price-item-content-counter-result-text" v-show="!sliderValue_student && !sliderValue_teacher">请拖动滑竿或直接输入相关人数的预计用量，以估算使用Paracraft服务的总成本</p>
-              <div class="price-item-content-counter-result-item" v-show="sliderValue_student">
-                <span class="price-item-content-counter-result-item-key">学生服务</span>
-                <span class="price-item-content-counter-result-item-value">￥{{_allStudentsCharge}}</span>
-                <p class="price-item-content-counter-result-item-hint">学生费用{{studentCharge}}元/年/人 · {{sliderValue_student}}人</p>
-              </div>
-              <div class="price-item-content-counter-result-item" v-show="sliderValue_teacher">
-                <span class="price-item-content-counter-result-item-key">老师服务：</span>
-                <span class="price-item-content-counter-result-item-value">￥{{_allTeachersCharge}}</span>
-                <p class="price-item-content-counter-result-item-hint">老师费用{{teacherCharge}}元/年/人 · {{sliderValue_teacher}}人</p>
-              </div>
-              <div class="price-item-content-counter-result-item" v-show="sliderValue_student || sliderValue_teacher">
-                <span class="price-item-content-counter-result-item-key">优惠</span>
-                <span class="price-item-content-counter-result-item-count">￥{{discounts}}</span>
-              </div>
-            </div>
-            <div class="price-item-content-counter-result-total">
-              <p>合计：￥<span class="price-item-content-counter-result-total-hightlight">{{totalCharge}}</span>/年</p>
-            </div>
-            <p class="price-item-content-counter-result-export" @click="exportList()">↓导出清单</p>
-          </div>
-        </div>
         <div class="price-item-content-hint">
           包年一次性付费优惠更多，欢迎洽谈。
         </div>
