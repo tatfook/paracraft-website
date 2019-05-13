@@ -5,8 +5,7 @@ import Download from '@/component/common/Download'
 import News from '@/component/common/News'
 import EmailContent from '@/component/common/EmailContent'
 import CompanyProfile from '@/component/CompanyProfile'
-import LessonSystem from '@/component/common/LessonSystem'
-import LessonSystem_Phone from '@/component/common/LessonSystem_Phone'
+import Curriculum from '@/component/common/Curriculum'
 
 Vue.use(Router)
 
@@ -40,14 +39,9 @@ export default new Router({
       component: EmailContent
     },
     {
-      path: '/lessonSystem',
-      name: 'LessonSystem',
-      component: LessonSystem
-    },
-    {
-      path: '/lessonSystem_Phone',
-      name: 'LessonSystem_Phone',
-      component: LessonSystem_Phone
+      path: '/curriculum',
+      name: 'Curriculum',
+      component: Curriculum
     }
   ]
 })

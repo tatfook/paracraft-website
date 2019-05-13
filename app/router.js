@@ -5,6 +5,5 @@ module.exports = app => {
   app.get('/news', app.controller.home.homepage);
   app.get('/companyProfile', app.controller.home.homepage);
   app.get('/ceo_letter', app.controller.home.homepage);
-  app.get('/lessonSystem', app.controller.home.homepage);
-  app.get('/lessonSystem_Phone', app.controller.home.homepage);
+  app.get('/curriculum', app.controller.home.homepage);
 };
