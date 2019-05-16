@@ -5,7 +5,7 @@
       <div class="price-item-content">
         <div class="price-item-content-top">
           <span>编程课程服务</span>
-          <span class="price-item-content-top-link" @click="isShowGatherInfo">获取课程体系</span>
+          <span class="price-item-content-top-link" @click="goCurriculum">获取课程体系</span>
         </div>
         <p class="price-item-content-flow">通用流程</p>
         <p class="price-item-content-step"><span class="price-item-content-step-icon">1</span>留下您的联系方式，我们的服务人员将邀请您体验具体课程内容</p>
@@ -146,6 +146,9 @@ export default {
         })
         this.downloadLoading = false
       })
+    },
+    goCurriculum() {
+      window.open('https://biz.keepwork.com/curriculum')
     }
   }
 }

@@ -270,7 +270,7 @@ import QuickToTop from './QuickToTop'
 import tableData from '@/component/data/lessonSystemWorkData'
 
 export default {
-  name: 'LessonSystem',
+  name: 'Curriculum',
   data() {
     return {
       showGatherInfoDialog: false,
