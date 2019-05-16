@@ -99,10 +99,10 @@ export default {
       carouselPic_3: [
         { url: require('@/asset/images/优势3-未来教育.jpg') },
         { url: require('@/asset/images/未来教育-互动学习辅导平台.jpg') },
-        { url: require('@/asset/images/01.jpg') },
+        { url: require('@/asset/images/01-顺序图3.jpg') },
         { url: require('@/asset/images/02.jpg') },
-        { url: require('@/asset/images/03.jpg') },
-        { url: require('@/asset/images/04.jpg') }
+        { url: require('@/asset/images/03-顺序图5.jpg') },
+        { url: require('@/asset/images/04-顺序图6.jpg') }
       ]
     }
   },
