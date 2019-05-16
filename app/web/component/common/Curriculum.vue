@@ -131,9 +131,9 @@
       <div class="lesson-system-reference">
         <h3 class="lesson-system-atlas-center-title">参考资料</h3>
         <div class="lesson-system-atlas-center-icon"></div>
-        <img class="lesson-system-reference-img" src="@/asset/images/参考资料.jpg" alt="">
+        <img class="lesson-system-reference-img" src="@/asset/images/参考资料.jpg" alt="" @click="goTextbookPage">
         <div class="lesson-system-reference-books">
-          <div class="lesson-system-reference-books-book">
+          <div class="lesson-system-reference-books-book" @click="goTextbookPage">
             <p class="lesson-system-reference-books-book-name">《Paracraft编程入门》</p>
             <p class="lesson-system-reference-books-book-author">李西峙主编</p>
           </div>
@@ -385,6 +385,9 @@ export default {
     },
     headerRowStyle({ row, rowIndex }) {
       return 'table-header'
+    },
+    goTextbookPage() {
+      window.open('https://keepwork.com/s/textbook')
     }
   }
 }
@@ -759,6 +762,7 @@ export default {
     margin: 0 auto;
     &-img {
       margin: 30px 0 5px;
+      cursor: pointer;
     }
     &-books {
       display: flex;
@@ -776,11 +780,13 @@ export default {
           line-height: 39px;
           font-weight: bold;
           margin-bottom: 4px;
+          cursor: pointer;
         }
         &-author {
           font-size: 20px;
           color: #303133;
           margin-top: 4px;
+          cursor: pointer;
         }
       }
     }
