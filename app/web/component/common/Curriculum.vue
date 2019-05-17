@@ -204,7 +204,7 @@
         <div class="lesson-system-phone-schedule-icon"></div>
         <div class="lesson-system-phone-schedule-table" v-for="(i,index) in tableDataList" :key="index">
           <h4 class="lesson-system-phone-schedule-table-title">{{i.tableName}}</h4>
-          <el-table class="lesson-system-phone-schedule-table-case" :data="i.tableResource" border height="300" style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
+          <el-table class="lesson-system-phone-schedule-table-case" :data="i.tableResource" border height="360" style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
             <el-table-column prop="id" label="序号" width="65"></el-table-column>
             <el-table-column prop="name" label="课程名称" width="80"></el-table-column>
             <el-table-column label="教学基本要求">
@@ -217,7 +217,7 @@
         <div class="lesson-system-phone-schedule-table">
           <h4 class="lesson-system-phone-schedule-table-title">CAD课程</h4>
           <p class="lesson-system-phone-schedule-table-episode">另外我们还有7节CAD课程，讲授如何使用Paracraft里的NPL CAD模型方块通过编程CAD的方式来建模，可以比基于粒子（方块）创建的3D模型有更高的精度。我们推荐您选用。</p>
-          <el-table class="lesson-system-phone-schedule-table-case" :data="tableData.CADData" border height="300" style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
+          <el-table class="lesson-system-phone-schedule-table-case" :data="tableData.CADData" border height="360" style="width:100%" :row-class-name="tableRowClassName" :header-row-class-name="headerRowStyle">
             <el-table-column prop="id" label="序号" width="65"></el-table-column>
             <el-table-column prop="name" label="课程名称" width="80"></el-table-column>
             <el-table-column label="教学基本要求">
