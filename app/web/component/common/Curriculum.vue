@@ -253,7 +253,7 @@
         <h3 class="lesson-system-phone-refrecen-author">李西峙主编</h3>
         <img class="lesson-system-phone-refrecen-cover" src="@/asset/images/书2.png" alt="">
         <h2 class="lesson-system-phone-refrecen-bookname">《Paracraft编程入门》</h2>
-        <h3 class="lesson-system-phone-refrecen-author">李西峙主编</h3>
+        <h3 class="lesson-system-phone-refrecen-author">于平主编</h3>
       </div>
       <div class="lesson-system-phone-bottom">
         <div class="lesson-system-phone-bottom-center">
