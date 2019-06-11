@@ -131,15 +131,16 @@
       <div class="lesson-system-reference">
         <h3 class="lesson-system-atlas-center-title">参考资料</h3>
         <div class="lesson-system-atlas-center-icon"></div>
-        <img class="lesson-system-reference-img" src="@/asset/images/参考资料.jpg" alt="" @click="goTextbookPage">
+        <img class="lesson-system-reference-img" src="@/asset/images/参考资料.jpg" alt="">
+        <div class="lesson-system-reference-img-position" @click="goTextbookPage"></div>
         <div class="lesson-system-reference-books">
           <div class="lesson-system-reference-books-book" @click="goTextbookPage">
             <p class="lesson-system-reference-books-book-name">《Paracraft编程入门》</p>
             <p class="lesson-system-reference-books-book-author">李西峙主编</p>
           </div>
           <div class="lesson-system-reference-books-book lesson-system-reference-books-book-animation">
-            <p class="lesson-system-reference-books-book-name">《Paracraft创意动画入门》</p>
-            <p class="lesson-system-reference-books-book-author">于平主编</p>
+            <p class="lesson-system-reference-books-book-name no-click">《Paracraft创意动画入门》</p>
+            <p class="lesson-system-reference-books-book-author  no-click">于平主编</p>
           </div>
         </div>
       </div>
@@ -248,8 +249,8 @@
       <div class="lesson-system-phone-refrecen">
         <div class="lesson-system-phone-refrecen-title">参考资料</div>
         <div class="lesson-system-phone-refrecen-icon"></div>
-        <img class="lesson-system-phone-refrecen-cover" src="@/asset/images/书1.png" alt="">
-        <h2 class="lesson-system-phone-refrecen-bookname">《Paracraft编程入门》</h2>
+        <img class="lesson-system-phone-refrecen-cover" src="@/asset/images/书1.png" alt="" @click="goTextbookPage">
+        <h2 class="lesson-system-phone-refrecen-bookname" @click="goTextbookPage">《Paracraft编程入门》</h2>
         <h3 class="lesson-system-phone-refrecen-author">李西峙主编</h3>
         <img class="lesson-system-phone-refrecen-cover" src="@/asset/images/书2.png" alt="">
         <h2 class="lesson-system-phone-refrecen-bookname">《Paracraft编程入门》</h2>
@@ -760,13 +761,24 @@ export default {
     padding: 97px 0 40px;
     max-width: 1307px;
     margin: 0 auto;
+    position: relative;
     &-img {
       margin: 30px 0 5px;
-      cursor: pointer;
+      &-position {
+        cursor: pointer;
+        height: 500px;
+        width: 360px;
+        position: absolute;
+        top: 200px;
+        left: 200px;
+      }
     }
     &-books {
       display: flex;
       justify-content: center;
+      .no-click {
+        cursor: default;
+      }
       &-book {
         width: 540px;
         text-align: center;
