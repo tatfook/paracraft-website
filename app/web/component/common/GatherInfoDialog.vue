@@ -127,7 +127,7 @@ export default {
           <p><span>所在城市：</span>${this.infoData.city}</p>
           <p><span>申请时间：</span>${sendTime}</p>
           </div>`,
-          from: 'Paracraft团队 <noreply@mail.keepwork.com>'
+          from: 'https://biz.keepwork.com/ <noreply@mail.keepwork.com>'
         })
         .then(res => {})
         .catch(err => {
