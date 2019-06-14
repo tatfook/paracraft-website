@@ -117,7 +117,7 @@ export default {
       axios
         .post(`${baseUrl}/keepworks/email`, {
           subject: '申请表单合作咨询者信息',
-          to: '861146388@qq.com,lixizhi@paraengine.com',
+          to: '861146388@qq.com,lixizhi@paraengine.com,466303837@qq.com',
           html: `<div>
           <p><span>联系人：</span>${this.infoData.realname}</p>
           <p><span>联系电话：</span>${this.infoData.cellphone}</p>
