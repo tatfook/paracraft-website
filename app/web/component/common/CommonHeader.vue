@@ -29,7 +29,30 @@ export default {
       activeIndex: '1'
     }
   },
+  watch: {},
+  mounted() {
+    window.scrollTo(0, 0)
+  },
   methods: {
+    currentPageYOffset() {
+      if (window.pageYOffset > 700 && window.pageYOffset < 2400) {
+        this.$nextTick(() => {
+          this.activeIndex = 'oursAdvantage'
+        })
+      } else if (window.pageYOffset > 2400 && window.pageYOffset < 3200) {
+        this.$nextTick(() => {
+          this.activeIndex = 'oursService'
+        })
+      } else if (window.pageYOffset > 6500 && window.pageYOffset < 8000) {
+        this.$nextTick(() => {
+          this.activeIndex = 'price'
+        })
+      } else {
+        this.$nextTick(() => {
+          this.activeIndex = 'experience'
+        })
+      }
+    },
     showGatherInfo() {
       this.showGatherInfoDialog = true
     },
@@ -64,6 +87,12 @@ export default {
   },
   components: {
     GatherInfoDialog
+  },
+  created() {
+    window.addEventListener('scroll', _.debounce(this.currentPageYOffset, 80))
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.currentPageYOffset)
   }
 }
 </script>
@@ -74,7 +103,14 @@ export default {
   &-phone {
     display: none;
   }
+  .el-menu--horizontal.el-menu .el-menu-item.is-active {
+    color: #3c93ff;
+  }
   &-menu {
+    &.el-menu--horizontal > .el-menu-item.is-active {
+      border-color: transparent;
+      color: #3c93ff;
+    }
     &-first {
       padding-right: 80px;
     }
@@ -164,7 +200,7 @@ export default {
       &-first {
         padding: 0 0 0 10px;
       }
-      .pull-right{
+      .pull-right {
         padding: 0 10px 0 0;
       }
     }

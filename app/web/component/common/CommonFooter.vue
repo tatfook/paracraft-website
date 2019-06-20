@@ -4,24 +4,25 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">产品</li>
-          <li @click="handleSelect('top')">Paracraft 创意空间</li>
-          <li><a href="http://paracraft.keepwork.com/download?lang=zh" target="_blank">免费下载</a></li>
+          <!-- <li @click="handleSelect('top')">Paracraft 创意空间</li> -->
+          <li><a href="http://paracraft.keepwork.com/download?lang=zh" target="_blank">Paracraft下载</a></li>
           <li><a href="https://keepwork.com/" target="_blank">作品社区</a></li>
           <li><a href="https://keepwork.com/NPL" target="_blank">NPL动画与编程大赛</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
-          <li class="common-footer-content-part-list-title">服务</li>
-          <li @click="handleSelect('oursAdvantage')">我们的优势</li>
+          <li class="common-footer-content-part-list-title">服务与支持</li>
+          <!-- <li @click="handleSelect('oursAdvantage')">我们的优势</li> -->
+          <li><a href="https://keepwork.com/official/paracraft/index" target="_blank">解决方案</a></li>
           <li @click="handleSelect('oursService')">服务项目</li>
-          <li @click="handleSelect('price')">价格</li>
+          <li @click="handleSelect('price')">价格详情</li>
           <li><a href="/curriculum">课程体系</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
-          <li class="common-footer-content-part-list-title">致社区</li>
+          <li class="common-footer-content-part-list-title">教育理念</li>
           <li><a href="https://keepwork.com/official/paracraft/to-educators" target="_blank">致教育者</a></li>
           <li><a href="https://keepwork.com/official/paracraft/to-parents" target="_blank">给父母的话</a></li>
           <li><a href="https://keepwork.com/official/paracraft/to-developers" target="_blank">致开发者</a></li>
@@ -31,8 +32,8 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">关于我们</li>
-          <li><a href="/companyProfile ">公司简介</a></li>
-          <!-- <li><a href="https://api.keepwork.com/storage/v0/siteFiles/3749/raw#宣传页.pdf" target="_blank">宣传页下载</a></li> -->
+          <li><a href="/companyProfile ">公司介绍</a></li>
+          <li><a href="https://api.keepwork.com/storage/v0/siteFiles/3749/raw#宣传页.pdf" target="_blank">宣传页下载</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
