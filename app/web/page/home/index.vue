@@ -49,11 +49,18 @@ body {
   min-height: 100%;
   &-main {
     padding: 0;
+    padding-top: 82px;
   }
   &-header.el-header {
     padding: 0;
     height: auto !important;
     background: rgb(5, 16, 41);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
   }
   &-footer.el-footer {
     padding: 0;
