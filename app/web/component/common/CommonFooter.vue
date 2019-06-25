@@ -41,6 +41,7 @@
           <li class="common-footer-content-part-list-title">联系我们</li>
           <li>电话：<br>0755-86967012</li>
           <li>邮箱：<br>support@paraengine.com</li>
+          <li @click="showLocation()">地址：<br>深圳市南山区科技园德赛科技大厦西座2303-2304</li>
         </ul>
       </div>
       <div class="common-footer-content-part common-footer-content-part-last">
@@ -92,6 +93,7 @@
         <div class="common-footer-phone-contact-left-content">
           <p class="common-footer-phone-contact-left-content-text">电话：<br>0755-86967012</p>
           <p class="common-footer-phone-contact-left-content-text">邮箱：<br>support@paraengine.com</p>
+          <p class="common-footer-phone-contact-left-content-text" @click="showLocation">地址：<br>深圳市南山区科技园德赛科技大厦西座2303-2304</p>
         </div>
       </div>
       <div class="common-footer-phone-contact-right">
@@ -142,6 +144,9 @@ export default {
         default:
           break
       }
+    },
+    showLocation() {
+      this.$router.push({ name: 'CompanyAddress' })
     }
   }
 }
@@ -172,6 +177,9 @@ export default {
         }
         li + li {
           color: #b4b4b4;
+          // cursor: pointer;
+        }
+        li:nth-last-child(1) {
           cursor: pointer;
         }
         &-weixin {

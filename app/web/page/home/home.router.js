@@ -6,6 +6,7 @@ import News from '@/component/common/News'
 import EmailContent from '@/component/common/EmailContent'
 import CompanyProfile from '@/component/CompanyProfile'
 import Curriculum from '@/component/common/Curriculum'
+import CompanyAddress from '@/component/common/CompanyAddress'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/curriculum',
       name: 'Curriculum',
       component: Curriculum
+    },
+    {
+      path: '/companyAddress',
+      name: 'CompanyAddress',
+      component: CompanyAddress
     }
   ]
 })
