@@ -111,6 +111,9 @@ export default {
       border-color: transparent;
       color: #3c93ff;
     }
+    &.el-menu--horizontal > .el-menu-item:not(.is-disabled):focus {
+      background: none;
+    }
     &-first {
       padding-right: 80px;
     }
