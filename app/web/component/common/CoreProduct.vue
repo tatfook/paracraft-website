@@ -25,10 +25,10 @@
       <p class="company-mission-explain-dot"><span class="prefix-dot"></span>22项软件著作权及PCT国际专利</p>
       <p class="company-mission-explain-dot"><span class="prefix-dot"></span>原创的NPL脚本语言及MCML标记语言、以及分布式3D游戏引擎</p>
       <p class="company-mission-explain-more">点击了解更多:</p>
-      <p class="company-mission-explain-more-item"><a class="item-url" href="#" target="_blank">核心技术(必看)</a></p>
-      <p class="company-mission-explain-more-item"><a class="item-url" href="#" target="_blank">个人作品网</a></p>
-      <p class="company-mission-explain-more-item"><a class="item-url" href="#" target="_blank">NPL研发中心办公场所</a></p>
-      <p class="company-mission-explain-more-item"><a class="item-url" href="#" target="_blank">配天集团：专注投资程序员和远程开发团队</a></p>
+      <p class="company-mission-explain-more-item"><a class="item-url" href="https://keepwork.com/official/company/coreassets" target="_blank">核心技术(必看)</a></p>
+      <p class="company-mission-explain-more-item"><a class="item-url" href="https://keepwork.com/" target="_blank">个人作品网</a></p>
+      <p class="company-mission-explain-more-item"><a class="item-url" href="https://keepwork.com/official/company/building" target="_blank">NPL研发中心办公场所</a></p>
+      <p class="company-mission-explain-more-item"><a class="item-url" href="https://keepwork.com/official/company/partner" target="_blank">配天集团：专注投资程序员和远程开发团队</a></p>
 
       
     </div>

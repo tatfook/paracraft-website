@@ -15,18 +15,18 @@
       <h3 class="profile-title">创始人 & CEO</h3>
       <p class="profile-text">李西峙: 深圳市大富网络技术有限公司CEO， NPL计算机语言创世人， Paracraft软件首席程序员。</p>
       <p class="profile-text">1982年出生于哈尔滨。2005年毕业于浙江大学计算机系（竺可桢学院）。大学期间他在国内外会议和刊物上发表游戏引擎，脚本语言技术，三维动画制作，CPU芯片设计相关论文和著作8篇。2004年出于长期对人工智能的兴趣和研究，他创立了NPL语言（Neural Parallel Language）和ParaEngine 3D游戏引擎，至今写了过百万的开源代码和各种开发工具。Paracraft也是基于NPL语言开发的一款3D创作工具。2007-2015年，他先后获得著名风险投资IDG和国内著名企业家的投资，并任CEO。 </p>
-      <p class="profile-text prorile-text-self">大家好，我是李西峙。大家在用的Paracraft软件就是我编写的。 1989年，7岁的我照着一本我父亲给我的书编写了我人生中第一个程序，并从此喜欢上了编程，小学期间我完成了大量个人作品，到了随心所欲的入门状态。更多内容可以看我写的书<a href="#" class="book-link">《Paracraft编程入门》</a></p>
+      <p class="profile-text prorile-text-self">大家好，我是李西峙。大家在用的Paracraft软件就是我编写的。 1989年，7岁的我照着一本我父亲给我的书编写了我人生中第一个程序，并从此喜欢上了编程，小学期间我完成了大量个人作品，到了随心所欲的入门状态。更多内容可以看我写的书<a href="https://keepwork.com/s/textbook" target="_blank" class="book-link">《Paracraft编程入门》</a></p>
 
       <div class="profile-box">
         <h5 class="profile-box-title">新闻</h5>
-        <a href="https://keepwork.com/official/company/building" class="profile-box-intro">
+        <a href="https://keepwork.com/official/company/building" target="_blank" class="profile-box-intro">
           <div class="profile-box-intro-img"></div><img src="@/asset/images/新闻.jpg" alt="">
           <div class="profile-box-intro-words">2017.10.1 大富网络入住NPL南山研发中心</div>
         </a>
       </div>
       <div class="profile-box">
         <h5 class="profile-box-title">投资者关系</h5>
-        <a href="#" class="profile-box-intro">
+        <a href="https://keepwork.com/official/company/index#" target="_blank" class="profile-box-intro">
           <div class="profile-box-intro-img"></div><img src="@/asset/images/投资关系.jpg" alt="">
           <div class="profile-box-intro-words invest-word">ParaEngine工作室成立于2005年8月; 2007年获得IDG和著名IT企业家的联合投资,2014年团队加入大富配天集团，目前团队属于大富网络，为Tatfook子公司。</div>
         </a>
