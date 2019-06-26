@@ -25,6 +25,7 @@
     "egg-view-vue-ssr": "^3.0.2",
     "element-ui": "^2.6.1",
     "extend": "~3.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-saver": "^2.0.1",
     "lodash": "^4.17.11",
     "mint-ui": "^2.2.9",
