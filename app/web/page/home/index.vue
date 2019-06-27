@@ -50,7 +50,7 @@ export default {
         })
       } else {
         this.$nextTick(() => {
-          this.$refs['header'].$el.style.boxShadow = '0 0 10px 1px #fff'
+          // this.$refs['header'].$el.style.boxShadow = '0 0 10px 1px #fff'
         })
       }
     }
@@ -85,7 +85,7 @@ body {
     right: 0;
     width: 100%;
     z-index: 99;
-    box-shadow: 0 0 7px 1px #fff;
+    // box-shadow: 0 0 7px 1px #fff;
   }
   &-footer.el-footer {
     padding: 0;
