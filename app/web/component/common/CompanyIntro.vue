@@ -48,16 +48,13 @@ export default {
     return {
       carouselImgUrl: [
         {
-          url:
-            'http://git.keepwork.com/gitlab_rls_official/keepworkcompany/raw/master/official_images/img_1508292202822.jpeg'
+          url: require('@/asset/images/公司介绍ban.jpg')
         },
         {
-          url:
-            'http://git.keepwork.com/gitlab_rls_official/keepworkcompany/raw/master/official_images/img_1508292966568.jpeg'
+          url: require('@/asset/images/公司介绍ban2.jpg')
         },
         {
-          url:
-            'http://git.keepwork.com/gitlab_rls_official/keepworkcompany/raw/master/official_images/img_1508292235506.jpeg'
+          url: require('@/asset/images/公司介绍ban3.jpg')
         }
       ]
     }
@@ -68,11 +65,12 @@ export default {
 <style lang="scss" scoped>
 .profile {
   max-width: 1200px;
-  margin: 120px auto;
+  margin: 60px auto;
 }
 .profile-carousel {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 30px auto;
+  overflow: hidden;
 }
 .profile-title {
   text-align: center;
