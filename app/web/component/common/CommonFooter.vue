@@ -23,10 +23,11 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">教育理念</li>
-          <li><a href="https://keepwork.com/official/paracraft/to-educators" target="_blank">致教育者</a></li>
-          <li><a href="https://keepwork.com/official/paracraft/to-parents" target="_blank">给父母的话</a></li>
+          <li><a href="https://keepwork.com/official/paracraft/to-parents" target="_blank">写给父母们的话</a></li>
+          <li><a href="https://keepwork.com/official/paracraft/to-educators" target="_blank">致教育工作者</a></li>
           <li><a href="https://keepwork.com/official/paracraft/to-developers" target="_blank">致开发者</a></li>
-          <li><a href="https://github.com/LiXizhi/NPLRuntime/wiki" target="_blank">对爱好编程的你说</a></li>
+          <li><a href="https://keepwork.com/autobiography" target="_blank">对爱好编程的你说</a></li>
+          <li><a href="https://keepwork.com/official/paracraft/selflearning" target="_blank">关于自主学习</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
