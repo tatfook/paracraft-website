@@ -10,7 +10,7 @@
     <div class="profile">
       <h3 class="profile-title">公司简介</h3>
       <p class="profile-text">大富网络技术有限公司是上市公司大富科技（300134）旗下的子公司。</p>
-      <p class="profile-text">大富网络（Tatfook Network Inc.）是一家探索面向个人的3d设计, 人工智能与未来教育的软件公司。公司自主研发了3D动画与编程创作软件Paracraft和个人作品网keepwork，拥有自己的3D引擎和编程语言NPL。</p>
+      <p class="profile-text">大富网络（Tatfook Network Inc.）是一家探索面向<strong>个人的3d设计</strong>,<strong>人工智能</strong>与<strong>未来教育</strong>的软件公司。公司自主研发了3D动画与编程创作软件Paracraft和个人作品网keepwork，拥有自己的3D引擎和编程语言NPL。</p>
       <p class="profile-text">我们是由一支专业的技术开发团队组成，专注于ParaEngine引擎和NPL语言的开发，我们有原创的NPL脚本语言及MCML标记语言，分布式的3D游戏引擎，22项软件著作权及PCT国际专利，编写代码超过200万行，拥有经过多年自主研发的青少年编程教学工具——Paracraft，有自己的知识产权。Paracraft融入了我们几十年积累下来的编程体验和对软件编程的理解，我们开放了自主开发的游戏引擎和相关生态软件，打造成一个自主学习的平台（即Paracraft+KeepWork），希望能携手学校和教育机构一起培养下一代的优秀的程序员，也帮助更广大的孩子们学会自主学习的方法。</p>
       <h3 class="profile-title">创始人 & CEO</h3>
       <p class="profile-text">李西峙: 深圳市大富网络技术有限公司CEO， NPL计算机语言创世人， Paracraft软件首席程序员。</p>
@@ -36,7 +36,7 @@
       <h3 class="profile-history-title">公司项目发展历程</h3>
       <p class="profile-history-detail">详见：发展历程 >></p>
       <div class="profile-history-content">
-        <img src="@/asset/images/历程.png" alt="">
+        <img class="profile-history-content-img" src="@/asset/images/历程.png" alt="">
       </div>
     </div>
   </div>
@@ -48,14 +48,17 @@ export default {
     return {
       carouselImgUrl: [
         {
-          url: "http://git.keepwork.com/gitlab_rls_official/keepworkcompany/raw/master/official_images/img_1508292202822.jpeg"
+          url:
+            'http://git.keepwork.com/gitlab_rls_official/keepworkcompany/raw/master/official_images/img_1508292202822.jpeg'
         },
         {
-          url: "http://git.keepwork.com/gitlab_rls_official/keepworkcompany/raw/master/official_images/img_1508292966568.jpeg"
+          url:
+            'http://git.keepwork.com/gitlab_rls_official/keepworkcompany/raw/master/official_images/img_1508292966568.jpeg'
         },
         {
-          url:"http://git.keepwork.com/gitlab_rls_official/keepworkcompany/raw/master/official_images/img_1508292235506.jpeg"
-        },
+          url:
+            'http://git.keepwork.com/gitlab_rls_official/keepworkcompany/raw/master/official_images/img_1508292235506.jpeg'
+        }
       ]
     }
   }
@@ -80,6 +83,7 @@ export default {
 }
 .profile-box-intro {
   display: flex;
+  flex-wrap: wrap;
   text-decoration: none;
   background-color: #fafafa;
 }
@@ -134,6 +138,13 @@ export default {
   background: url('../../asset/images/huaban.jpg') top center #f9faff no-repeat;
   background-size: 1600px;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .profile-history-content {
+    &-img {
+      width: 100%;
+    }
+  }
 }
 </style>
 
