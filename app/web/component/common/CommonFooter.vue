@@ -15,8 +15,8 @@
           <li class="common-footer-content-part-list-title">服务与支持</li>
           <!-- <li @click="handleSelect('oursAdvantage')">我们的优势</li> -->
           <li><a href="https://keepwork.com/official/paracraft/index" target="_blank">解决方案</a></li>
-          <li @click="handleSelect('oursService')">服务项目</li>
-          <li @click="handleSelect('price')">价格详情</li>
+          <li><a href="#" @click.stop.prevent="handleSelect('oursService')">服务项目</a></li>
+          <li><a href="#" @click.stop.prevent="handleSelect('price')">价格详情</a></li>
           <li><a href="/curriculum">课程体系</a></li>
         </ul>
       </div>
@@ -26,7 +26,7 @@
           <li><a href="https://keepwork.com/official/paracraft/to-parents" target="_blank">写给父母们的话</a></li>
           <li><a href="https://keepwork.com/official/paracraft/to-educators" target="_blank">致教育工作者</a></li>
           <li><a href="https://keepwork.com/official/paracraft/to-developers" target="_blank">致开发者</a></li>
-          <li><a href="https://keepwork.com/autobiography" target="_blank">对爱好编程的你说</a></li>
+          <li><a href="https://keepwork.com/s/autobiography" target="_blank">对爱好编程的你说</a></li>
           <li><a href="https://keepwork.com/official/paracraft/selflearning" target="_blank">关于自主学习</a></li>
         </ul>
       </div>
