@@ -39,21 +39,21 @@ export default {
   },
 
   methods: {
-    currentPageYOffset() {
-      if (window.pageYOffset > 900 && window.pageYOffset < 3900) {
-        this.$nextTick(() => {
-          this.$refs['header'].$el.style.boxShadow = '0 0 10px 1px #333'
-        })
-      } else if (window.pageYOffset > 5400 && window.pageYOffset) {
-        this.$nextTick(() => {
-          this.$refs['header'].$el.style.boxShadow = '0 0 10px 1px black'
-        })
-      } else {
-        this.$nextTick(() => {
+    // currentPageYOffset() {
+    //   if (window.pageYOffset > 900 && window.pageYOffset < 3900) {
+    //     this.$nextTick(() => {
+    //       this.$refs['header'].$el.style.boxShadow = '0 0 10px 1px #333'
+    //     })
+    //   } else if (window.pageYOffset > 5400 && window.pageYOffset) {
+    //     this.$nextTick(() => {
+    //       this.$refs['header'].$el.style.boxShadow = '0 0 10px 1px black'
+    //     })
+    //   } else {
+    //     this.$nextTick(() => {
           // this.$refs['header'].$el.style.boxShadow = '0 0 10px 1px #fff'
-        })
-      }
-    }
+    //     })
+    //   }
+    // }
   },
   created() {
     window.addEventListener('scroll', _.debounce(this.currentPageYOffset, 80))
@@ -85,7 +85,7 @@ body {
     right: 0;
     width: 100%;
     z-index: 99;
-    // box-shadow: 0 0 7px 1px #fff;
+    box-shadow: 0 0 7px 1px #333;
   }
   &-footer.el-footer {
     padding: 0;
