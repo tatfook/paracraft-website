@@ -20,14 +20,14 @@
       <div class="profile-box">
         <h5 class="profile-box-title">新闻</h5>
         <a href="https://keepwork.com/official/company/building" target="_blank" class="profile-box-intro">
-          <div class="profile-box-intro-img"></div><img src="@/asset/images/新闻.jpg" alt="">
+          <div class="profile-box-intro-img"><img src="@/asset/images/新闻.jpg" alt=""></div>
           <div class="profile-box-intro-words">2017.10.1 大富网络入住NPL南山研发中心</div>
         </a>
       </div>
       <div class="profile-box">
         <h5 class="profile-box-title">投资者关系</h5>
         <a href="https://keepwork.com/official/company/index#" target="_blank" class="profile-box-intro">
-          <div class="profile-box-intro-img"></div><img src="@/asset/images/投资关系.jpg" alt="">
+          <div class="profile-box-intro-img"><img src="@/asset/images/投资关系.jpg" alt=""></div>
           <div class="profile-box-intro-words invest-word">ParaEngine工作室成立于2005年8月; 2007年获得IDG和著名IT企业家的联合投资,2014年团队加入大富配天集团，目前团队属于大富网络，为Tatfook子公司。</div>
         </a>
       </div>
@@ -84,6 +84,12 @@ export default {
   flex-wrap: wrap;
   text-decoration: none;
   background-color: #fafafa;
+  &-img {
+    width: 290px;
+  }
+  &-words {
+    flex: 1;
+  }
 }
 .profile-box-title {
   border-bottom: 1px solid #dcdcdc;
