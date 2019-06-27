@@ -37,30 +37,6 @@ export default {
     CommonHeader,
     CommonFooter
   },
-
-  methods: {
-    // currentPageYOffset() {
-    //   if (window.pageYOffset > 900 && window.pageYOffset < 3900) {
-    //     this.$nextTick(() => {
-    //       this.$refs['header'].$el.style.boxShadow = '0 0 10px 1px #333'
-    //     })
-    //   } else if (window.pageYOffset > 5400 && window.pageYOffset) {
-    //     this.$nextTick(() => {
-    //       this.$refs['header'].$el.style.boxShadow = '0 0 10px 1px black'
-    //     })
-    //   } else {
-    //     this.$nextTick(() => {
-          // this.$refs['header'].$el.style.boxShadow = '0 0 10px 1px #fff'
-    //     })
-    //   }
-    // }
-  },
-  created() {
-    window.addEventListener('scroll', _.debounce(this.currentPageYOffset, 80))
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.currentPageYOffset)
-  }
 }
 </script>
 <style lang="scss">
