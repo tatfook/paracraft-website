@@ -307,6 +307,7 @@ export default {
     }
   },
   created() {
+    document.title = 'Paracraft-青少年的编程工具与学习平台'
     window.scrollTo(0, 0)
   },
   computed: {
