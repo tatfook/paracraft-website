@@ -8,7 +8,7 @@
       <span class="detail">详见：<a class="detail-url" href="https://biz.keepwork.com" target="_blank">https://biz.keepwork.com</a></span>
       </p>
       <p class="company-mission-explain-dot"><span class="prefix-dot"></span>keepwork个人作品网：为Paracraft用户提供了探索，学习和创作的网络平台；内置强大的在线创作工具，包括基于Markdown语法的个人网站编辑器，课件制作与发布，在线文档创作，项目管理与协作，Git云存储，云盘。
-      <span class="detail">详见：<a class="detail-url" href="https://biz.keepwork.com" target="_blank">https://keepwork.com</a></span>
+      <span class="detail">详见：<a class="detail-url" href="https://keepwork.com" target="_blank">https://keepwork.com</a></span>
       </p>
       <p class="company-mission-explain-dot"><span class="prefix-dot"></span>NPL语言：Paracraft使用NPL语言开发完成。NPL语言全称Neural Parallel Language(神经元并行计算机语言)是李西峙于2004年为了解决基于相似原理的AI仿真问题研发的一个编程语言，语法与主流编程语言兼容，NPL社区通过github开源了200多万行引擎与NPL类库代码，期待编程爱好者的加入。
       <span class="detail">NPL语言官网：<a class="detail-url" href="https://github.com/LiXizhi/NPLRuntime" target="_blank">https://github.com/LiXizhi/NPLRuntime</a></span>
