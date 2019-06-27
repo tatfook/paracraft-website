@@ -4,35 +4,37 @@
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">产品</li>
-          <li @click="handleSelect('top')">Paracraft 创意空间</li>
-          <li><a href="http://paracraft.keepwork.com/download?lang=zh" target="_blank">免费下载</a></li>
+          <!-- <li @click="handleSelect('top')">Paracraft 创意空间</li> -->
+          <li><a href="http://paracraft.keepwork.com/download?lang=zh" target="_blank">Paracraft下载</a></li>
           <li><a href="https://keepwork.com/" target="_blank">作品社区</a></li>
           <li><a href="https://keepwork.com/NPL" target="_blank">NPL动画与编程大赛</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
-          <li class="common-footer-content-part-list-title">服务</li>
-          <li @click="handleSelect('oursAdvantage')">我们的优势</li>
-          <li @click="handleSelect('oursService')">服务项目</li>
-          <li @click="handleSelect('price')">价格</li>
+          <li class="common-footer-content-part-list-title">服务与支持</li>
+          <!-- <li @click="handleSelect('oursAdvantage')">我们的优势</li> -->
+          <li><a href="https://keepwork.com/official/paracraft/index" target="_blank">解决方案</a></li>
+          <li><a href="#" @click.stop.prevent="handleSelect('oursService')">服务项目</a></li>
+          <li><a href="#" @click.stop.prevent="handleSelect('price')">价格详情</a></li>
           <li><a href="/curriculum">课程体系</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
-          <li class="common-footer-content-part-list-title">致社区</li>
-          <li><a href="https://keepwork.com/official/paracraft/to-educators" target="_blank">致教育者</a></li>
-          <li><a href="https://keepwork.com/official/paracraft/to-parents" target="_blank">给父母的话</a></li>
+          <li class="common-footer-content-part-list-title">教育理念</li>
+          <li><a href="https://keepwork.com/official/paracraft/to-parents" target="_blank">写给父母们的话</a></li>
+          <li><a href="https://keepwork.com/official/paracraft/to-educators" target="_blank">致教育工作者</a></li>
           <li><a href="https://keepwork.com/official/paracraft/to-developers" target="_blank">致开发者</a></li>
-          <li><a href="https://github.com/LiXizhi/NPLRuntime/wiki" target="_blank">对爱好编程的你说</a></li>
+          <li><a href="https://keepwork.com/s/autobiography" target="_blank">对爱好编程的你说</a></li>
+          <li><a href="https://keepwork.com/official/paracraft/selflearning" target="_blank">关于自主学习</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">关于我们</li>
-          <li><a href="/companyProfile ">公司简介</a></li>
-          <!-- <li><a href="https://api.keepwork.com/storage/v0/siteFiles/3749/raw#宣传页.pdf" target="_blank">宣传页下载</a></li> -->
+          <li><a href="/companyProfile ">公司介绍</a></li>
+          <li><a href="https://api.keepwork.com/storage/v0/siteFiles/3749/raw#宣传页.pdf" target="_blank">宣传页下载</a></li>
         </ul>
       </div>
       <div class="common-footer-content-part">
@@ -40,6 +42,7 @@
           <li class="common-footer-content-part-list-title">联系我们</li>
           <li>电话：<br>0755-86967012</li>
           <li>邮箱：<br>support@paraengine.com</li>
+          <li @click="showLocation()">地址：<br>深圳市南山区科技园德赛科技大厦西座2303-2304</li>
         </ul>
       </div>
       <div class="common-footer-content-part common-footer-content-part-last">
@@ -91,6 +94,7 @@
         <div class="common-footer-phone-contact-left-content">
           <p class="common-footer-phone-contact-left-content-text">电话：<br>0755-86967012</p>
           <p class="common-footer-phone-contact-left-content-text">邮箱：<br>support@paraengine.com</p>
+          <p class="common-footer-phone-contact-left-content-text" @click="showLocation">地址：<br>深圳市南山区科技园德赛科技大厦西座2303-2304</p>
         </div>
       </div>
       <div class="common-footer-phone-contact-right">
@@ -141,6 +145,9 @@ export default {
         default:
           break
       }
+    },
+    showLocation() {
+      this.$router.push({ name: 'CompanyAddress' })
     }
   }
 }
@@ -171,6 +178,9 @@ export default {
         }
         li + li {
           color: #b4b4b4;
+          // cursor: pointer;
+        }
+        li:nth-last-child(1) {
           cursor: pointer;
         }
         &-weixin {

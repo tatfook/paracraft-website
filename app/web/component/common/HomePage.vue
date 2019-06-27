@@ -234,6 +234,7 @@ export default {
     }
   },
   mounted() {
+    document.title = 'Paracraft-青少年的编程工具与学习平台'
     this.currentPicArr = this.achievement_tags_pic_1
     this.achievementTagsAnimation()
     this.achievementTagsAnimation_2()

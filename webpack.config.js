@@ -12,6 +12,9 @@ module.exports = {
       server: 'app/web/framework/vue/entry/server-loader.js'
     }
   },
+  externals: {
+    "BMap": "BMap"
+  },
   alias: {
     '@': 'app/web',
     server: 'app/web/framework/vue/entry/server.js',

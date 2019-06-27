@@ -1,7 +1,7 @@
 <template>
   <div class="gather-info">
     <get-info-form-dialog v-if="showGatherInfoDialog" :showGatherInfoDialog="showGatherInfoDialog" @close="handleClose"></get-info-form-dialog>
-    <el-dialog :visible.sync="submitSuccessVisible" width="30%" center class="submit-success">
+    <el-dialog :visible.sync="submitSuccessVisible" width="30%" center custom-class="submit-success" :append-to-body="true">
       <h4 slot="title" class="submit-success-title">Hi,{{infoData.realname}}</h4>
       <div class="submit-success-speech">
         <p>我们已经向您提交的邮箱<span class="submit-success-speech-email">({{infoData.email}})</span>发送了一份有关如何入门Paracraft的视频，请查收。</p>
@@ -13,7 +13,7 @@
         <p>• 如需帮助请在Paracraft微信公众号中留言,我们将尽快回复！</p>
       </div>
     </el-dialog>
-    <el-dialog :visible.sync="resendEmailVisible" width="25%" center class="resend-email">
+    <el-dialog :visible.sync="resendEmailVisible" width="25%" center custom-class="resend-email" :append-to-body="true">
       <h4 slot="title" class="resend-email-title">重发确认邮箱</h4>
       <el-form ref="resendEmail" :model="resendEmailData" :rules="resendEmailDataRules">
         <el-form-item prop="new_email">
@@ -113,7 +113,7 @@ export default {
     },
     sendEmailToMarketer(email) {
       let baseUrl = process.env.KEEPWORK_API_PREFIX
-      let sendTime = moment().format("YYYY-MM-DD H:mm:ss")
+      let sendTime = moment().format('YYYY-MM-DD H:mm:ss')
       axios
         .post(`${baseUrl}/keepworks/email`, {
           subject: '申请表单合作咨询者信息',
@@ -141,65 +141,65 @@ export default {
 }
 </script>
 <style lang="scss">
-.gather-info {
-  .submit-success {
-    &-title {
-      font-size: 18px;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    &-speech {
-      background-color: #eaf3fe;
-      box-shadow: 0px 2px 5px 0px rgba(147, 171, 201, 0.35);
-      border-radius: 2px;
-      border: solid 1px #3c7afe;
-      padding: 5px 18px;
-      color: #1b64d2;
-      &-email {
-        font-weight: bold;
-      }
-    }
-    &-hint {
-      background-color: #fff9e5;
-      box-shadow: 0px 2px 5px 0px rgba(147, 171, 201, 0.35);
-      border-radius: 2px;
-      border: solid 1px #f2d054;
-      color: #8a6700;
-      padding: 5px 18px;
-      margin: 17px 0;
-      &-resend {
-        color: #1b64d2;
-        text-decoration: underline;
-        cursor: pointer;
-      }
-    }
-    .el-dialog {
-      max-width: 600px !important;
-      .el-dialog__body {
-        padding-top: 0;
-      }
+// .gather-info {
+.submit-success {
+  &-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  &-speech {
+    background-color: #eaf3fe;
+    box-shadow: 0px 2px 5px 0px rgba(147, 171, 201, 0.35);
+    border-radius: 2px;
+    border: solid 1px #3c7afe;
+    padding: 5px 18px;
+    color: #1b64d2;
+    &-email {
+      font-weight: bold;
     }
   }
-  .resend-email {
-    &-title {
-      font-size: 18px;
-      color: #333;
+  &-hint {
+    background-color: #fff9e5;
+    box-shadow: 0px 2px 5px 0px rgba(147, 171, 201, 0.35);
+    border-radius: 2px;
+    border: solid 1px #f2d054;
+    color: #8a6700;
+    padding: 5px 18px;
+    margin: 17px 0;
+    &-resend {
+      color: #1b64d2;
+      text-decoration: underline;
+      cursor: pointer;
     }
-    &-send {
-      text-align: center;
-      &-btn {
-        width: 158px;
-        margin-top: 20px;
-      }
-    }
-    .el-dialog {
-      max-width: 466px !important;
-      .el-dialog__body {
-        padding-top: 0;
-      }
+  }
+  .el-dialog {
+    max-width: 600px !important;
+    .el-dialog__body {
+      padding-top: 0;
     }
   }
 }
+.resend-email {
+  &-title {
+    font-size: 18px;
+    color: #333;
+  }
+  &-send {
+    text-align: center;
+    &-btn {
+      width: 158px;
+      margin-top: 20px;
+    }
+  }
+  .el-dialog {
+    max-width: 466px !important;
+    .el-dialog__body {
+      padding-top: 0;
+    }
+  }
+}
+// }
 @media screen and (max-width: 769px) {
   .gather-info {
     .el-dialog__wrapper {

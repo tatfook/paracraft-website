@@ -1,6 +1,6 @@
 <template>
   <el-container id='app' class="index-page-container">
-    <el-header class="index-page-container-header" v-if="hiddenHeaderAndFooter">
+    <el-header class="index-page-container-header" ref="header" v-if="hiddenHeaderAndFooter">
       <common-header></common-header>
     </el-header>
     <el-main class="index-page-container-main">
@@ -36,7 +36,7 @@ export default {
   components: {
     CommonHeader,
     CommonFooter
-  }
+  },
 }
 </script>
 <style lang="scss">
@@ -49,11 +49,19 @@ body {
   min-height: 100%;
   &-main {
     padding: 0;
+    padding-top: 82px;
   }
   &-header.el-header {
     padding: 0;
     height: auto !important;
     background: rgb(5, 16, 41);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0 0 7px 1px #333;
   }
   &-footer.el-footer {
     padding: 0;
