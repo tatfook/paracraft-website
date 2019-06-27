@@ -35,6 +35,7 @@ export default {
   },
   methods: {
     currentPageYOffset() {
+      if (this.$route.name !== 'HomePage') return
       if (window.pageYOffset > 700 && window.pageYOffset < 2400) {
         this.$nextTick(() => {
           this.activeIndex = 'oursAdvantage'

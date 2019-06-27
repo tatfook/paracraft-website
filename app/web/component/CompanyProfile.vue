@@ -45,6 +45,7 @@ export default {
     }
   },
   mounted() {
+    document.title = '公司介绍_Paracraft-青少年的编程工具与学习平台'
     this.getEditorData()
   },
   components: {
