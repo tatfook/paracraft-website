@@ -11,7 +11,7 @@
     </div>
     <div class="company-profile-tab">
       <div :class="['company-profile-tab-item', {'selected': selectedTabIndex == 0}]" @click="selectedItem(0)">公司简介</div>
-      <div :class="['company-profile-tab-item', {'selected': selectedTabIndex == 1}]" @click="selectedItem(1)">远景与使命</div>
+      <div :class="['company-profile-tab-item', {'selected': selectedTabIndex == 1}]" @click="selectedItem(1)">愿景与使命</div>
       <div :class="['company-profile-tab-item', {'selected': selectedTabIndex == 2}]" @click="selectedItem(2)">产品与核心资产</div>
     </div>
     <div class="company-profile-intro" v-show='selectedTabIndex == 0'>
@@ -90,16 +90,18 @@ export default {
   &-banner {
     background: linear-gradient(to right, #2599e7, #61a3fb);
     &-center {
-      background: url(../asset/images/简介.jpg) top center no-repeat;
-      min-height: 336px;
+      background: url(../asset/images/ban.jpg) top center no-repeat;
+      min-height: 260px;
+      border: 1px solid transparent;
       &-text {
         color: #ffffff;
         max-width: 1200px;
         margin: 0 auto;
-        height: 330px;
+        // height: 330px;
+
         &-title {
           margin: 0;
-          padding: 60px 0 30px;
+          padding: 60px 0 18px;
           font-size: 28px;
         }
         &-desc {
@@ -133,6 +135,9 @@ export default {
         &-text {
           padding: 0;
           text-align: center;
+          &-desc {
+            font-size: 18px;
+          }
         }
       }
     }

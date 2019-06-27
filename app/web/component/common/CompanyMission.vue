@@ -1,7 +1,7 @@
 <template>
   <div class="company-mission">
     <div class="company-mission-banner">
-      <h4 class="company-mission-banner-title">我们的愿望</h4>
+      <h4 class="company-mission-banner-title">我们的愿景</h4>
       <p class="company-mission-banner-text">团结全世界的资源和力量, 共同创建属于每一个人的游戏世界</p>
     </div>
     <div class="company-mission-target">
@@ -11,7 +11,7 @@
     <div class="company-mission-explain">
       <h4 class="company-mission-explain-title">大富网络愿景的解释</h4>
       <p class="company-mission-explain-hint">下面是内部讨论组中李西峙的解释</p>
-      <p>“团结全世界的资源和力量, 共同创建属于每一个人的游戏世界”</p>
+      <p><strong>“团结全世界的资源和力量, 共同创建属于每一个人的游戏世界”</strong></p>
       <p>当你看到我们这句话时，你想到了什么？一款大胆的创作游戏？头号玩家的电影？虚拟人生？</p>
       <p>这句话，在我2005年刚刚创业时，就被印在了墙上。 2006年公司发布了《儿童动漫创作平台》，IDG的创始人从中看到了一种人人创作的可能性，2006年投资我们要做中国的虚拟人生second life。当时的second life是国外的一款现象级网红产品，大家可以搜索了解下这个产品。但是second life的问题还是技术问题，无法让很多人参与，只有少量的美术设计师或成人参与创造。</p>
       <p>然后出现了minecraft, 大家觉得它距离我们的愿景差多远？差在哪里？Minecraft规模和行业够了，但创造的只是世界，不是游戏。</p>
@@ -39,9 +39,9 @@
       <p class="company-mission-explain-dot"><span class="prefix-dot"></span>其实keepwork也用的git存储; 但是我们做了很多技术上的优化。世界数据的所有权是属于用户的，Git是最好的存储格式。</p>
       <p class="company-mission-explain-dot"><span class="prefix-dot"></span>做NPL的本地数据库table db，也是为了实现，用户架设私服时，不再需要架设类似mysql的复杂的大型数据量软件。</p>
 
-      <h4 class="company-mission-explain-title">大富网络愿景的解释</h4>
-      <p>“为人工智能做出贡献，让人人可以随心所欲的创造。”</p>
-      <p>能够影响我们长达14年各种关键决定的一句话才能称得上是愿景。愿景不是给别人看的，给别人看的，是公司介绍。公司介绍，在我们官网文档里也有，就三句话说完了，而且公司介绍，根据我们公司的业务还会不断地调整, 比如我最近补充了keepwork和编程教育的部分。</p>
+      <h4 class="company-mission-explain-title">大富网络使命的解释</h4>
+      <p><strong>“为人工智能做出贡献，让人人可以随心所欲的创造。”</strong></p>
+      <p>NPL语言始于创始人对人工智能的研究。但随着公司的成长，未来教育，或者更具体的讲，未来的计算机技术的教育，成为了我们当下的重要使命。 教育一但深入进去， 需要理解人的大脑，理解人性；我们公司关心的不是应试教育， 而是教育中关乎人性，知识结构，学习方法等这些最本质问题的新的探索。 同样的，人工智能也很宽泛，但是我们关心的是智能的本质，以及如何教育机器，让机器学会学习，思考，辅助我们创作等问题。</p>
       <p>我们关心的是人工智能与人类智慧相交的部分。 它包括一系列教育问题：什么是知识？什么是记忆？如何学习？如何变得更有创造力？如何让机器帮助你？等等。</p>
 
       <h4 class="company-mission-explain-title">商业模式与愿景的关系</h4>
