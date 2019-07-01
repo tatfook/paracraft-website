@@ -129,14 +129,21 @@ export default {
         case 'price':
           if (this.$route.name != 'HomePage') {
             this.$router.push('/')
+            setTimeout(() => {
+              let theId = document.getElementById(key)
+              scrollIntoView(theId, {
+                scrollMode: 'if-needed',
+                behavior: 'smooth',
+                block: 'start'
+              })
+            }, 1000)
+            return
           }
-          this.$nextTick(() => {
-            let theId = document.getElementById(key)
-            scrollIntoView(theId, {
-              scrollMode: 'if-needed',
-              behavior: 'smooth',
-              block: 'start'
-            })
+          let theId = document.getElementById(key)
+          scrollIntoView(theId, {
+            scrollMode: 'if-needed',
+            behavior: 'smooth',
+            block: 'start'
           })
           break
         case 'experience':
