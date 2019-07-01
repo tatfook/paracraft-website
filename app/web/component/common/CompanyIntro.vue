@@ -34,7 +34,7 @@
     </div>
     <div class="profile-history">
       <h3 class="profile-history-title">公司项目发展历程</h3>
-      <p class="profile-history-detail">详见：发展历程 >></p>
+      <a class="profile-history-detail" href="https://keepwork.com/official/company/roadmap" target="_blank">详见：发展历程 >></a>
       <div class="profile-history-content">
         <img class="profile-history-content-img" src="@/asset/images/历程.png" alt="">
       </div>
@@ -136,7 +136,7 @@ export default {
   font-size: 16px;
   color: #0090ff;
   margin-bottom: 70px;
-  /* margin: 0; */
+  display: block;
 }
 .profile-history-content {
   background: url('../../asset/images/huaban.jpg') top center #f9faff no-repeat;
