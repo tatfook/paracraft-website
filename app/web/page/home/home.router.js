@@ -7,6 +7,7 @@ import EmailContent from '@/component/common/EmailContent'
 import CompanyProfile from '@/component/CompanyProfile'
 import Curriculum from '@/component/common/Curriculum'
 import CompanyAddress from '@/component/common/CompanyAddress'
+import Roadmap from '@/component/common/Roadmap'
 
 Vue.use(Router)
 
@@ -48,6 +49,11 @@ export default new Router({
       path: '/companyAddress',
       name: 'CompanyAddress',
       component: CompanyAddress
+    },
+    {
+      path: '/roadmap',
+      name: 'Roadmap',
+      component: Roadmap
     }
   ]
 })
