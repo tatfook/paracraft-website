@@ -34,7 +34,7 @@
     </div>
     <div class="profile-history">
       <h3 class="profile-history-title">公司项目发展历程</h3>
-      <a class="profile-history-detail" href="https://keepwork.com/official/company/roadmap" target="_blank">详见：发展历程 >></a>
+      <a class="profile-history-detail" href="/roadmap" target="_blank">详见：发展历程 >></a>
       <div class="profile-history-content">
         <img class="profile-history-content-img" src="@/asset/images/历程.png" alt="">
       </div>
