@@ -104,9 +104,7 @@
       </div>
     </div>
     <div class="common-footer-bottom">
-      Paracraft
-      |
-      <span class="common-footer-bottom-text">粤ICP备14002196号-2© Tatfook</span>
+      <span class="common-footer-bottom-text">© Tatfook | 粤ICP备14002196号-2</span>
     </div>
   </div>
 </template>
