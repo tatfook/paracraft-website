@@ -26,9 +26,6 @@
           <el-form-item label="所在城市：" prop="city">
             <el-cascader placeholder="" :options="cityName" filterable change-on-select v-model="infoData.city"></el-cascader>
           </el-form-item>
-          <el-form-item label="机构规模：" prop="scale">
-            <el-input placeholder="请输入单位或机构的规模人数" v-model="infoData.scale"></el-input>
-          </el-form-item>
           <el-form-item label="描述：">
             <el-input type="textarea" placeholder="请简单描述一下你想了解的问题" v-model="infoData.description"></el-input>
           </el-form-item>
@@ -65,7 +62,6 @@ export default {
         email: '',
         organization: '',
         city: [],
-        scale: undefined,
         description: ''
       },
       infoDataRules: {
@@ -104,7 +100,7 @@ export default {
     },
     submitInfo() {
       let baseUrl = process.env.KEEPWORK_API_PREFIX
-      let { city, scale, ..._infoData } = this.infoData
+      let { city, ..._infoData } = this.infoData
       this.$refs.infoForm.validate(valid => {
         if (valid) {
           this.submitSuccessLoading = true
@@ -112,8 +108,7 @@ export default {
             .post(`${baseUrl}/paracraftVisitors/upsert`, {
               ..._infoData,
               extra: {
-                scale,
-                city
+                city: city
               }
             })
             .then(res => {
