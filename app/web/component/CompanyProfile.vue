@@ -5,7 +5,7 @@
         <div class="company-profile-banner-center-text">
           <h2 class="company-profile-banner-center-text-title">公司介绍</h2>
           <p class="company-profile-banner-center-text-desc">大富网络是一家探索面向个人的3d设计, 人工智能与未来教育的软件公司</p>
-          <p class="company-profile-banner-center-text-desc">“团结全世界的资源和力量, 共同创建属于每一个人的游戏世界”</p>
+          <p class="company-profile-banner-center-text-desc">“团结全世界的资源与力量, 共同创造属于每一个人的3D世界”</p>
         </div>
       </div>
     </div>
