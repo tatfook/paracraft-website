@@ -2,7 +2,7 @@
   <div class="company-mission">
     <div class="company-mission-banner">
       <h4 class="company-mission-banner-title">我们的愿景</h4>
-      <p class="company-mission-banner-text">团结全世界的资源和力量, 共同创建属于每一个人的游戏世界</p>
+      <p class="company-mission-banner-text">团结全世界的资源与力量, 共同创造属于每一个人的3D世界</p>
     </div>
     <div class="company-mission-target">
       <h4 class="company-mission-target-title">我们的使命</h4>
@@ -11,7 +11,7 @@
     <div class="company-mission-explain">
       <h4 class="company-mission-explain-title">大富网络愿景的解释</h4>
       <p class="company-mission-explain-hint">下面是内部讨论组中李西峙的解释</p>
-      <p><strong>“团结全世界的资源和力量, 共同创建属于每一个人的游戏世界”</strong></p>
+      <p><strong>“团结全世界的资源与力量, 共同创造属于每一个人的3D世界”</strong></p>
       <p>当你看到我们这句话时，你想到了什么？一款大胆的创作游戏？头号玩家的电影？虚拟人生？</p>
       <p>这句话，在我2005年刚刚创业时，就被印在了墙上。 2006年公司发布了《儿童动漫创作平台》，IDG的创始人从中看到了一种人人创作的可能性，2006年投资我们要做中国的虚拟人生second life。当时的second life是国外的一款现象级网红产品，大家可以搜索了解下这个产品。但是second life的问题还是技术问题，无法让很多人参与，只有少量的美术设计师或成人参与创造。</p>
       <p>然后出现了minecraft, 大家觉得它距离我们的愿景差多远？<br>差在哪里？Minecraft规模和行业够了，但创造的只是世界，不是游戏。</p>
