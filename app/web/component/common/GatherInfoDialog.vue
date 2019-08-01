@@ -125,6 +125,7 @@ export default {
           <p><span>单位名称：</span>${this.infoData.organization}</p>
           <p><span>描述：</span>${this.infoData.description}</p>
           <p><span>所在城市：</span>${this.infoData.city}</p>
+          <p><span>机构规模人数：</span>${this.infoData.scale}</p>
           <p><span>申请时间：</span>${sendTime}</p>
           </div>`,
           from: 'https://biz.keepwork.com/ <noreply@mail.keepwork.com>'
