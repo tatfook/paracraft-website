@@ -11,7 +11,7 @@
       <h3 class="profile-title">公司简介</h3>
       <p class="profile-text">大富网络技术有限公司是上市公司大富科技（300134）旗下的子公司。</p>
       <p class="profile-text">大富网络（Tatfook Network Inc.）是一家探索面向<strong>个人的3d设计</strong>,<strong>人工智能</strong>与<strong>未来教育</strong>的软件公司。公司自主研发了3D动画与编程创作软件Paracraft和个人作品网keepwork，拥有自己的3D引擎和编程语言NPL。</p>
-      <p class="profile-text">我们是由一支专业的技术开发团队组成，专注于ParaEngine引擎和NPL语言的开发，我们有原创的NPL脚本语言及MCML标记语言，分布式的3D游戏引擎，22项软件著作权及PCT国际专利，编写代码超过200万行，拥有经过多年自主研发的青少年编程教学工具——Paracraft，有自己的知识产权。Paracraft融入了我们几十年积累下来的编程体验和对软件编程的理解，我们开放了自主开发的游戏引擎和相关生态软件，打造成一个自主学习的平台（即Paracraft+KeepWork），希望能携手学校和教育机构一起培养下一代的优秀的程序员，也帮助更广大的孩子们学会自主学习的方法。</p>
+      <p class="profile-text">我们是由一支专业的技术开发团队组成，专注于ParaEngine引擎和NPL语言的开发，我们有原创的NPL脚本语言及MCML标记语言，分布式3D游戏引擎，40多项软件著作权及PCT国际专利，编写并开源代码超过200万行，拥有经过多年自主研发的3D动画与编程创作工具Paracraft。Paracraft融入了我们几十年积累下来的编程体验和对软件编程的理解，我们开源了自主开发的游戏引擎和相关生态软件，打造成一个自主学习的平台（即Paracraft+KeepWork），希望团结学校、机构、教育工作者一起为青少年儿童提供最佳的学习、探索和创作环境，让每个孩子能够用计算机随心所欲的创作。</p>
       <h3 class="profile-title">创始人 & CEO</h3>
       <p class="profile-text">李西峙: 深圳市大富网络技术有限公司CEO， NPL计算机语言创世人， Paracraft软件首席程序员。</p>
       <p class="profile-text">1982年出生于哈尔滨。2005年毕业于浙江大学计算机系（竺可桢学院）。大学期间他在国内外会议和刊物上发表游戏引擎，脚本语言技术，三维动画制作，CPU芯片设计相关论文和著作8篇。2004年出于长期对人工智能的兴趣和研究，他创立了NPL语言（Neural Parallel Language）和ParaEngine 3D游戏引擎，至今写了过百万的开源代码和各种开发工具。Paracraft也是基于NPL语言开发的一款3D创作工具。2007-2015年，他先后获得著名风险投资IDG和国内著名企业家的投资，并任CEO。 </p>
