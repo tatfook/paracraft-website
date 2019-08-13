@@ -126,6 +126,9 @@ export default {
       &.selected {
         color: #2599e7;
       }
+      &:hover {
+        color: #2599e7;
+      }
     }
   }
 }

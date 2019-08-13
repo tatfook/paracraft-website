@@ -163,6 +163,9 @@ export default {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    a:hover {
+      color: #3c93ff;
+    }
     &-part {
       flex: 1;
       color: #fff;
