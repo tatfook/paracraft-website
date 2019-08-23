@@ -184,8 +184,11 @@ export default {
           font-weight: normal;
           color: #0090ff;
           float: right;
-          text-decoration: underline;
+          text-decoration: none;
           cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
       &-flow {

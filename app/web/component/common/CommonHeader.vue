@@ -164,6 +164,9 @@ export default {
       line-height: 82px;
       color: #fff;
       font-size: 14px;
+      &:hover {
+        color: #3c93ff;
+      }
       a {
         text-decoration: none;
       }

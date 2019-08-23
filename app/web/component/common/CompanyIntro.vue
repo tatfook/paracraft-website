@@ -109,6 +109,9 @@ export default {
   padding: 30px;
   font-size: 14px;
   color: #0090ff;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .prorile-text-self {
   font-size: 14px;
@@ -119,6 +122,9 @@ export default {
 .book-link {
   color: #0090ff;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .profile-history {
   min-height: 1082px;
@@ -137,6 +143,10 @@ export default {
   color: #0090ff;
   margin-bottom: 70px;
   display: block;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .profile-history-content {
   background: url('../../asset/images/huaban.jpg') top center #f9faff no-repeat;

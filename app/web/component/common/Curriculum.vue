@@ -135,8 +135,8 @@
         <div class="lesson-system-reference-img-position" @click="goTextbookPage"></div>
         <div class="lesson-system-reference-books">
           <div class="lesson-system-reference-books-book" @click="goTextbookPage">
-            <p class="lesson-system-reference-books-book-name">《Paracraft编程入门》</p>
-            <p class="lesson-system-reference-books-book-author">李西峙主编</p>
+            <p class="lesson-system-reference-books-book-name blue-hover">《Paracraft编程入门》</p>
+            <p class="lesson-system-reference-books-book-author blue-hover">李西峙主编</p>
           </div>
           <div class="lesson-system-reference-books-book lesson-system-reference-books-book-animation">
             <p class="lesson-system-reference-books-book-name no-click">《Paracraft创意动画入门》</p>
@@ -794,12 +794,18 @@ export default {
           font-weight: bold;
           margin-bottom: 4px;
           cursor: pointer;
+          &.blue-hover:hover {
+            color: #3c93ff;
+          }
         }
         &-author {
           font-size: 20px;
           color: #303133;
           margin-top: 4px;
           cursor: pointer;
+          &.blue-hover:hover {
+            color: #3c93ff;
+          }
         }
       }
     }

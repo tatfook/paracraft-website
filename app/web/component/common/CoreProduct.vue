@@ -87,6 +87,10 @@
         display: block;
         &-url {
           color: #0090ff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -98,6 +102,9 @@
         .item-url {
           color: #0090ff;
           text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
         }
         &::before{
           content: '';
