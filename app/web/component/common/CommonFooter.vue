@@ -5,7 +5,7 @@
         <ul class="common-footer-content-part-list">
           <li class="common-footer-content-part-list-title">产品</li>
           <!-- <li @click="handleSelect('top')">Paracraft 创意空间</li> -->
-          <li><a href="http://paracraft.keepwork.com/download?lang=zh" target="_blank">Paracraft下载</a></li>
+          <li><a href="/download">Paracraft下载</a></li>
           <li><a href="https://keepwork.com/" target="_blank">作品社区</a></li>
           <li><a href="https://keepwork.com/NPL" target="_blank">NPL动画与编程大赛</a></li>
         </ul>
