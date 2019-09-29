@@ -8,8 +8,8 @@
       <el-menu-item index="experience" class="pull-right">
         <el-button type="primary" class="common-header-menu-experience-btn">合作咨询</el-button>
       </el-menu-item>
-      <el-menu-item index="download" class="pull-right">
-        <el-button type="primary">下载Paracraft</el-button>
+      <el-menu-item index="download" class="pull-right common-header-menu-download-item">
+        <el-button type="primary" class="common-header-menu-download-btn">下载Paracraft</el-button>
       </el-menu-item>
     </el-menu>
     <div class="common-header-phone">
@@ -145,6 +145,20 @@ export default {
     &-logo {
       font-size: 20px;
       margin-left: 16px;
+    }
+    &-download-item {
+      padding-right: 2px;
+    }
+    &-download-btn {
+      border-radius: 20px;
+      font-size: 14px;
+      color: #40b0ff;
+      border: 1px solid;
+      background-color: transparent;
+      &:active,
+      &:focus {
+        background-color: transparent;
+      }
     }
     &-experience-btn {
       border-radius: 20px;
