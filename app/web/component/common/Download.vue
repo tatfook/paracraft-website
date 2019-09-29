@@ -2,11 +2,12 @@
   <div class="download">
     <div class="download-welcome">
       <div class="download-welcome-center">
-        <p class="download-welcome-center-title">Paracraft创意空间教学版</p>
+        <p class="download-welcome-center-title">Paracraft创意空间（教学版）</p>
         <p class="download-welcome-center-info">
           - 内置教学所需插件，免除后续下载、安装的麻烦。
-          <br />
-          - 针对学校、教学机构定制，优化教学体验
+        </p>
+        <p class="download-welcome-center-info">
+          - 针对学校、教学机构定制，优化教学体验。
         </p>
         <p class="download-welcome-center-count">
           <span class="download-welcome-center-count-diamonds" v-for="(i,index) in optimizeDownloadCount" :key="index">{{i}}</span>人下载使用
@@ -14,7 +15,7 @@
       </div>
     </div>
     <div class="download-center">
-      <p class="download-center-guide">遇到安装问题，不会安装？<a class="download-center-guide-link" href="https://keepwork.com/official/docs/sales/common/install_guide" target="_blank">点击这里</a>查看安装指引</p>
+      <p class="download-center-guide"><a class="download-center-guide-link" href="https://keepwork.com/official/docs/sales/common/install_guide" target="_blank">点击这里</a>查看安装指引</p>
       <div class="download-center-cabinet">
         <div class="download-center-cabinet-box-wrap">
           <div class="download-center-cabinet-box">
@@ -88,11 +89,14 @@ export default {
       margin: 0 auto;
       color: #fff;
       &-title {
-        margin: 0;
+        margin: 0 0 16px;
         font-size: 36px;
       }
+      &-info {
+        margin: 8px 0;
+      }
       &-count {
-        margin: 0;
+        margin: 16px 0 0;
         &-diamonds {
           display: inline-block;
           background: #fff;
