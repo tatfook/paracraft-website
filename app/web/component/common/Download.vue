@@ -1,82 +1,325 @@
 <template>
   <div class="download">
-    <div class="download-intro">
-      <h3 class="download-intro-title">免费的3D可视化编程教学工具</h3>
-      <p class="download-intro-text">7岁以上用户可以用Paracraft创作3D动画和电影，学习和编写计算机程序，支持积木式编程和代码编程一键切换，界面操作简单，老师和学生都能快速上手。</p>
-    </div>
-    <div class="download-versions">
-      <div class="download-versions-part">
-        <h5 class="download-versions-part-title">桌面版</h5>
-        <div class="download-versions-part-img"><img src="@/asset/images/desk.png" alt="desk"></div>
-        <el-button class="download-versions-part-btn"><a href="http://cdn.keepwork.com/paracraft/win32/paracraft_full.exe?ver=07411">直接下载</a></el-button>
-      </div>
-      <div class="download-versions-part">
-        <h5 class="download-versions-part-title">Mac版</h5>
-        <div class="download-versions-part-img"><img src="@/asset/images/mac.png" alt="mac"></div>
-        <el-button class="download-versions-part-btn"><a href="https://itunes.apple.com/cn/app/paracraft/id1422406070" target="_blank">App Store下载</a></el-button>
-        <el-button class="download-versions-part-btn"><a href="http://cdn.keepwork.com/paracraft/mac/paracraft.pkg?ver=07386">直接下载</a></el-button>
-      </div>
-      <div class="download-versions-part">
-        <h5 class="download-versions-part-title">Android版</h5>
-        <div class="download-versions-part-img"><img class="download-versions-part-img-android" src="@/asset/images/Android.png" alt="Android"><img src="@/asset/images/Android_2.png" alt="Android"></div>
-        <el-button class="download-versions-part-btn"><a href="http://cdn.keepwork.com/paracraft/android/paracraft.apk?ver=07411">下载安卓手机APK安装包</a></el-button>
+    <div class="download-welcome">
+      <div class="download-welcome-center">
+        <p class="download-welcome-center-title">Paracraft创意空间教学版</p>
+        <p class="download-welcome-center-info">
+          - 内置教学所需插件，免除后续下载、安装的麻烦。
+          <br />
+          - 针对学校、教学机构定制，优化教学体验
+        </p>
+        <p class="download-welcome-center-count">
+          <span class="download-welcome-center-count-diamonds" v-for="(i,index) in optimizeDownloadCount" :key="index">{{i}}</span>人下载使用
+        </p>
       </div>
     </div>
-    <div class="download-pic">
-      <img src="@/asset/images/adjust.jpg" alt="">
+    <div class="download-center">
+      <p class="download-center-guide">遇到安装问题，不会安装？<a class="download-center-guide-link" href="https://keepwork.com/official/docs/sales/common/install_guide" target="_blank">点击这里</a>查看安装指引</p>
+      <div class="download-center-cabinet">
+        <div class="download-center-cabinet-box-wrap">
+          <div class="download-center-cabinet-box">
+            <img src="@/asset/images/downloadPage/Windows-8.png" alt="">
+            <p class="download-center-cabinet-box-recommend">Windows版</p>
+            <a :href="downloadURL.window_zip" @click="addDownloadCount" class="download-center-cabinet-box-desc download-center-cabinet-box-desc-highlight "><img class="download-center-cabinet-box-desc-img" src="@/asset/images/downloadPage/Windows-8-icon.png" alt="">立即下载</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
-<style lang="scss">
+<script>
+import axios from 'axios'
+import { get, post } from '@/api'
+export default {
+  name: 'Download',
+  data() {
+    return {
+      downloadCount: '',
+      downloadURL: {}
+    }
+  },
+  computed: {
+    optimizeDownloadCount() {
+      this.downloadCount = 103200 + this.downloadCount
+      return this.downloadCount.toString().split('')
+    },
+    QROptions() {
+      return {
+        width: 91,
+        height: 91
+      }
+    },
+    QRUrl() {
+      return `${window.location.origin}/qrDownload`
+    }
+  },
+  async mounted() {
+    window.scrollTo(0, 0)
+    document.title = '下载-Paracraft创意空间'
+    await Promise.all([this.getDownloadCount(), this.getdownloadURL()])
+  },
+  methods: {
+    async getDownloadCount() {
+      const res = await get('keepworks/paracraft_download_count')
+      this.downloadCount = res
+    },
+    addDownloadCount() {
+      post('keepworks/paracraft_download_count', {})
+        .then(response => {
+          this.downloadCount = response
+        })
+        .catch(error => console.error(error))
+    },
+    async getdownloadURL() {
+      const url = await get('keepworks/paracraft_download_url')
+      this.downloadURL = url
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
 .download {
-  max-width: 1200px;
-  margin: 0 auto;
-  &-intro {
-    text-align: center;
-    &-title {
-      font-size: 40px;
-      color: #333;
-      line-height: 40px;
-      font-weight: normal;
-      margin-top: 100px;
-    }
-    &-text {
-      max-width: 1084px;
-      font-size: 20px;
-      color: #666;
-      line-height: 39px;
-    }
-  }
-  &-versions {
-    text-align: center;
-    display: flex;
-    &-part {
-      flex: 1;
+  &-welcome {
+    background: #1e7cfc;
+    padding: 30px 30px 38px;
+    &-center {
+      max-width: 1200px;
+      margin: 0 auto;
+      color: #fff;
       &-title {
-        font-size: 18px;
+        margin: 0;
+        font-size: 36px;
       }
-      &-img {
-        margin: 40px 0 48px;
-        &-android {
-          margin-right: 16px;
-        }
-      }
-      &-btn {
-        padding: 0;
-        a {
-          text-decoration: none;
-          color: #666;
-          display: block;
-          height: 40px;
-          line-height: 40px;
-          padding: 0 10px;
+      &-count {
+        margin: 0;
+        &-diamonds {
+          display: inline-block;
+          background: #fff;
+          color: #1e7cfc;
+          padding: 0 4px;
+          margin-right: 4px;
         }
       }
     }
   }
-  &-pic {
-    text-align: center;
-    margin: 143px 0;
+  &-center {
+    max-width: 1200px;
+    margin: 0 auto;
+    &-guide {
+      min-height: 62px;
+      line-height: 62px;
+      background: #e7f5ed;
+      text-align: center;
+      &-link {
+        text-decoration: none;
+        color: #ff8150;
+        &:hover {
+          color: #e17247;
+        }
+      }
+    }
+    &-cabinet {
+      display: flex;
+      padding: 40px 0;
+      &-phone {
+        background: rgb(232, 245, 234);
+      }
+      &-box {
+        flex: 1;
+        text-align: center;
+        align-items: center;
+        &-cover {
+          width: 50px;
+          margin: 0 auto;
+          position: relative;
+        }
+        &-QR {
+          position: absolute;
+          right: -110px;
+          top: 0;
+        }
+        &-wrap {
+          display: flex;
+          align-items: center;
+          flex: 1;
+        }
+        &-recommend {
+        }
+        &-desc {
+          display: flex;
+          padding: 7px;
+          border-radius: 4px;
+          margin: 14px auto;
+          max-width: 142px;
+          border: 1px solid #409eff;
+          justify-content: center;
+          color: #409eff;
+          text-decoration: none;
+          &:hover {
+            color: rgb(51, 143, 229);
+            border: 1px solid rgb(51, 143, 229);
+          }
+          &-highlight {
+            background: #409eff;
+            color: #fff;
+            &:hover {
+              background: rgb(51, 143, 229);
+              color: #fff;
+            }
+          }
+          &-img {
+            width: 20px;
+            margin-right: 4px;
+          }
+        }
+        &-hint {
+          font-size: 14px;
+          color: #8d8d8d;
+          &-phone {
+            max-width: 176px;
+            color: #32b16c;
+            margin: 0 auto;
+            font-size: 16px;
+            display: block;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            &:hover {
+              color: #328654;
+            }
+          }
+        }
+      }
+    }
+    &-paracraft {
+      border-bottom: 1px solid #d9d9d9;
+      &-title {
+        color: #333;
+        font-size: 24px;
+        margin: 53px 0 20px;
+      }
+      &-hint {
+        color: #8d8d8d;
+        font-size: 16px;
+        &-guide {
+          color: #399fff;
+          text-decoration: none;
+          &:hover {
+            color: #2c82d2;
+          }
+        }
+      }
+      &-code {
+        border: none;
+      }
+    }
+  }
+  &-abstract {
+    background: rgb(249, 248, 248);
+    padding: 68px 0 74px;
+    &-intro {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      &-box {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        &-content {
+          &-title {
+            margin: 40px 0 10px 0;
+          }
+          &-text {
+            max-width: 478px;
+            color: #8d8d8d;
+            font-size: 16px;
+            margin: 0 auto;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .download {
+    &-welcome {
+      &-center {
+        padding-left: 12px;
+        &-title {
+          font-size: 16px;
+          padding: 12px 0 0 0;
+          font-weight: bold;
+        }
+        &-version {
+          font-size: 12px;
+          &-new {
+          }
+        }
+        &-count {
+          font-size: 12px;
+        }
+      }
+    }
+    &-center {
+      &-guide {
+        font-size: 12px;
+        margin: 0;
+        min-height: 40px;
+        line-height: 40px;
+      }
+      &-cabinet {
+        flex-wrap: wrap;
+        padding: 0;
+        &-box {
+          min-width: 220px;
+          border-bottom: 10px solid rgb(249, 249, 249);
+          padding: 26px 0;
+          &-hint {
+            font-size: 12px;
+            &-phone {
+              max-width: 220px;
+            }
+          }
+        }
+      }
+      &-paracraft {
+        &-title {
+          font-size: 14px;
+          padding-left: 12px;
+          margin-top: 17px;
+        }
+        &-hint {
+          font-size: 12px;
+          padding: 0 12px;
+        }
+      }
+    }
+    &-abstract {
+      background: #fff;
+      border-top: 10px solid rgb(249, 249, 249);
+      border-bottom: 10px solid rgb(249, 249, 249);
+      &-intro {
+        flex-wrap: wrap;
+        &-box {
+          min-width: 260px;
+          margin: 12px;
+          &-content {
+            width: 100%;
+            max-width: 480px;
+            &-title {
+              font-size: 14px;
+            }
+            &-text {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 </style>

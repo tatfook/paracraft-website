@@ -8,6 +8,9 @@
       <el-menu-item index="experience" class="pull-right">
         <el-button type="primary" class="common-header-menu-experience-btn">合作咨询</el-button>
       </el-menu-item>
+      <el-menu-item index="download" class="pull-right">
+        <el-button type="primary">下载Paracraft</el-button>
+      </el-menu-item>
     </el-menu>
     <div class="common-header-phone">
       <span class="common-header-phone-item" @click="handleSelect('oursAdvantage')">我们的优势</span>
@@ -34,6 +37,11 @@ export default {
     window.scrollTo(0, 0)
   },
   methods: {
+    toDownloadPage() {
+      this.$router.push({
+        path: '/download'
+      })
+    },
     currentPageYOffset() {
       if (this.$route.name !== 'HomePage') return
       if (window.pageYOffset > 700 && window.pageYOffset < 2400) {
@@ -87,6 +95,9 @@ export default {
           break
         case 'experience':
           this.showGatherInfo()
+          break
+        case 'download':
+          this.toDownloadPage()
           break
         default:
           break
