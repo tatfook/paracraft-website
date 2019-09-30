@@ -157,6 +157,7 @@ export default {
       background-color: transparent;
       &:active,
       &:focus {
+        color: #40b0ff;
         background-color: transparent;
       }
     }
