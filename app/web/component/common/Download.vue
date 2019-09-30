@@ -148,8 +148,6 @@ export default {
           align-items: center;
           flex: 1;
         }
-        &-recommend {
-        }
         &-desc {
           display: flex;
           padding: 7px;
@@ -167,6 +165,7 @@ export default {
           &-highlight {
             background: #409eff;
             color: #fff;
+            border-radius: 36px;
             &:hover {
               background: rgb(51, 143, 229);
               color: #fff;
