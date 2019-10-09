@@ -22,6 +22,13 @@
             <img src="@/asset/images/downloadPage/Windows-8.png" alt="">
             <p class="download-center-cabinet-box-recommend">Windows版</p>
             <a :href="downloadURL.window_zip" @click="addDownloadCount" class="download-center-cabinet-box-desc download-center-cabinet-box-desc-highlight "><img class="download-center-cabinet-box-desc-img" src="@/asset/images/downloadPage/Windows-8-icon.png" alt="">立即下载</a>
+            <div>适用于Windows 7 及以上</div>
+            <div class="download-center-cabinet-box-append">
+              <div>
+                您还可以下载 <a href="http://cdn.keepwork.com/paracraft/win32/ParacraftWinXP.zip?ver=0.7.470">Paracraft for WinXP SP3</a> 版。
+              </div>
+              <div>(适用于Windows XP Service Pack 3 及以上)</div>
+            </div>
           </div>
         </div>
       </div>
@@ -191,6 +198,13 @@ export default {
             &:hover {
               color: #328654;
             }
+          }
+        }
+        &-append {
+          margin-top: 30px;
+          font-size: 14px;
+          a {
+            color: #409EFF;
           }
         }
       }
