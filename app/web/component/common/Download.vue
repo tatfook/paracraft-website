@@ -304,7 +304,6 @@ export default {
         padding: 0;
         &-box {
           min-width: 220px;
-          border-bottom: 10px solid rgb(249, 249, 249);
           padding: 26px 0;
           &-hint {
             font-size: 12px;
