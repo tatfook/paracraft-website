@@ -241,9 +241,9 @@ export default {
       align-items: center;
       .cellphone-button-wrap {
         color: #40b5ff;
-        width: 120px;
-        height: 30px;
-        padding: 0 6px;
+        width: 110px;
+        height: 28px;
+        padding: 0 4px;
         line-height: 30px;
         background: #112f54;
         border-radius: 30px;
@@ -253,7 +253,6 @@ export default {
     }
     &-phone {
       background: rgb(12, 49, 119);
-      display: block;
       color: #acafb8;
       display: flex;
       justify-content: space-around;
@@ -261,7 +260,7 @@ export default {
         line-height: 38px;
         &.acitve {
           color: #fff;
-          border-bottom: 2px solid #409EFF;
+          border-bottom: 2px solid #409eff;
         }
       }
     }
@@ -274,6 +273,17 @@ export default {
       }
       &-logo {
         font-size: 15px;
+        margin-left: 0;
+      }
+      &-logoimg {
+        width: 32px;
+      }
+    }
+    .el-menu--horizontal.el-menu {
+      min-height: 40px;
+      .el-menu-item {
+        height: 60px;
+        line-height: 60px;
       }
     }
   }
