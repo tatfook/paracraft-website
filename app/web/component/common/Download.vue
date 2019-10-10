@@ -25,7 +25,7 @@
             <div class="grey-font">(适用于Windows 7 及以上)</div>
             <div class="download-center-cabinet-box-append">
               <div class="download-center-cabinet-box-append-line">
-                您还可以下载 <a href="http://cdn.keepwork.com/paracraft/win32/ParacraftWinXP.zip?ver=0.7.470">Paracraft for WinXP SP3</a> 版
+                您还可以下载 <a :href="downloadURL.sp3">Paracraft for WinXP SP3</a> 版
               </div>
               <div class="download-center-cabinet-box-append-line grey-font">(适用于Windows XP Service Pack 3 及以上)</div>
             </div>
