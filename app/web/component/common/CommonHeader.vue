@@ -5,17 +5,24 @@
       <el-menu-item index="oursAdvantage" class="common-header-menu-hidden-item">我们的优势</el-menu-item>
       <el-menu-item index="oursService" class="common-header-menu-hidden-item">服务项目</el-menu-item>
       <el-menu-item index="price" class="common-header-menu-hidden-item">价格</el-menu-item>
-      <el-menu-item index="experience" class="pull-right">
+      <el-menu-item index="experience" class="pull-right cellphone-hidden">
         <el-button type="primary" class="common-header-menu-experience-btn">合作咨询</el-button>
       </el-menu-item>
-      <el-menu-item index="download" class="pull-right common-header-menu-download-item">
+      <el-menu-item index="download" class="pull-right common-header-menu-download-item cellphone-hidden">
         <el-button type="primary" class="common-header-menu-download-btn">下载Paracraft</el-button>
+      </el-menu-item>
+      <el-menu-item index="cellphone" class="pull-right cellphone-menu">
+        <div class="cellphone-button-wrap">
+          <span @click="handleSelect('download')">下载</span>
+          <span>|</span>
+          <span @click="handleSelect('experience')">合作咨询</span>
+        </div>
       </el-menu-item>
     </el-menu>
     <div class="common-header-phone">
-      <span class="common-header-phone-item" @click="handleSelect('oursAdvantage')">我们的优势</span>
-      <span class="common-header-phone-item" @click="handleSelect('oursService')">服务项目</span>
-      <span class="common-header-phone-item" @click="handleSelect('price')">价格</span>
+      <span :class="['common-header-phone-item', { 'acitve':  activeIndex === 'oursAdvantage' }]" @click="handleSelect('oursAdvantage')">我们的优势</span>
+      <span :class="['common-header-phone-item', { 'acitve':  activeIndex === 'oursService' }]" @click="handleSelect('oursService')">服务项目</span>
+      <span :class="['common-header-phone-item', { 'acitve' : activeIndex==='price' }]" @click="handleSelect('price')">价格</span>
     </div>
     <gather-info-dialog :showGatherInfoDialog="showGatherInfoDialog" @close="closeGatherInfoDialog"></gather-info-dialog>
   </div>
@@ -44,22 +51,31 @@ export default {
     },
     currentPageYOffset() {
       if (this.$route.name !== 'HomePage') return
-      if (window.pageYOffset > 700 && window.pageYOffset < 2400) {
-        this.$nextTick(() => {
-          this.activeIndex = 'oursAdvantage'
-        })
-      } else if (window.pageYOffset > 2400 && window.pageYOffset < 3200) {
-        this.$nextTick(() => {
-          this.activeIndex = 'oursService'
-        })
-      } else if (window.pageYOffset > 6500 && window.pageYOffset < 8000) {
-        this.$nextTick(() => {
-          this.activeIndex = 'price'
-        })
+      const oursAdvantageEle = document.querySelector('#oursAdvantage')
+      const oursServiceEle = document.querySelector('#oursService')
+      const priceEle = document.querySelector('#price')
+
+      const oursAdvantageRect = oursAdvantageEle.getBoundingClientRect()
+      const oursServiceRect = oursServiceEle.getBoundingClientRect()
+      const priceRect = priceEle.getBoundingClientRect()
+      const OFFSET = 120
+      if (
+        -(oursAdvantageRect.height - OFFSET) < oursAdvantageRect.top &&
+        oursAdvantageRect.top < OFFSET
+      ) {
+        this.activeIndex = 'oursAdvantage'
+      } else if (
+        -(oursServiceRect.height - OFFSET) < oursServiceRect.top &&
+        oursServiceRect.top < OFFSET
+      ) {
+        this.activeIndex = 'oursService'
+      } else if (
+        -(priceRect.height - OFFSET) < priceRect.top &&
+        priceRect.top < OFFSET
+      ) {
+        this.activeIndex = 'price'
       } else {
-        this.$nextTick(() => {
-          this.activeIndex = 'experience'
-        })
+        this.activeIndex = 'experience'
       }
     },
     showGatherInfo() {
@@ -119,6 +135,9 @@ export default {
 .common-header {
   max-width: 1200px;
   margin: 0 auto;
+  .cellphone-menu {
+    display: none;
+  }
   &-phone {
     display: none;
   }
@@ -210,15 +229,39 @@ export default {
 }
 @media screen and (max-width: 769px) {
   .common-header {
+    .cellphone-hidden {
+      display: none;
+    }
+    .cellphone-menu.el-menu-item {
+      &:hover {
+        background: none;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .cellphone-button-wrap {
+        color: #40b5ff;
+        width: 110px;
+        height: 28px;
+        padding: 0 4px;
+        line-height: 30px;
+        background: #112f54;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
     &-phone {
       background: rgb(12, 49, 119);
-      display: block;
-      color: #fff;
-      opacity: 0.7;
+      color: #acafb8;
       display: flex;
       justify-content: space-around;
       &-item {
         line-height: 38px;
+        &.acitve {
+          color: #fff;
+          border-bottom: 2px solid #409eff;
+        }
       }
     }
     &-menu {
@@ -230,6 +273,17 @@ export default {
       }
       &-logo {
         font-size: 15px;
+        margin-left: 0;
+      }
+      &-logoimg {
+        width: 32px;
+      }
+    }
+    .el-menu--horizontal.el-menu {
+      min-height: 40px;
+      .el-menu-item {
+        height: 60px;
+        line-height: 60px;
       }
     }
   }

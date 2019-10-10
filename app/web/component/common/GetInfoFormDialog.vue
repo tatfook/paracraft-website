@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-dialog v-if="showGatherInfoDialog" :visible.sync="showGatherInfoDialog" width="772px" center class="gather-info-dialog" :before-close="handleClose" :append-to-body="true">
+    <el-dialog v-if="showGatherInfoDialog" top="8vh" :visible.sync="showGatherInfoDialog" width="772px" center class="gather-info-dialog" :before-close="handleClose" :append-to-body="true">
       <div class="gather-info-dialog-title">
         <h4 class="gather-info-dialog-title-text">合作咨询</h4>
         <p class="gather-info-dialog-title-hint">我们的销售代表会尽快联系您</p>
@@ -135,7 +135,6 @@ export default {
 <style lang="scss">
 .gather-info-dialog {
   .el-dialog {
-    margin-top: 8vh !important;
     .el-dialog__header,
     .el-dialog__body {
       padding: 0;
@@ -208,6 +207,7 @@ export default {
   .gather-info-dialog {
     .el-dialog {
       width: 100% !important;
+      margin-top: 0 !important;
     }
   }
 }
