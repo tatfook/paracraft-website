@@ -58,7 +58,7 @@ export default {
       const oursAdvantageRect = oursAdvantageEle.getBoundingClientRect()
       const oursServiceRect = oursServiceEle.getBoundingClientRect()
       const priceRect = priceEle.getBoundingClientRect()
-      const OFFSET = 200
+      const OFFSET = 120
       if (
         -(oursAdvantageRect.height - OFFSET) < oursAdvantageRect.top &&
         oursAdvantageRect.top < OFFSET
