@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="download-center">
-      <p class="download-center-guide"><a class="download-center-guide-link" href="https://keepwork.com/official/docs/sales/common/install_guide" target="_blank">点击这里</a>查看安装指引</p>
+      <p class="download-center-guide"><a class="download-center-guide-link" href="https://keepwork.com/official/Biz_Website/Instructional_edition_installation_guide" target="_blank">点击这里</a>查看安装指南</p>
       <div class="download-center-cabinet">
         <div class="download-center-cabinet-box-wrap">
           <div class="download-center-cabinet-box">
